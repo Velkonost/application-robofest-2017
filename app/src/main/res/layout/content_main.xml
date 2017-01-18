@@ -16,7 +16,8 @@
 
     <ScrollView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
@@ -34,7 +35,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/welcomeText"
                 android:layout_marginTop="10dp"
-                android:background="#333"
+                android:background="@drawable/main_activity_map"
                 android:paddingTop="40dp"
                 android:paddingBottom="40dp">
 
@@ -48,11 +49,13 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/llBtnDay"
                 android:orientation="horizontal"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_below="@+id/mapImage"
                 xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_centerInParent="true"
                 android:layout_marginTop="10dp">
 
                 <Button
@@ -83,6 +86,142 @@
                     android:layout_marginBottom="2dp"
                     android:layout_marginRight="3dp" />
             </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llBtnDay"
+                android:id="@+id/rlDayDesc"
+                android:layout_centerInParent="true"
+                android:background="@drawable/main_activity_day_desc"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/day_one_time_zero"
+                    android:padding="10dp"
+                    android:id="@+id/textInvisibleStart"
+                    android:visibility="invisible"/>
+
+                    <LinearLayout
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal"
+                      android:id="@+id/one"
+                      android:padding="10dp">
+
+                        <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="@string/day_one_time_first"
+                          android:id="@+id/firstTime"/>
+
+                        <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="@string/day_one_desc_first"
+                          android:layout_marginStart="5dp"
+                          android:id="@+id/firstMeasure"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:id="@+id/two"
+                        android:layout_below="@id/one"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/day_one_time_second"
+                            android:id="@+id/secondTime"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/day_one_desc_second"
+                            android:layout_marginStart="5dp"
+                            android:id="@+id/secondMeasure"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:id="@+id/three"
+                        android:layout_below="@id/two"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/day_one_time_third"
+                            android:id="@+id/thirdTime"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/day_one_desc_third"
+                            android:layout_marginStart="5dp"
+                            android:id="@+id/thirdMeasure"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:id="@+id/four"
+                        android:layout_below="@id/three"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/day_one_time_forth"
+                            android:id="@+id/forthTime"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/day_one_desc_forth"
+                            android:layout_marginStart="5dp"
+                            android:id="@+id/forthMeasure"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:id="@+id/five"
+                        android:layout_below="@id/four"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/day_one_time_fifth"
+                            android:id="@+id/fifthTime"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/day_one_desc_fifth"
+                            android:layout_marginStart="5dp"
+                            android:id="@+id/fifthMeasure"/>
+                    </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="0dp"
+                    android:background="#000"
+                    android:layout_toEndOf="@id/textInvisibleStart"
+                    android:layout_alignTop="@id/one"
+                    android:layout_alignBottom="@id/five"
+                    android:id="@+id/blackLine"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"/>
+
+            </RelativeLayout>
+
 
         </RelativeLayout>
     </ScrollView>

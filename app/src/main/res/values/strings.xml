@@ -5,4 +5,17 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+
+    <string name="day_one_desc_first"> выставка/соревнования jr.FLL </string>
+    <string name="day_one_desc_second"> сборка роботов/тренировка: HR сортировщик (старшая), HR чертежник (старшая), HR шорт-трек (младшая) </string>
+    <string name="day_one_desc_third"> тренировка FLL </string>
+    <string name="day_one_desc_forth"> презентация проектов FLL </string>
+    <string name="day_one_desc_fifth"> соревнования: HR сортировщик (старшая), HR чертежник (старшая), HR шорт-трек (младшая) </string>
+
+    <string name="day_one_time_zero">11.00–14.00  </string>
+    <string name="day_one_time_first">11.00–14.00  </string>
+    <string name="day_one_time_second">11.00–14.00 </string>
+    <string name="day_one_time_third">11.00–16.00  </string>
+    <string name="day_one_time_forth">14.00–16.00 </string>
+    <string name="day_one_time_fifth">15.00–18.00  </string>
 </resources>

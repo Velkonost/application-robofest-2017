@@ -11,14 +11,19 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-
-import com.tooltip.Tooltip;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private Button btnDay1;
     private Button btnDay2;
+
+    private TextView firstTime, firstMeasure;
+    private TextView secondTime, secondMeasure;
+    private TextView thirdTime, thirdMeasure;
+    private TextView forthTime, forthMeasure;
+    private TextView fifthTime, fifthMeasure;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,11 +36,29 @@ public class MainActivity extends AppCompatActivity
         btnDay1 = (Button) findViewById(R.id.buttonDay1);
         btnDay2 = (Button) findViewById(R.id.buttonDay2);
 
+        firstTime = (TextView) findViewById(R.id.firstTime);
+        secondTime = (TextView) findViewById(R.id.secondTime);
+        thirdTime = (TextView) findViewById(R.id.thirdTime);
+        forthTime = (TextView) findViewById(R.id.forthTime);
+        fifthTime = (TextView) findViewById(R.id.fifthTime);
 
+        firstMeasure = (TextView) findViewById(R.id.firstMeasure);
+        secondMeasure = (TextView) findViewById(R.id.secondMeasure);
+        thirdMeasure = (TextView) findViewById(R.id.thirdMeasure);
+        forthMeasure = (TextView) findViewById(R.id.forthMeasure);
+        fifthMeasure = (TextView) findViewById(R.id.fifthMeasure);
 
-        final Tooltip tooltipDay1 = new Tooltip.Builder(btnDay1).setCornerRadius((float) 25.0)
-                .setText("Hello tooltip")
-                .show();
+        firstTime.setText(getResources().getString(R.string.day_one_time_first) + "     ");
+        secondTime.setText(getResources().getString(R.string.day_one_time_second) + "     ");
+        thirdTime.setText(getResources().getString(R.string.day_one_time_third) + "     ");
+        forthTime.setText(getResources().getString(R.string.day_one_time_forth) + "     ");
+        fifthTime.setText(getResources().getString(R.string.day_one_time_fifth) + "     ");
+
+        firstMeasure.setText(getResources().getString(R.string.day_one_desc_first));
+        secondMeasure.setText(getResources().getString(R.string.day_one_desc_second));
+        thirdMeasure.setText(getResources().getString(R.string.day_one_desc_third));
+        forthMeasure.setText(getResources().getString(R.string.day_one_desc_forth));
+        fifthMeasure.setText(getResources().getString(R.string.day_one_desc_fifth));
 
         final DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -45,6 +68,8 @@ public class MainActivity extends AppCompatActivity
 
         final NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
 
         drawer.addDrawerListener(new DrawerLayout.DrawerListener() {
             @Override
@@ -61,11 +86,12 @@ public class MainActivity extends AppCompatActivity
 
             @Override
             public void onDrawerStateChanged(int newState) {
-                if (!drawer.isDrawerVisible(navigationView)) tooltipDay1.show();
-                else tooltipDay1.dismiss();
+
             }
         });
     }
+
+
 
     @Override
     public void onBackPressed() {
