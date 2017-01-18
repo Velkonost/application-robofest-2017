@@ -12,10 +12,22 @@
     <string name="day_one_desc_forth"> презентация проектов FLL </string>
     <string name="day_one_desc_fifth"> соревнования: HR сортировщик (старшая), HR чертежник (старшая), HR шорт-трек (младшая) </string>
 
+    <string name="day_two_desc_first"> тренировка FLL </string>
+    <string name="day_two_desc_second"> сборка роботов/тренировка: HR шорт-трек (старшая), HR чертежник (младшая), HR траектория-квест, HR сортировщик (Profi) </string>
+    <string name="day_two_desc_third"> выставка проектов “Freestyle” </string>
+    <string name="day_two_desc_forth"> соревнования: HR чертежник (младшая), HR шорт-трек (старшая), HR сортировщик (Profi), HR траектория-квест </string>
+    <string name="day_two_desc_fifth"> соревнования FLL </string>
+
     <string name="day_one_time_zero">11.00–14.00  </string>
     <string name="day_one_time_first">11.00–14.00  </string>
     <string name="day_one_time_second">11.00–14.00 </string>
     <string name="day_one_time_third">11.00–16.00  </string>
     <string name="day_one_time_forth">14.00–16.00 </string>
     <string name="day_one_time_fifth">15.00–18.00  </string>
+
+    <string name="day_two_time_first">10.00–14.00  </string>
+    <string name="day_two_time_second">10.00–13.00 </string>
+    <string name="day_two_time_third">11.00–15.00  </string>
+    <string name="day_two_time_forth">14.00–17.00 </string>
+    <string name="day_two_time_fifth">15.00–17.00  </string>
 </resources>

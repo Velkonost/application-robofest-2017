@@ -41,6 +41,7 @@
 
                 <ImageView
                     android:layout_width="match_parent"
+                    android:id="@+id/imageMap"
                     android:layout_height="wrap_content"
                     android:src="@drawable/robofestomsk_sheme"
                     android:fitsSystemWindows="true"
@@ -94,7 +95,8 @@
                 android:id="@+id/rlDayDesc"
                 android:layout_centerInParent="true"
                 android:background="@drawable/main_activity_day_desc"
-                android:padding="5dp">
+                android:padding="5dp"
+                android:visibility="invisible">
 
                 <TextView
                     android:layout_width="wrap_content"

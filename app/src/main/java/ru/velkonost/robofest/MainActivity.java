@@ -1,5 +1,6 @@
 package ru.velkonost.robofest;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -11,6 +12,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity
@@ -19,11 +22,15 @@ public class MainActivity extends AppCompatActivity
     private Button btnDay1;
     private Button btnDay2;
 
+    private RelativeLayout rlDayDesc;
+
     private TextView firstTime, firstMeasure;
     private TextView secondTime, secondMeasure;
     private TextView thirdTime, thirdMeasure;
     private TextView forthTime, forthMeasure;
     private TextView fifthTime, fifthMeasure;
+
+    private ImageView imageMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +42,8 @@ public class MainActivity extends AppCompatActivity
 
         btnDay1 = (Button) findViewById(R.id.buttonDay1);
         btnDay2 = (Button) findViewById(R.id.buttonDay2);
+
+        rlDayDesc = (RelativeLayout) findViewById(R.id.rlDayDesc);
 
         firstTime = (TextView) findViewById(R.id.firstTime);
         secondTime = (TextView) findViewById(R.id.secondTime);
@@ -48,17 +57,7 @@ public class MainActivity extends AppCompatActivity
         forthMeasure = (TextView) findViewById(R.id.forthMeasure);
         fifthMeasure = (TextView) findViewById(R.id.fifthMeasure);
 
-        firstTime.setText(getResources().getString(R.string.day_one_time_first) + "     ");
-        secondTime.setText(getResources().getString(R.string.day_one_time_second) + "     ");
-        thirdTime.setText(getResources().getString(R.string.day_one_time_third) + "     ");
-        forthTime.setText(getResources().getString(R.string.day_one_time_forth) + "     ");
-        fifthTime.setText(getResources().getString(R.string.day_one_time_fifth) + "     ");
-
-        firstMeasure.setText(getResources().getString(R.string.day_one_desc_first));
-        secondMeasure.setText(getResources().getString(R.string.day_one_desc_second));
-        thirdMeasure.setText(getResources().getString(R.string.day_one_desc_third));
-        forthMeasure.setText(getResources().getString(R.string.day_one_desc_forth));
-        fifthMeasure.setText(getResources().getString(R.string.day_one_desc_fifth));
+        imageMap = (ImageView) findViewById(R.id.imageMap);
 
         final DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -69,24 +68,56 @@ public class MainActivity extends AppCompatActivity
         final NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-
-
-        drawer.addDrawerListener(new DrawerLayout.DrawerListener() {
+        imageMap.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onDrawerSlide(View drawerView, float slideOffset) {
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, FullScreenPhotoActivity.class);
+                intent.putExtra("Photo", 1);
+                MainActivity.this.startActivity(intent);
             }
+        });
 
+        btnDay1.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onDrawerOpened(View drawerView) {
+            public void onClick(View view) {
+                rlDayDesc.setVisibility(View.VISIBLE);
+
+                firstTime.setText(getResources().getString(R.string.day_one_time_first) + "     ");
+                secondTime.setText(getResources().getString(R.string.day_one_time_second) + "     ");
+                thirdTime.setText(getResources().getString(R.string.day_one_time_third) + "     ");
+                forthTime.setText(getResources().getString(R.string.day_one_time_forth) + "     ");
+                fifthTime.setText(getResources().getString(R.string.day_one_time_fifth) + "     ");
+
+                firstMeasure.setText(getResources().getString(R.string.day_one_desc_first));
+                secondMeasure.setText(getResources().getString(R.string.day_one_desc_second));
+                thirdMeasure.setText(getResources().getString(R.string.day_one_desc_third));
+                forthMeasure.setText(getResources().getString(R.string.day_one_desc_forth));
+                fifthMeasure.setText(getResources().getString(R.string.day_one_desc_fifth));
+
+                btnDay1.setBackgroundColor(333);
+                btnDay2.setBackgroundColor(111);
             }
+        });
 
+        btnDay2.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onDrawerClosed(View drawerView) {
-            }
+            public void onClick(View view) {
+                rlDayDesc.setVisibility(View.VISIBLE);
 
-            @Override
-            public void onDrawerStateChanged(int newState) {
+                firstTime.setText(getResources().getString(R.string.day_two_time_first) + "     ");
+                secondTime.setText(getResources().getString(R.string.day_two_time_second) + "     ");
+                thirdTime.setText(getResources().getString(R.string.day_two_time_third) + "     ");
+                forthTime.setText(getResources().getString(R.string.day_two_time_forth) + "     ");
+                fifthTime.setText(getResources().getString(R.string.day_two_time_fifth) + "     ");
 
+                firstMeasure.setText(getResources().getString(R.string.day_two_desc_first));
+                secondMeasure.setText(getResources().getString(R.string.day_two_desc_second));
+                thirdMeasure.setText(getResources().getString(R.string.day_two_desc_third));
+                forthMeasure.setText(getResources().getString(R.string.day_two_desc_forth));
+                fifthMeasure.setText(getResources().getString(R.string.day_two_desc_fifth));
+
+                btnDay2.setBackgroundColor(333);
+                btnDay1.setBackgroundColor(111);
             }
         });
     }
