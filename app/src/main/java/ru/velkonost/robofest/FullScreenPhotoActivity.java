@@ -9,6 +9,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageView;
 
+import uk.co.senab.photoview.PhotoViewAttacher;
+
 
 public class FullScreenPhotoActivity extends AppCompatActivity {
     private static final int LAYOUT = R.layout.activity_full_screen_photo;
@@ -26,6 +28,7 @@ public class FullScreenPhotoActivity extends AppCompatActivity {
         ImageView imageView = (ImageView) findViewById(R.id.fullImage);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         switch (photo) {
             case 1:
@@ -38,7 +41,7 @@ public class FullScreenPhotoActivity extends AppCompatActivity {
         }
 
         new PhotoViewAttacher(imageView);
-        setSupportActionBar(toolbar);
+
 
         toolbar.setNavigationIcon(R.mipmap.ic_arrow_left);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
