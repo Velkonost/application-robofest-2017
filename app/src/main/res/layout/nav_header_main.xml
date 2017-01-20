@@ -25,6 +25,16 @@
             android:gravity="top"/>
 
         <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:layout_gravity="bottom"
+            android:layout_alignParentBottom="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:text="Экспоцентр ул. 70 лет Октября"/>
+
+        <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -35,15 +45,7 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:text="26-27 февраля 2017г."/>
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="bottom"
-            android:layout_gravity="bottom"
-            android:layout_alignParentBottom="true"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:text="Экспоцентр ул. 70 лет Октября"/>
+
 
     </RelativeLayout>
 
