@@ -24,11 +24,11 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/title"
                 android:padding="10dp"
+                android:text="Немного истории"
 
                 android:textAlignment="center"
                 android:textSize="14sp"
-                android:gravity="center"
-                android:text="O фестивале"/>
+                android:gravity="center"/>
 
             <View
                 android:layout_width="match_parent"
@@ -44,9 +44,37 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/desc"
                 android:layout_below="@id/line"
-
                 android:padding="10dp"
-                android:text="РобоФест – крупнейший в Европе и один из крупнейших в мире фестивалей, ежегодно собирающий лучших участников научно-технического творчества в возрасте от 6 до 30 лет, которые представляют свои уникальные разработки. Идея его проведения родилась у Олега Дерипаска в 2007 году при посещении Североамериканских всемирных соревнований роботов FIRST (For Inspiration and Recognition of Science and Technology – Развитие и поощрение интереса к науке и технике). В России на тот момент не было единой программы поддержки робототехники и инженерных специальностей. При этом наша страна всегда была знаменита своими физиками, математиками, изобретателями, инженерами. Возродить престиж инженерных профессий в России, привить интерес к ним со школьной скамьи – ключевые задачи РобоФеста"/>
+                android:layout_marginLeft="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/title2"
+                android:padding="10dp"
+                android:text="Робофест в Омске"
+                android:layout_marginTop="40dp"
+                android:layout_below="@id/desc"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                android:gravity="center"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/line2"
+                android:layout_below="@id/title2"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/colorBlack"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/desc2"
+                android:layout_below="@id/line2"
+                android:padding="10dp"
+                android:layout_marginLeft="20dp"/>
         </RelativeLayout>
 
 

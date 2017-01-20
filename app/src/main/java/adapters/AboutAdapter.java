@@ -3,7 +3,6 @@ package adapters;
 import android.content.Context;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,11 +17,13 @@ public class AboutAdapter extends RecyclerView.Adapter<AboutAdapter.AboutViewHol
     private List<String> data;
     private Context mContext;
     private String title;
+    private String textHistory;
     private String text;
 
 
-    public AboutAdapter(String text, Context mContext) {
+    public AboutAdapter(String textHistory, String text, Context mContext) {
         this.mContext = mContext;
+        this.textHistory = textHistory;
         this.text = text;
     }
 
@@ -35,8 +36,8 @@ public class AboutAdapter extends RecyclerView.Adapter<AboutAdapter.AboutViewHol
 
     @Override
     public void onBindViewHolder(AboutViewHolder holder, int position) {
-        Log.i("KEKE", text);
-        holder.title.setText(text);
+        holder.desc.setText(textHistory);
+        holder.desc2.setText(text);
     }
 
     @Override
@@ -47,14 +48,16 @@ public class AboutAdapter extends RecyclerView.Adapter<AboutAdapter.AboutViewHol
     public static class AboutViewHolder extends RecyclerView.ViewHolder {
 
         CardView cardView;
-        TextView title;
+        TextView desc;
+        TextView desc2;
 
 
         public AboutViewHolder(View itemView) {
             super(itemView);
 
             cardView = (CardView) itemView.findViewById(R.id.cardView);
-            title = (TextView) itemView.findViewById(R.id.desc);
+            desc = (TextView) itemView.findViewById(R.id.desc);
+            desc2 = (TextView) itemView.findViewById(R.id.desc2);
 
 
         }

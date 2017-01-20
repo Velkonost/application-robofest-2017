@@ -25,19 +25,22 @@ import ru.velkonost.robofest.R;
 public class AboutFragment extends AbstractTabFragment {
     private static final int LAYOUT = R.layout.fragment_about;
 
-    private int competitionId; // по этому ид определять, какое соревнование и парсить уже его
+    private int columnId; // по этому ид определять, какое соревнование и парсить уже его
 
-    String text;
+    private String textHistory;
+    private String text;
+
 
     private Document[] doc = {null};
 
-    public static AboutFragment getInstance(Context context, int competitionId, String title) {
+    public static AboutFragment getInstance(Context context, int columnId, String title) {
         Bundle args = new Bundle();
         AboutFragment fragment = new AboutFragment();
 
         fragment.setArguments(args);
         fragment.setContext(context);
         fragment.setTitle(title);
+        fragment.setColumnId(columnId);
 
         return fragment;
     }
@@ -50,10 +53,10 @@ public class AboutFragment extends AbstractTabFragment {
 
 
 
-        switch (competitionId) {
+        switch (columnId) {
             case 1:
-
-//                rv.setAdapter(new AboutAdapter("FLL", getContext()));
+                GetHtml getHtml = new GetHtml();
+                getHtml.execute();
                 break;
             case 2:
 //                rv.setAdapter(new AboutAdapter("Jr.FLL", getContext()));
@@ -62,8 +65,7 @@ public class AboutFragment extends AbstractTabFragment {
 //                rv.setAdapter(new AboutAdapter("HR", getContext()));
                 break;
             default:
-                GetHtml getHtml = new GetHtml();
-                getHtml.execute();
+
                 break;
         }
 
@@ -74,10 +76,7 @@ public class AboutFragment extends AbstractTabFragment {
     public void setContext(Context context) {
         this.context = context;
     }
-
-    public void setAboutId(int competitionId) {
-        this.competitionId = competitionId;
-    }
+    public void setColumnId(int columnId) { this.columnId = columnId; }
 
     private class GetHtml extends AsyncTask<Object, Object, String> {
         @Override
@@ -104,20 +103,23 @@ public class AboutFragment extends AbstractTabFragment {
             super.onPostExecute(strJson);
 
 
-            List title = doc[0].select("article[class=box post]").select("p").subList(1, 5);
+            List title = doc[0].select("article[class=box post]").select("p");
 
-//            text = title.toString();
 
-            text = TextUtils.join(" ", title);
+            textHistory = TextUtils.join(" ", title.subList(1, 5));
+            text = TextUtils.join(" ", title.subList(5, 8));
 
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                textHistory = String.valueOf(Html.fromHtml(textHistory, Html.FROM_HTML_MODE_LEGACY));
                 text = String.valueOf(Html.fromHtml(text, Html.FROM_HTML_MODE_LEGACY));
-            else
+            } else {
+                textHistory = String.valueOf(Html.fromHtml(textHistory));
                 text = String.valueOf(Html.fromHtml(text));
+            }
 
             RecyclerView rv = (RecyclerView) view.findViewById(R.id.recyclerViewAbout);
             rv.setLayoutManager(new LinearLayoutManager(context));
-            rv.setAdapter(new AboutAdapter(text, getContext()));
+            rv.setAdapter(new AboutAdapter(textHistory, text, getContext()));
 
 
 
