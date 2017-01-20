@@ -1,7 +1,9 @@
 package ru.velkonost.robofest;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -15,6 +17,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import static managers.Initializations.changeActivityCompat;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -159,22 +163,33 @@ public class MainActivity extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
+
+        Intent nextIntent = null;
+
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
+        if (id == R.id.main) {
+            nextIntent = new Intent(MainActivity.this, MainActivity.class);
+        } else if (id == R.id.competition) {
+            nextIntent = new Intent(MainActivity.this, CompetitionActivity.class);
+        } else if (id == R.id.translations) {
+//            nextIntent = new Intent(MainActivity.this, TranslationsActivity.class);
+        } else if (id == R.id.about) {
+            nextIntent = new Intent(MainActivity.this, AboutActivity.class);
         }
+
+        final Intent finalNextIntent = nextIntent;
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+
+                /**
+                 * Обновляет страницу.
+                 * {@link Initializations#changeActivityCompat(Activity, Intent)}
+                 * */
+                changeActivityCompat(MainActivity.this, finalNextIntent);
+            }
+        }, 350);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
