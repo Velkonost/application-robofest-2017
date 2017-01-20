@@ -42,10 +42,9 @@ public class AboutTabsFragmentAdapter extends FragmentPagerAdapter {
         tabs = new HashMap<>();
 
 
-        tabs.put(0, AboutFragment.getInstance(context, 1, "FLL"));
-        tabs.put(1, AboutFragment.getInstance(context, 2, "Jr.FLL"));
-        tabs.put(2, AboutFragment.getInstance(context, 3, "HR"));
-        tabs.put(3, AboutFragment.getInstance(context, 1, "FS"));
+        tabs.put(0, AboutFragment.getInstance(context, 1, "FLiergbeiuhpL"));
+//        tabs.put(1, AboutFragment.getInstance(context, 2, "Jr.FLL"));
+//        tabs.put(2, AboutFragment.getInstance(context, 3, "HR"));
 
     }
 }

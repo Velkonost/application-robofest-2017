@@ -3,10 +3,10 @@ package adapters;
 import android.content.Context;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
@@ -18,11 +18,12 @@ public class AboutAdapter extends RecyclerView.Adapter<AboutAdapter.AboutViewHol
     private List<String> data;
     private Context mContext;
     private String title;
-    private ImageView compImg;
+    private String text;
 
-    public AboutAdapter(String title, Context mContext) {
+
+    public AboutAdapter(String text, Context mContext) {
         this.mContext = mContext;
-        this.title = title;
+        this.text = text;
     }
 
     @Override
@@ -34,9 +35,8 @@ public class AboutAdapter extends RecyclerView.Adapter<AboutAdapter.AboutViewHol
 
     @Override
     public void onBindViewHolder(AboutViewHolder holder, int position) {
-        holder.title.setText(title);
-        holder.title.setVisibility(View.VISIBLE);
-
+        Log.i("KEKE", text);
+        holder.title.setText(text);
     }
 
     @Override
@@ -47,7 +47,6 @@ public class AboutAdapter extends RecyclerView.Adapter<AboutAdapter.AboutViewHol
     public static class AboutViewHolder extends RecyclerView.ViewHolder {
 
         CardView cardView;
-        ImageView compImg;
         TextView title;
 
 
@@ -55,10 +54,11 @@ public class AboutAdapter extends RecyclerView.Adapter<AboutAdapter.AboutViewHol
             super(itemView);
 
             cardView = (CardView) itemView.findViewById(R.id.cardView);
-            title = (TextView) itemView.findViewById(R.id.Text);
-            compImg = (ImageView) itemView.findViewById(R.id.comp_img);
+            title = (TextView) itemView.findViewById(R.id.desc);
 
 
         }
     }
+
+
 }
