@@ -43,10 +43,10 @@ public class CompetitionTabsFragmentAdapter extends FragmentPagerAdapter {
         tabs = new HashMap<>();
 
 
-        tabs.put(0, CompetitionFragment.getInstance(context, 1, "123"));
-        tabs.put(1, CompetitionFragment.getInstance(context, 2, "#21"));
-        tabs.put(2, CompetitionFragment.getInstance(context, 3, "gre"));
-        tabs.put(3, CompetitionFragment.getInstance(context, 1, "wp"));
+        tabs.put(0, CompetitionFragment.getInstance(context, 1, "FLL"));
+        tabs.put(1, CompetitionFragment.getInstance(context, 2, "Jr.FLL"));
+        tabs.put(2, CompetitionFragment.getInstance(context, 3, "HR"));
+        tabs.put(3, CompetitionFragment.getInstance(context, 1, "FS"));
 
     }
 }

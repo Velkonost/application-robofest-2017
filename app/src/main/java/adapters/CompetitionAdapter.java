@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
@@ -17,6 +18,7 @@ public class CompetitionAdapter extends RecyclerView.Adapter<CompetitionAdapter.
     private List<String> data;
     private Context mContext;
     private String title;
+    private ImageView compImg;
 
     public CompetitionAdapter(String title, Context mContext) {
         this.mContext = mContext;
@@ -45,7 +47,7 @@ public class CompetitionAdapter extends RecyclerView.Adapter<CompetitionAdapter.
     public static class CompetitionViewHolder extends RecyclerView.ViewHolder {
 
         CardView cardView;
-
+        ImageView compImg;
         TextView title;
 
 
@@ -54,6 +56,7 @@ public class CompetitionAdapter extends RecyclerView.Adapter<CompetitionAdapter.
 
             cardView = (CardView) itemView.findViewById(R.id.cardView);
             title = (TextView) itemView.findViewById(R.id.Text);
+            compImg = (ImageView) itemView.findViewById(R.id.comp_img);
 
 
         }

@@ -41,9 +41,16 @@ public class CompetitionFragment extends AbstractTabFragment {
 
         switch (competitionId) {
             case 1:
-                rv.setAdapter(new CompetitionAdapter("HR", getContext()));
+                rv.setAdapter(new CompetitionAdapter("FLL", getContext()));
                 break;
             case 2:
+                rv.setAdapter(new CompetitionAdapter("Jr.FLL", getContext()));
+                break;
+            case 3:
+                rv.setAdapter(new CompetitionAdapter("HR", getContext()));
+                break;
+            case 4:
+                rv.setAdapter(new CompetitionAdapter("FS", getContext()));
                 break;
             default:
                 rv.setAdapter(new CompetitionAdapter("HRwrehw;o", getContext()));
