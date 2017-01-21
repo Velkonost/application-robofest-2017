@@ -17,12 +17,12 @@ public class CompetitionAdapter extends RecyclerView.Adapter<CompetitionAdapter.
 
     private List<String> data;
     private Context mContext;
-    private String title;
+    private String text;
     private ImageView compImg;
 
     public CompetitionAdapter(String title, Context mContext) {
         this.mContext = mContext;
-        this.title = title;
+        this.text = title;
     }
 
     @Override
@@ -34,9 +34,8 @@ public class CompetitionAdapter extends RecyclerView.Adapter<CompetitionAdapter.
 
     @Override
     public void onBindViewHolder(CompetitionViewHolder holder, int position) {
-        holder.title.setText(title);
-        holder.title.setVisibility(View.VISIBLE);
-
+        holder.title.setText(text);
+  //      holder.title.setVisibility(View.VISIBLE);
     }
 
     @Override
@@ -54,9 +53,10 @@ public class CompetitionAdapter extends RecyclerView.Adapter<CompetitionAdapter.
         public CompetitionViewHolder(View itemView) {
             super(itemView);
 
-            cardView = (CardView) itemView.findViewById(R.id.cardView);
-            title = (TextView) itemView.findViewById(R.id.Text);
+            cardView = (CardView) itemView.findViewById(R.id.cardViewCompetition);
+            title = (TextView) itemView.findViewById(R.id.title_comp);
             compImg = (ImageView) itemView.findViewById(R.id.comp_img);
+
 
 
         }
