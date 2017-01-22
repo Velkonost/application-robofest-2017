@@ -3,6 +3,8 @@
           package="ru.velkonost.robofest">
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+
 
     <application
         android:allowBackup="true"
@@ -24,7 +26,9 @@
         <activity android:name=".CompetitionActivity"/>
         <activity android:name=".AboutActivity"/>
 
-        <service android:name="services.AlarmService" />
+        <receiver
+            android:name=".ScheduledReceiver"
+            android:process=":remote"/>
     </application>
 
 </manifest>

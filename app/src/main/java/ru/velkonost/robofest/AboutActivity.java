@@ -15,6 +15,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -24,7 +25,6 @@ import android.widget.Toast;
 import java.util.Calendar;
 
 import adapters.AboutTabsFragmentAdapter;
-import services.AlarmService;
 
 import static managers.Initializations.changeActivityCompat;
 
@@ -78,22 +78,32 @@ public class AboutActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
 
-        Intent myIntent = new Intent(AboutActivity.this,
-                AlarmService.class);
-
-        mPendingIntent = PendingIntent.getService(AboutActivity.this, 0, myIntent, 0);
-
+//        Intent myIntent = new Intent(AboutActivity.this,
+//                AlarmService.class);
+//
+//        mPendingIntent = PendingIntent.getService(AboutActivity.this, 0, myIntent, 0);
+//
         AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
-
+//
         Calendar calendar = Calendar.getInstance();
-        calendar.setTimeInMillis(System.currentTimeMillis());
-        calendar.add(Calendar.SECOND, 10);
+        calendar.set(Calendar.YEAR, 2017);
+        calendar.set(Calendar.MONTH, 1);
+        calendar.set(Calendar.DAY_OF_MONTH, 22);
+        calendar.set(Calendar.HOUR_OF_DAY, 23);
+        calendar.set(Calendar.MINUTE, 5);
+        calendar.set(Calendar.SECOND, 0);
+//
+//
+//        alarmManager.set(AlarmManager.RTC_WAKEUP,
+//                calendar.getTimeInMillis(), mPendingIntent);
+//
+        Log.i(String.valueOf(System.currentTimeMillis()), String.valueOf(calendar.getTimeInMillis()));
 
-        alarmManager.set(AlarmManager.RTC_WAKEUP,
-                calendar.getTimeInMillis(), mPendingIntent);
-
+        Intent intent = new Intent(this, ScheduledReceiver.class);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 0,
+                intent, PendingIntent.FLAG_ONE_SHOT);
+        alarmManager.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + (5*1000), pendingIntent);
         Toast.makeText(AboutActivity.this, "Устанавливаем сигнализацию", Toast.LENGTH_LONG).show();
-
     }
 
 
