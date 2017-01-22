@@ -100,9 +100,9 @@ public class CompetitionAdapter extends RecyclerView.Adapter<CompetitionAdapter.
                         webView.setVisibility(View.VISIBLE);
                         webView.loadUrl(goURL);
                         webView.getSettings().setBuiltInZoomControls(true);
-                        webView.setInitialScale(1);
+                    /*    webView.setInitialScale(1);
                         webView.getSettings().setLoadWithOverviewMode(true);
-                        webView.getSettings().setUseWideViewPort(true);
+                        webView.getSettings().setUseWideViewPort(true);*/
                     }else{
                         webView.setVisibility(View.INVISIBLE);
                         webView.stopLoading();
