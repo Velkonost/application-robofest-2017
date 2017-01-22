@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -54,8 +55,7 @@ public class CompetitionAdapter extends RecyclerView.Adapter<CompetitionAdapter.
         CardView cardView;
         ImageView compImg;
         TextView title;
-        WebView webView;
-        Button showMoreBtn;
+        ImageButton showMoreBtn;
         String goURL = null;
         boolean check = false;
 
@@ -66,10 +66,8 @@ public class CompetitionAdapter extends RecyclerView.Adapter<CompetitionAdapter.
             cardView = (CardView) itemView.findViewById(R.id.cardViewCompetition);
             title = (TextView) itemView.findViewById(R.id.title_comp);
             compImg = (ImageView) itemView.findViewById(R.id.comp_img);
-            webView = (WebView) itemView.findViewById(R.id.showmore_web);
-            showMoreBtn = (Button) itemView.findViewById(R.id.btn_showmore);
+            showMoreBtn = (ImageButton) itemView.findViewById(R.id.btn_showmore);
 
-            webView.getSettings().setJavaScriptEnabled(true);
 
             switch (competitionId) {
                 case 1:
@@ -97,15 +95,7 @@ public class CompetitionAdapter extends RecyclerView.Adapter<CompetitionAdapter.
                 public void onClick(View v) {
                     check=!check;
                     if(check) {
-                        webView.setVisibility(View.VISIBLE);
-                        webView.loadUrl(goURL);
-                        webView.getSettings().setBuiltInZoomControls(true);
-                    /*    webView.setInitialScale(1);
-                        webView.getSettings().setLoadWithOverviewMode(true);
-                        webView.getSettings().setUseWideViewPort(true);*/
                     }else{
-                        webView.setVisibility(View.INVISIBLE);
-                        webView.stopLoading();
                     }
                 }
             };
