@@ -1,7 +1,6 @@
 package adapters;
 
 import android.content.Context;
-import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -47,7 +46,6 @@ public class AboutAdapter extends RecyclerView.Adapter<AboutAdapter.AboutViewHol
 
     public static class AboutViewHolder extends RecyclerView.ViewHolder {
 
-        CardView cardView;
         TextView desc;
         TextView desc2;
 
@@ -55,7 +53,6 @@ public class AboutAdapter extends RecyclerView.Adapter<AboutAdapter.AboutViewHol
         public AboutViewHolder(View itemView) {
             super(itemView);
 
-            cardView = (CardView) itemView.findViewById(R.id.cardView);
             desc = (TextView) itemView.findViewById(R.id.desc);
             desc2 = (TextView) itemView.findViewById(R.id.desc2);
 

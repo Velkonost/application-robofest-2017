@@ -101,9 +101,7 @@ public class AboutFragment extends AbstractTabFragment {
         protected void onPostExecute(String strJson) {
             super.onPostExecute(strJson);
 
-
             List title = doc[0].select("article[class=box post]").select("p");
-
 
             textHistory = TextUtils.join(" ", title.subList(1, 5));
             text = TextUtils.join(" ", title.subList(5, 8));
