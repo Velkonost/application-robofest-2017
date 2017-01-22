@@ -81,16 +81,16 @@ public class CompetitionFragment extends AbstractTabFragment {
 
             switch (competitionId) {
                 case 1:
-                    goURL = "http://robofest.ru/sorevnovaniya/JrFLL/";
+                    goURL = "http://robofest.ru/sorevnovaniya/FLL/";
                     break;
                 case 2:
-                    goURL = "http://www.robofestomsk.ru/o-festivale.html";
+                    goURL = "http://robofest.ru/sorevnovaniya/JrFLL/";
                     break;
                 case 3:
-                    goURL = "http://www.robofestomsk.ru/o-festivale.html";
+                    goURL = "http://robofest.ru/sorevnovaniya/HR/";
                     break;
                 case 4:
-                    goURL = "http://www.robofestomsk.ru/o-festivale.html";
+                    goURL = "http://robofest.ru/sorevnovaniya/JrFLL/";
                     break;
                 default:
 
@@ -114,8 +114,38 @@ public class CompetitionFragment extends AbstractTabFragment {
 
 
             //List title = doc.select("article[class=box post]").select("p");
-            textHistory = doc.select("div.content").text();
-            text = doc.select("div.content").text();
+            //textHistory = doc.select("div.content").text();
+            //text = doc.select("div.content").text();
+
+            List title2 = doc.select("div.content-wrapper").select("div.content").select("p");
+            textHistory = "KLIMENKO DAUN";
+            text = "KLIMENKO DAUN";
+            switch (competitionId) {
+                case 1:
+                    text = TextUtils.join(" ", title2.subList(2, 4));
+                    text+="\n";
+                    text+= TextUtils.join(" ", title2.subList(4, 7));
+                    break;
+                case 2:
+                    text = TextUtils.join(" ", title2.subList(2, 4));
+                    text = "Junior First Lego League (Jr.FLL)\n"+text;
+                    text+="\n";
+                    text+= TextUtils.join(" ", title2.subList(4, 5));
+                    break;
+                case 3:
+                    text = TextUtils.join(" ", title2.subList(1, 3));
+                    text = "HELLO, ROBOT!\n"+text;
+                    text+="\n";
+                    text+= TextUtils.join(" ", title2.subList(4, 5));
+                    break;
+                case 4:
+                    break;
+                default:
+
+                    //   rv.setAdapter(new CompetitionAdapter("HRwrehw;o", getContext()));
+                    break;
+            }
+
 
 
             //textHistory = TextUtils.join(" ", title.subList(1, 5));
@@ -131,7 +161,7 @@ public class CompetitionFragment extends AbstractTabFragment {
 
             RecyclerView rv = (RecyclerView) view.findViewById(R.id.recyclerViewCompetition);
             rv.setLayoutManager(new LinearLayoutManager(context));
-            rv.setAdapter(new CompetitionAdapter(text, getContext()));
+            rv.setAdapter(new CompetitionAdapter(competitionId,text, getContext()));
 
 
 
