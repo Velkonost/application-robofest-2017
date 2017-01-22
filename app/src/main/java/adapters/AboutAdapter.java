@@ -62,6 +62,4 @@ public class AboutAdapter extends RecyclerView.Adapter<AboutAdapter.AboutViewHol
 
         }
     }
-
-
 }

@@ -1,6 +1,7 @@
 package ru.velkonost.robofest;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.design.widget.NavigationView;
@@ -13,6 +14,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import adapters.AboutTabsFragmentAdapter;
 
@@ -72,6 +74,19 @@ public class AboutActivity extends AppCompatActivity
         tabLayout.setupWithViewPager(viewPager);
         tabLayout.setTabMode(TabLayout.MODE_FIXED);
 
+    }
+
+    public void onClickPhoneNumber(View view) {
+        Intent intent = new Intent(Intent.ACTION_DIAL);
+        intent.setData(Uri.parse("tel: 8-800-2222-108"));
+        startActivity(intent);
+    }
+
+
+    public void onClickEmail(View view) {
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse("mailto:"+ "robofestomsk@mail.ru"));
+        startActivity(intent);
     }
 
 

@@ -20,6 +20,7 @@ import java.io.IOException;
 import java.util.List;
 
 import adapters.AboutAdapter;
+import adapters.AboutContactAdapter;
 import ru.velkonost.robofest.R;
 
 public class AboutFragment extends AbstractTabFragment {
@@ -50,19 +51,18 @@ public class AboutFragment extends AbstractTabFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(LAYOUT, container, false);
 
-
-
-
         switch (columnId) {
             case 1:
                 GetHtml getHtml = new GetHtml();
                 getHtml.execute();
                 break;
             case 2:
-//                rv.setAdapter(new AboutAdapter("Jr.FLL", getContext()));
+
                 break;
             case 3:
-//                rv.setAdapter(new AboutAdapter("HR", getContext()));
+                RecyclerView rv = (RecyclerView) view.findViewById(R.id.recyclerViewAbout);
+                rv.setLayoutManager(new LinearLayoutManager(context));
+                rv.setAdapter(new AboutContactAdapter());
                 break;
             default:
 
@@ -76,23 +76,19 @@ public class AboutFragment extends AbstractTabFragment {
     public void setContext(Context context) {
         this.context = context;
     }
-    public void setColumnId(int columnId) { this.columnId = columnId; }
+    public void setColumnId(int columnId) {
+        this.columnId = columnId;
+    }
 
     private class GetHtml extends AsyncTask<Object, Object, String> {
         @Override
         protected String doInBackground(Object... strings) {
 
-            /**
-             * Формирование адреса, по которому необходимо обратиться.
-             **/
-            String dataURL = "http://developer.alexanderklimov.ru/android/";
+            String dataURL = "http://www.robofestomsk.ru/o-festivale.html";
 
-            /**
-             * Формирование отправных данных.
-             */
 
             try {
-                doc[0] = Jsoup.connect("http://www.robofestomsk.ru/o-festivale.html").get();
+                doc[0] = Jsoup.connect(dataURL).get();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -120,10 +116,6 @@ public class AboutFragment extends AbstractTabFragment {
             RecyclerView rv = (RecyclerView) view.findViewById(R.id.recyclerViewAbout);
             rv.setLayoutManager(new LinearLayoutManager(context));
             rv.setAdapter(new AboutAdapter(textHistory, text, getContext()));
-
-
-
-
         }
     }
 }
