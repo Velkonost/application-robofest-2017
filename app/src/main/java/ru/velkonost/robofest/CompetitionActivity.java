@@ -128,5 +128,4 @@ public class CompetitionActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-    //ТЫ ОХУЕЛ БЛЯТЬ?
 }
