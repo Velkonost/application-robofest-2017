@@ -38,7 +38,7 @@
                 android:id="@+id/title_comp"
                 android:text="31231"
                 android:textAlignment="center"
-                android:textSize="20sp"
+                android:textSize="14sp"
                 android:gravity="center"
                 android:visibility="visible"/>
 

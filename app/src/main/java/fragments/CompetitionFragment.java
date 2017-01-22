@@ -32,7 +32,7 @@ public class CompetitionFragment extends AbstractTabFragment {
     private String text;
 
 
-    private Document[] doc = {null};
+    private Document doc = null;
 
 
     public static CompetitionFragment getInstance(Context context, int competitionId, String title) {
@@ -81,7 +81,7 @@ public class CompetitionFragment extends AbstractTabFragment {
 
             switch (competitionId) {
                 case 1:
-                    goURL = "http://www.robofestomsk.ru/o-festivale.html";
+                    goURL = "http://robofest.ru/sorevnovaniya/JrFLL/";
                     break;
                 case 2:
                     goURL = "http://www.robofestomsk.ru/o-festivale.html";
@@ -102,7 +102,7 @@ public class CompetitionFragment extends AbstractTabFragment {
              */
 
             try {
-                doc[0] = Jsoup.connect(goURL).get();
+                doc = Jsoup.connect(goURL).get();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -113,11 +113,13 @@ public class CompetitionFragment extends AbstractTabFragment {
             super.onPostExecute(strJson);
 
 
-            List title = doc[0].select("article[class=box post]").select("p");
+            //List title = doc.select("article[class=box post]").select("p");
+            textHistory = doc.select("div.content").text();
+            text = doc.select("div.content").text();
 
 
-            textHistory = TextUtils.join(" ", title.subList(1, 5));
-            text = TextUtils.join(" ", title.subList(5, 8));
+            //textHistory = TextUtils.join(" ", title.subList(1, 5));
+            //text = TextUtils.join(" ", title.subList(1, 8));
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
                 textHistory = String.valueOf(Html.fromHtml(textHistory, Html.FROM_HTML_MODE_LEGACY));
