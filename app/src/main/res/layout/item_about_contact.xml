@@ -49,7 +49,9 @@
                 android:layout_height="1dp"
                 android:background="@color/colorBlack"
                 android:id="@+id/line"
-                android:layout_below="@id/rlPhone"/>
+                android:layout_below="@id/rlPhone"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"

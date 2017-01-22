@@ -21,6 +21,7 @@ import java.util.List;
 
 import adapters.AboutAdapter;
 import adapters.AboutContactAdapter;
+import adapters.AboutOrganizersAdapter;
 import ru.velkonost.robofest.R;
 
 public class AboutFragment extends AbstractTabFragment {
@@ -57,12 +58,14 @@ public class AboutFragment extends AbstractTabFragment {
                 getHtml.execute();
                 break;
             case 2:
-
+                RecyclerView rv1 = (RecyclerView) view.findViewById(R.id.recyclerViewAbout);
+                rv1.setLayoutManager(new LinearLayoutManager(context));
+                rv1.setAdapter(new AboutOrganizersAdapter());
                 break;
             case 3:
-                RecyclerView rv = (RecyclerView) view.findViewById(R.id.recyclerViewAbout);
-                rv.setLayoutManager(new LinearLayoutManager(context));
-                rv.setAdapter(new AboutContactAdapter());
+                RecyclerView rv2 = (RecyclerView) view.findViewById(R.id.recyclerViewAbout);
+                rv2.setLayoutManager(new LinearLayoutManager(context));
+                rv2.setAdapter(new AboutContactAdapter());
                 break;
             default:
 
