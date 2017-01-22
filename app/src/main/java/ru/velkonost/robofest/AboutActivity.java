@@ -1,5 +1,8 @@
 package ru.velkonost.robofest;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -15,8 +18,13 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TimePicker;
+import android.widget.Toast;
+
+import java.util.Calendar;
 
 import adapters.AboutTabsFragmentAdapter;
+import services.AlarmService;
 
 import static managers.Initializations.changeActivityCompat;
 
@@ -25,6 +33,30 @@ public class AboutActivity extends AppCompatActivity
 
     private ViewPager viewPager;
 
+
+    // Слушатель выбора времени
+    TimePickerDialog.OnTimeSetListener onTimeSetListener = new TimePickerDialog.OnTimeSetListener() {
+
+        @Override
+        public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+
+            Calendar calNow = Calendar.getInstance();
+            Calendar calendar = (Calendar) calNow.clone();
+
+            calendar.set(Calendar.YEAR, 2016);
+            calendar.set(Calendar.MONTH, 1);
+            calendar.set(Calendar.DAY_OF_MONTH, 22);
+            calendar.set(Calendar.HOUR_OF_DAY, 22);
+            calendar.set(Calendar.MINUTE, 30);
+            calendar.set(Calendar.SECOND, 0);
+
+
+
+//            setAlarm(calendar);
+        }
+    };
+
+    private PendingIntent mPendingIntent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +77,22 @@ public class AboutActivity extends AppCompatActivity
         final NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+
+        Intent myIntent = new Intent(AboutActivity.this,
+                AlarmService.class);
+
+        mPendingIntent = PendingIntent.getService(AboutActivity.this, 0, myIntent, 0);
+
+        AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTimeInMillis(System.currentTimeMillis());
+        calendar.add(Calendar.SECOND, 10);
+
+        alarmManager.set(AlarmManager.RTC_WAKEUP,
+                calendar.getTimeInMillis(), mPendingIntent);
+
+        Toast.makeText(AboutActivity.this, "Устанавливаем сигнализацию", Toast.LENGTH_LONG).show();
 
     }
 
