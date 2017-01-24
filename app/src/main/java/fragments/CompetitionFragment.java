@@ -15,6 +15,8 @@ import android.view.ViewGroup;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 
 import java.io.IOException;
 import java.util.List;
@@ -32,7 +34,7 @@ public class CompetitionFragment extends AbstractTabFragment {
     private String text;
 
 
-    private Document doc = null;
+    private Document doc = null, doc2 = null;
 
 
     public static CompetitionFragment getInstance(Context context, int competitionId, String title) {
@@ -103,6 +105,7 @@ public class CompetitionFragment extends AbstractTabFragment {
 
             try {
                 doc = Jsoup.connect(goURL).get();
+                doc2 = Jsoup.connect(goURL).get();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -122,21 +125,46 @@ public class CompetitionFragment extends AbstractTabFragment {
             text = "KLIMENKO DAUN";
             switch (competitionId) {
                 case 1:
-                    text = TextUtils.join(" ", title2.subList(2, 4));
+                    text = TextUtils.join(" ", title2.subList(5, 7));
                     text+="\n";
-                    text+= TextUtils.join(" ", title2.subList(4, 7));
+                    text = "First Lego League (FLL)\n"+text+"\n"+"Ссылки: "+"\n";
+                    text+="\nИнформация взята отсюда: \nhttp://robofest.ru/sorevnovaniya/FLL/";
+                 /*   Elements links = doc2.select("div.content-wrapper")
+                            .select("div.content")
+                            .select("div.two-cell")
+                            .select("a");
+                    for (Element link : links) {
+                        // myList.add(link.text());
+                        // linksList.add(link.attr("href"));
+                        text+=(link.text() + ":"+ "\n" + link.attr("href") + "\n");
+                    }
+                    // text+= TextUtils.join(" ", title2.subList(4, 7));*/
                     break;
                 case 2:
-                    text = TextUtils.join(" ", title2.subList(2, 4));
+                    text = TextUtils.join(" ", title2.subList(2, 5));
                     text = "Junior First Lego League (Jr.FLL)\n"+text;
                     text+="\n";
-                    text+= TextUtils.join(" ", title2.subList(4, 5));
+                    text+= TextUtils.join(" ", title2.subList(7, 7));
+                    text+="\nИнформация взята отсюда: \nhttp://robofest.ru/sorevnovaniya/JrFLL/";
                     break;
                 case 3:
                     text = TextUtils.join(" ", title2.subList(1, 3));
                     text = "HELLO, ROBOT!\n"+text;
                     text+="\n";
-                    text+= TextUtils.join(" ", title2.subList(4, 5));
+                    text+= TextUtils.join(" ", title2.subList(3, 8));
+                    text+="\n";
+                    text+= TextUtils.join(" ", title2.subList(5, 8));
+                    text+="\nИнформация взята отсюда: \nhttp://robofest.ru/sorevnovaniya/HR/";
+
+               /*     text+="Ссылки: "+"\n";
+                    Elements links2 = doc2.select("div.content-wrapper")
+                            .select("div.content")
+                            .select("a");
+                    for (Element link : links2) {
+                        // myList.add(link.text());
+                        // linksList.add(link.attr("href"));
+                        text+=(link.text() + ":"+ "\n" + link.attr("href") + "\n");
+                    }*/
                     break;
                 case 4:
                     break;

@@ -24,6 +24,7 @@ public class CompetitionAdapter extends RecyclerView.Adapter<CompetitionAdapter.
     private Context mContext;
     private String text;
     private ImageView compImg;
+    public static String text2;
     private static int competitionId;
 
     public CompetitionAdapter(int competitionId, String title, Context mContext) {
@@ -41,8 +42,9 @@ public class CompetitionAdapter extends RecyclerView.Adapter<CompetitionAdapter.
 
     @Override
     public void onBindViewHolder(CompetitionViewHolder holder, int position) {
+        //holder.title.setText(text);
         holder.title.setText(text);
-  //      holder.title.setVisibility(View.VISIBLE);
+        holder.title.setTextSize(0);
     }
 
     @Override
@@ -54,8 +56,8 @@ public class CompetitionAdapter extends RecyclerView.Adapter<CompetitionAdapter.
 
         CardView cardView;
         ImageView compImg;
-        TextView title;
-        ImageButton showMoreBtn;
+        TextView title, ageTxt, teamTxt, robotTxt, langProgTxt, langProgTxtName;
+        Button showMoreBtn;
         String goURL = null;
         boolean check = false;
 
@@ -63,22 +65,41 @@ public class CompetitionAdapter extends RecyclerView.Adapter<CompetitionAdapter.
         public CompetitionViewHolder(View itemView) {
             super(itemView);
 
+            ageTxt = (TextView) itemView.findViewById(R.id.text_age);
+            teamTxt = (TextView) itemView.findViewById(R.id.text_team);
+            robotTxt = (TextView) itemView.findViewById(R.id.text_robot);
+            langProgTxt = (TextView) itemView.findViewById(R.id.text_langProg);
+            langProgTxtName = (TextView) itemView.findViewById(R.id.text_langProg_name);
+
             cardView = (CardView) itemView.findViewById(R.id.cardViewCompetition);
             title = (TextView) itemView.findViewById(R.id.title_comp);
             compImg = (ImageView) itemView.findViewById(R.id.comp_img);
-            showMoreBtn = (ImageButton) itemView.findViewById(R.id.btn_showmore);
+            showMoreBtn = (Button) itemView.findViewById(R.id.btn_showmore);
 
 
             switch (competitionId) {
                 case 1:
+                    ageTxt.setText(R.string.fll_age);
+                    teamTxt.setText(R.string.fll_team);
+                    robotTxt.setText(R.string.fll_robot);
+                    langProgTxt.setText(R.string.fll_langProg);
                     goURL = "http://robofest.ru/sorevnovaniya/FLL/";
                     compImg.setImageResource(R.drawable.fll);
                     break;
                 case 2:
+                    ageTxt.setText(R.string.jrfll_age);
+                    teamTxt.setText(R.string.jrfll_team);
+                    robotTxt.setText(R.string.jrfll_robot);
+                    langProgTxtName.setVisibility(View.INVISIBLE);
+                    langProgTxt.setVisibility(View.INVISIBLE);
                     goURL = "http://robofest.ru/sorevnovaniya/JrFLL/";
                     compImg.setImageResource(R.drawable.jrfll);
                     break;
                 case 3:
+                    ageTxt.setText(R.string.hr_age);
+                    teamTxt.setText(R.string.hr_team);
+                    robotTxt.setText(R.string.hr_robot);
+                    langProgTxt.setText(R.string.hr_langProg);
                     goURL = "http://robofest.ru/sorevnovaniya/HR/";
                     compImg.setImageResource(R.drawable.hr);
                     break;
@@ -95,7 +116,13 @@ public class CompetitionAdapter extends RecyclerView.Adapter<CompetitionAdapter.
                 public void onClick(View v) {
                     check=!check;
                     if(check) {
+                        title.setVisibility(View.VISIBLE);
+                        title.setTextSize(14);
+                //        title.setText(text2);
                     }else{
+                        title.setVisibility(View.INVISIBLE);
+                        title.setTextSize(0);
+                //        title.setText("");
                     }
                 }
             };

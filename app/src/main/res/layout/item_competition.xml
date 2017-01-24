@@ -45,26 +45,104 @@
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
-
-
-                        <TextView
+                        <LinearLayout
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:id="@+id/linearlayout">
+                            <TextView
+                                android:textSize="12sp"
+                                android:text="Возраст"
+                                android:textColor="@color/colorGrey2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:layout_marginLeft="6dp"
+                                android:textColor="@color/colorBlack"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/title_comp"
-                                android:text=""
-                                android:textAlignment="center"
                                 android:textSize="14sp"
-                                android:gravity="center"
-                                android:visibility="visible"
-                                android:layout_alignParentStart="true" />
-                        <ImageButton
-                            android:layout_below="@id/title_comp"
+                                android:id="@+id/text_age"/>
+                            <TextView
+                                android:textSize="12sp"
+                                android:text="Команда"
+                                android:textColor="@color/colorGrey2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:layout_marginLeft="6dp"
+                                android:textColor="@color/colorBlack"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:id="@+id/text_team"/>
+                            <TextView
+                                android:textSize="12sp"
+                                android:text="Робот"
+                                android:textColor="@color/colorGrey2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:layout_marginLeft="6dp"
+                                android:textColor="@color/colorBlack"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:id="@+id/text_robot"/>
+                            <TextView
+                                android:textColor="@color/colorGrey2"
+                                android:textSize="12sp"
+                                android:text="Язык программирования"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/text_langProg_name"/>
+                            <TextView
+                                android:layout_marginLeft="6dp"
+                                android:textColor="@color/colorBlack"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:id="@+id/text_langProg"/>
+
+                        </LinearLayout>
+
+                        <Button
+                            android:layout_below="@id/linearlayout"
                             android:layout_width="100sp"
                             android:layout_height="25sp"
-                            android:layout_marginLeft="250sp"
+                            android:layout_marginLeft="200sp"
                             android:id="@+id/btn_showmore"
+                            android:textSize="14dp"
+                            android:text="Подробнее"
                             android:background="@drawable/bg"
-                            android:src="@drawable/btn_showmore"/>
+                            />
+                        <LinearLayout
+                            android:layout_width="15sp"
+                            android:layout_height="25sp"
+                            android:layout_alignTop="@+id/btn_showmore"
+                            android:layout_toEndOf="@+id/btn_showmore"
+                            android:layout_above="@+id/title_comp" >
+                            <ImageView
+                                android:layout_width="15sp"
+                                android:layout_height="20sp"
+                                android:src="@drawable/icon_btn_showmore"
+                                android:scaleType="fitXY"/>
+                        </LinearLayout>
+                        <TextView
+                            android:layout_below="@id/btn_showmore"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/title_comp"
+                            android:text=""
+                            android:autoLink="web"
+                            android:linksClickable="true"
+                            android:lineSpacingMultiplier="1"
+                            android:gravity="center"
+                            android:textSize="14sp"
+                            android:visibility="invisible"
+                            android:layout_alignParentStart="true" />
                     </RelativeLayout>
                 </android.support.v7.widget.CardView>
         </LinearLayout>
