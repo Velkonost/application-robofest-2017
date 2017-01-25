@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/popup">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/popup_button_left"
+            android:textColor="@color/colorWhite"
+            android:id="@+id/btn1Popup"
+            android:text="1"/>
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/popup_button_center"
+            android:id="@+id/btn2Popup"
+            android:text="2"/>
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/popup_button_center"
+            android:id="@+id/btn3Popup"
+            android:text="3"/>
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/popup_button_center"
+            android:id="@+id/btn4Popup"
+            android:text="4"/>
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/popup_button_right"
+            android:id="@+id/btn5Popup"
+            android:text="5"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/area_name"
+        android:padding="10dp"
+        android:textAlignment="center"/>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:scrollbars="none">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rlDayDesc">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/day_one_time_zero"
+            android:padding="10dp"
+            android:id="@+id/textInvisibleStart"
+            android:visibility="invisible"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/onePopup"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/day_one_time_first"
+                android:textColor="@color/colorWhite"
+                android:id="@+id/firstTimePopup"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/day_one_desc_first"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/colorWhite"
+                android:id="@+id/firstMeasurePopup"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/twoPopup"
+            android:layout_below="@id/onePopup"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/day_one_time_second"
+                android:textColor="@color/colorWhite"
+                android:id="@+id/secondTimePopup"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/day_one_desc_second"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/colorWhite"
+                android:id="@+id/secondMeasurePopup"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/threePopup"
+            android:layout_below="@id/twoPopup"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/day_one_time_third"
+                android:textColor="@color/colorWhite"
+                android:id="@+id/thirdTimePopup"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/day_one_desc_third"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/colorWhite"
+                android:id="@+id/thirdMeasurePopup"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/fourPopup"
+            android:layout_below="@id/threePopup"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/day_one_time_forth"
+                android:textColor="@color/colorWhite"
+                android:id="@+id/forthTimePopup"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/day_one_desc_forth"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/colorWhite"
+                android:id="@+id/forthMeasurePopup"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/fivePopup"
+            android:layout_below="@id/fourPopup"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/day_one_time_fifth"
+                android:textColor="@color/colorWhite"
+                android:id="@+id/fifthTimePopup"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/day_one_desc_fifth"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/colorWhite"
+                android:id="@+id/fifthMeasurePopup"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/sixPopup"
+            android:layout_below="@id/fivePopup"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/day_one_time_fifth"
+                android:textColor="@color/colorWhite"
+                android:id="@+id/sixthTimePopup"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/day_one_desc_fifth"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/colorWhite"
+                android:id="@+id/sixthMeasurePopup"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/sevenPopup"
+            android:layout_below="@id/sixPopup"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/day_one_time_fifth"
+                android:textColor="@color/colorWhite"
+                android:id="@+id/seventhTimePopup"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/day_one_desc_fifth"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/colorWhite"
+                android:id="@+id/seventhMeasurePopup"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:background="@color/colorWhite"
+            android:layout_toEndOf="@id/textInvisibleStart"
+            android:layout_alignTop="@id/onePopup"
+            android:layout_alignBottom="@id/sevenPopup"
+            android:id="@+id/blackLine"
+            android:layout_marginTop="3dp"/>
+    </RelativeLayout>
+
+
+    </ScrollView>
+</LinearLayout>

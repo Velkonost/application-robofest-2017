@@ -222,13 +222,27 @@
                 <View
                     android:layout_width="1dp"
                     android:layout_height="0dp"
-                    android:background="#000"
+                    android:background="@color/colorWhite"
                     android:layout_toEndOf="@id/textInvisibleStart"
                     android:layout_alignTop="@id/one"
                     android:layout_alignBottom="@id/five"
                     android:id="@+id/blackLine"
-                    android:layout_marginTop="3dp"
-                    android:layout_marginBottom="3dp"/>
+                    android:layout_marginTop="3dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/five"
+                    android:textColor="@color/colorWhite"
+                    android:textAlignment="center"
+                    android:layout_alignParentBottom="true"
+                    android:padding="20dp"
+                    android:textSize="16sp"
+                    android:text="Работа тематических площадок"
+                    android:onClick="showSubjectAreas"/>
+
+
+
 
             </RelativeLayout>
 

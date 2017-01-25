@@ -2,6 +2,8 @@ package ru.velkonost.robofest;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Point;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.design.widget.NavigationView;
@@ -11,14 +13,20 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.TypedValue;
+import android.view.Display;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
 import static managers.Initializations.changeActivityCompat;
 
 public class MainActivity extends AppCompatActivity
@@ -36,6 +44,7 @@ public class MainActivity extends AppCompatActivity
     private TextView fifthTime, fifthMeasure;
 
     private ImageView imageMap;
+    private int day;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -108,6 +117,8 @@ public class MainActivity extends AppCompatActivity
                 btnDay2.setBackground(ContextCompat.getDrawable(MainActivity.this,
                         R.drawable.main_activity_button_right));
 
+                day = 1;
+
             }
         });
 
@@ -133,6 +144,8 @@ public class MainActivity extends AppCompatActivity
                         R.drawable.main_activity_button_left));
                 btnDay2.setBackground(ContextCompat.getDrawable(MainActivity.this,
                         R.drawable.main_activity_button_right_pressed));
+
+                day = 2;
             }
         });
     }
@@ -152,6 +165,70 @@ public class MainActivity extends AppCompatActivity
         // Inflate the menu; this adds items to the action bar if it is present.
 //        getMenuInflater().inflate(R.menu.main, menu);
         return true;
+    }
+
+    public void showSubjectAreas(View view) {
+        final View popupView;
+        final PopupWindow popupWindow;
+
+        Display display = getWindowManager().getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+        int width = size.x;
+        int height = size.y;
+
+        LayoutInflater layoutInflater = (LayoutInflater) getBaseContext()
+                .getSystemService(LAYOUT_INFLATER_SERVICE);
+
+        popupView = layoutInflater.inflate(R.layout.popup_subject_areas, null);
+
+        popupWindow = new PopupWindow(popupView,
+                WRAP_CONTENT, height - dp2px(120));
+
+
+//        recyclerView = (RecyclerView) popupView
+//                .findViewById(R.id.recyclerViewBoardInvite);
+
+
+        Button btn1, btn2, btn3, btn4, btn5;
+        TextView areaName;
+        TextView fisrtTimePopup, secondTimePopup, thirdTimePopup, forthTimePopup, fifthTimePopup,
+                sixthTimePopup, seventhTimePopup;
+
+        btn1 = (Button) popupView.findViewById(R.id.btn1Popup);
+        btn2 = (Button) popupView.findViewById(R.id.btn2Popup);
+        btn3 = (Button) popupView.findViewById(R.id.btn3Popup);
+        btn4 = (Button) popupView.findViewById(R.id.btn4Popup);
+        btn5 = (Button) popupView.findViewById(R.id.btn5Popup);
+
+        areaName = (TextView) popupView.findViewById(R.id.area_name);
+
+//        fisrtTimePopup = (TextView) popupView.findViewById(R.id.firstTimePopup);
+//        secondTimePopup = (TextView) popupView.findViewById(R.id)
+
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                popupWindow.dismiss();
+            }
+        });
+
+
+
+
+        popupWindow.setTouchable(true);
+        popupWindow.setFocusable(true);
+        popupWindow.setBackgroundDrawable(new ColorDrawable(getResources()
+                .getColor(android.R.color.transparent)));
+        popupWindow.setOutsideTouchable(true);
+
+        popupWindow.showAtLocation(popupView, Gravity.BOTTOM, 0, 0);
+
+    }
+
+    private int dp2px(int dp) {
+        return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp,
+                MainActivity.this.getResources().getDisplayMetrics());
     }
 
     @Override
