@@ -50,4 +50,136 @@
     <string name="jrfll_langProg"></string>
     <string name="hr_langProg">LEGO MINDSTORMS+ EV3, RoboLab, или NXT-G</string>
     <string name="fs_langProg">--</string>
+
+
+    <string name="area_name_1">Выставочный павильон, открытая площадка No1</string>
+    <string name="area_name_2">Выставочный павильон, открытая площадка No2</string>
+    <string name="area_name_3">Выставочный павильон, открытая площадка No3</string>
+    <string name="area_name_4">Выставочный павильон, амфитеатр</string>
+    <string name="area_name_5">Лекторий. Выставочный павильон, конференц-зал</string>
+
+    <string name="day1_btn1_first">11.00–11.15  </string>
+    <string name="day1_btn1_second">11.15–12.00  </string>
+    <string name="day1_btn1_third">12.15–13.00  </string>
+    <string name="day1_btn1_forth">13.00–13.40  </string>
+    <string name="day1_btn1_fifth">14.00–14.40  </string>
+    <string name="day1_btn1_sixth">15.00–15.40  </string>
+    <string name="day1_btn1_seventh">16.00–16.40  </string>
+
+    <string name="day1_btn2_first">11.00–11.15  </string>
+    <string name="day1_btn2_second">11.15–12.00  </string>
+    <string name="day1_btn2_third">12.15–13.00  </string>
+    <string name="day1_btn2_forth">13.00–13.40  </string>
+    <string name="day1_btn2_fifth">14.00–14.40  </string>
+    <string name="day1_btn2_sixth">15.00–15.40  </string>
+    <string name="day1_btn2_seventh">16.00–16.40  </string>
+
+    <string name="day1_btn3_first">11.00–11.15  </string>
+    <string name="day1_btn3_second">11.15–12.00  </string>
+    <string name="day1_btn3_third">12.15–13.00  </string>
+    <string name="day1_btn3_forth">13.00–13.40  </string>
+    <string name="day1_btn3_fifth">14.00–14.40  </string>
+    <string name="day1_btn3_sixth">15.00–15.40  </string>
+    <string name="day1_btn3_seventh">16.00–16.40  </string>
+
+    <string name="day1_btn4_first">11.00–11.15  </string>
+    <string name="day1_btn4_second">11.15–12.00  </string>
+    <string name="day1_btn4_third">12.15–13.00  </string>
+    <string name="day1_btn4_forth">13.00–13.40  </string>
+    <string name="day1_btn4_fifth">14.00–14.40  </string>
+    <string name="day1_btn4_sixth">15.00–15.40  </string>
+    <string name="day1_btn4_seventh">16.00–16.40  </string>
+
+    <string name="day1_btn5_first">10.00–10.40  </string>
+    <string name="day1_btn5_second">11.15–12.00  </string>
+    <string name="day1_btn5_third">12.15–13.00  </string>
+    <string name="day1_btn5_forth">13.00–13.40  </string>
+    <string name="day1_btn5_fifth">14.00–14.40  </string>
+    <string name="day1_btn5_sixth">15.00–15.40  </string>
+    <string name="day1_btn5_seventh">16.00–16.40  </string>
+
+
+
+    <string name="day2_btn1_first">10.00–10.40  </string>
+    <string name="day2_btn1_second">11.00–11.40  </string>
+    <string name="day2_btn1_third">12.00–12.40  </string>
+    <string name="day2_btn1_forth">13.00–13.40  </string>
+    <string name="day2_btn1_fifth">14.00–14.40  </string>
+    <string name="day2_btn1_sixth">15.00–15.40  </string>
+    <string name="day2_btn1_seventh">16.00–16.40  </string>
+
+    <string name="day2_btn2_first">10.00–10.45  </string>
+    <string name="day2_btn2_second">11.00–11.45  </string>
+    <string name="day2_btn2_third">12.00–12.45  </string>
+    <string name="day2_btn2_forth">13.00–13.45  </string>
+    <string name="day2_btn2_fifth">14.00–14.45  </string>
+    <string name="day2_btn2_sixth">15.00–15.45  </string>
+    <string name="day2_btn2_seventh"></string>
+
+    <string name="day2_btn3_first">10.00–10.45  </string>
+    <string name="day2_btn3_second">11.00–11.45  </string>
+    <string name="day2_btn3_third">12.00–12.45  </string>
+    <string name="day2_btn3_forth">13.00-13.45  </string>
+    <string name="day2_btn3_fifth">14.00–14.45  </string>
+    <string name="day2_btn3_sixth">15.00–15.45  </string>
+    <string name="day2_btn3_seventh"></string>
+
+    <string name="day2_btn4_first">10.00–10.45  </string>
+    <string name="day2_btn4_second">11.00–11.45  </string>
+    <string name="day2_btn4_third">12.00–12.45  </string>
+    <string name="day2_btn4_forth">13.00–13.45  </string>
+    <string name="day2_btn4_fifth">14.00–14.45  </string>
+    <string name="day2_btn4_sixth">15.00–15.45  </string>
+    <string name="day2_btn4_seventh"></string>
+
+    <string name="day2_btn5_first">10.00–10.40  </string>
+    <string name="day2_btn5_second">11.00–11.40  </string>
+    <string name="day2_btn5_third">12.00–12.40  </string>
+    <string name="day2_btn5_forth">13.00–13.40  </string>
+    <string name="day2_btn5_fifth">14.00–14.40  </string>
+    <string name="day2_btn5_sixth">15.00–15.40  </string>
+    <string name="day2_btn5_seventh"></string>
+
+
+
+    <string name="day1_btn1_first_desc">d</string>
+    <string name="day1_btn1_second_desc">11.15–12.00  </string>
+    <string name="day1_btn1_third_desc">12.15–13.00  </string>
+    <string name="day1_btn1_forth_desc">13.00–13.40  </string>
+    <string name="day1_btn1_fifth_desc">14.00–14.40  </string>
+    <string name="day1_btn1_sixth_desc">15.00–15.40  </string>
+    <string name="day1_btn1_seventh_desc">16.00–16.40  </string>
+
+    <string name="day1_btn2_first_desc">11.00–11.15  </string>
+    <string name="day1_btn2_second_desc">11.15–12.00  </string>
+    <string name="day1_btn2_third_desc">12.15–13.00  </string>
+    <string name="day1_btn2_forth_desc">13.00–13.40  </string>
+    <string name="day1_btn2_fifth_desc">14.00–14.40  </string>
+    <string name="day1_btn2_sixth_desc">15.00–15.40  </string>
+    <string name="day1_btn2_seventh_desc">16.00–16.40  </string>
+
+    <string name="day1_btn3_first_desc">11.00–11.15  </string>
+    <string name="day1_btn3_second_desc">11.15–12.00  </string>
+    <string name="day1_btn3_third_desc">12.15–13.00  </string>
+    <string name="day1_btn3_forth_desc">13.00–13.40  </string>
+    <string name="day1_btn3_fifth_desc">14.00–14.40  </string>
+    <string name="day1_btn3_sixth_desc">15.00–15.40  </string>
+    <string name="day1_btn3_seventh_desc">16.00–16.40  </string>
+
+    <string name="day1_btn4_first_desc">11.00–11.15  </string>
+    <string name="day1_btn4_second_desc">11.15–12.00  </string>
+    <string name="day1_btn4_third_desc">12.15–13.00  </string>
+    <string name="day1_btn4_forth_desc">13.00–13.40  </string>
+    <string name="day1_btn4_fifth_desc">14.00–14.40  </string>
+    <string name="day1_btn4_sixth_desc">15.00–15.40  </string>
+    <string name="day1_btn4_seventh_desc">16.00–16.40  </string>
+
+    <string name="day1_btn5_first_desc">10.00–10.40  </string>
+    <string name="day1_btn5_second_desc">11.15–12.00  </string>
+    <string name="day1_btn5_third_desc">12.15–13.00  </string>
+    <string name="day1_btn5_forth_desc">13.00–13.40  </string>
+    <string name="day1_btn5_fifth_desc">14.00–14.40  </string>
+    <string name="day1_btn5_sixth_desc">15.00–15.40  </string>
+    <string name="day1_btn5_seventh_desc">16.00–16.40  </string>
+
 </resources>

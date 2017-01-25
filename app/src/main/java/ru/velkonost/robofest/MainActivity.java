@@ -191,9 +191,12 @@ public class MainActivity extends AppCompatActivity
 
 
         Button btn1, btn2, btn3, btn4, btn5;
-        TextView areaName;
-        TextView fisrtTimePopup, secondTimePopup, thirdTimePopup, forthTimePopup, fifthTimePopup,
+        final TextView areaName;
+        final TextView firstTimePopup, secondTimePopup, thirdTimePopup, forthTimePopup, fifthTimePopup,
                 sixthTimePopup, seventhTimePopup;
+
+        TextView firstMeasurePopup, secondMeasurePopup, thirdMeasurePopup, forthMeasurePopup,
+                fifthMeasurePopup, sixthMeasurePopup, seventhMeasurePopup;
 
         btn1 = (Button) popupView.findViewById(R.id.btn1Popup);
         btn2 = (Button) popupView.findViewById(R.id.btn2Popup);
@@ -203,13 +206,37 @@ public class MainActivity extends AppCompatActivity
 
         areaName = (TextView) popupView.findViewById(R.id.area_name);
 
-//        fisrtTimePopup = (TextView) popupView.findViewById(R.id.firstTimePopup);
-//        secondTimePopup = (TextView) popupView.findViewById(R.id)
+        firstTimePopup = (TextView) popupView.findViewById(R.id.firstTimePopup);
+        secondTimePopup = (TextView) popupView.findViewById(R.id.secondTimePopup);
+        thirdTimePopup = (TextView) popupView.findViewById(R.id.thirdTimePopup);
+        forthTimePopup = (TextView) popupView.findViewById(R.id.forthTimePopup);
+        fifthTimePopup = (TextView) popupView.findViewById(R.id.fifthTimePopup);
+        sixthTimePopup = (TextView) popupView.findViewById(R.id.sixthTimePopup);
+        seventhTimePopup = (TextView) popupView.findViewById(R.id.seventhTimePopup);
+
+        firstMeasurePopup = (TextView) popupView.findViewById(R.id.firstMeasurePopup);
+        secondMeasurePopup = (TextView) popupView.findViewById(R.id.secondMeasurePopup);
+        thirdMeasurePopup = (TextView) popupView.findViewById(R.id.thirdMeasurePopup);
+        forthMeasurePopup = (TextView) popupView.findViewById(R.id.forthMeasurePopup);
+        fifthMeasurePopup = (TextView) popupView.findViewById(R.id.fifthMeasurePopup);
+        sixthMeasurePopup = (TextView) popupView.findViewById(R.id.sixthMeasurePopup);
+        seventhMeasurePopup = (TextView) popupView.findViewById(R.id.seventhMeasurePopup);
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                popupWindow.dismiss();
+                areaName.setText(R.string.area_name_1);
+
+                if (day == 1) {
+
+                    firstTimePopup.setText(R.string.day1_btn1_first + "     ");
+                    secondTimePopup.setText(R.string.day1_btn1_second + "     ");
+                    thirdTimePopup.setText(R.string.day1_btn1_third + "     ");
+                    forthTimePopup.setText(R.string.day1_btn1_forth + "     ");
+                    fifthTimePopup.setText(R.string.day1_btn1_fifth + "     ");
+                    sixthTimePopup.setText(R.string.day1_btn1_sixth + "     ");
+                    seventhTimePopup.setText(R.string.day1_btn1_seventh + "     ");
+                }
             }
         });
 
