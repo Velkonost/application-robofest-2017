@@ -76,6 +76,7 @@ public class AboutActivity extends AppCompatActivity
 
         final NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        navigationView.getMenu().getItem(3).setChecked(true);
 
 
 //        Intent myIntent = new Intent(AboutActivity.this,
