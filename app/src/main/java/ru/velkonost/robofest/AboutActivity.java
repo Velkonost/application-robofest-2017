@@ -92,11 +92,11 @@ public class AboutActivity extends AppCompatActivity
         calendar.set(Calendar.HOUR_OF_DAY, 23);
         calendar.set(Calendar.MINUTE, 5);
         calendar.set(Calendar.SECOND, 0);
-//
-//
+
+
 //        alarmManager.set(AlarmManager.RTC_WAKEUP,
 //                calendar.getTimeInMillis(), mPendingIntent);
-//
+
         Log.i(String.valueOf(System.currentTimeMillis()), String.valueOf(calendar.getTimeInMillis()));
 
         Intent intent = new Intent(this, ScheduledReceiver.class);

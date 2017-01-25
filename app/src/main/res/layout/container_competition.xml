@@ -21,7 +21,7 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="?attr/colorPrimary"
+                android:background="#03A9F4"
                 app:popupTheme="@style/AppTheme.PopupOverlay"/>
             <android.support.design.widget.TabLayout
                 android:id="@+id/tabLayout"
@@ -30,6 +30,7 @@
                 android:layout_marginTop="?attr/actionBarSize"
                 app:tabIndicatorColor="@android:color/white"
                 app:tabIndicatorHeight="6dp"
+                android:background="#03A9F4"
                 app:tabSelectedTextColor="@android:color/white"
                 app:tabTextColor="@android:color/white"/>
 
