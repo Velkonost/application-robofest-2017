@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.design.widget.NavigationView;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -98,8 +99,13 @@ public class MainActivity extends AppCompatActivity
                 forthMeasure.setText(getResources().getString(R.string.day_one_desc_forth));
                 fifthMeasure.setText(getResources().getString(R.string.day_one_desc_fifth));
 
-                btnDay1.setBackgroundColor(333);
-                btnDay2.setBackgroundColor(111);
+
+
+                btnDay1.setBackground(ContextCompat.getDrawable(MainActivity.this,
+                        R.drawable.main_activity_button_left_pressed));
+                btnDay2.setBackground(ContextCompat.getDrawable(MainActivity.this,
+                        R.drawable.main_activity_button_right));
+
             }
         });
 
@@ -120,8 +126,11 @@ public class MainActivity extends AppCompatActivity
                 forthMeasure.setText(getResources().getString(R.string.day_two_desc_forth));
                 fifthMeasure.setText(getResources().getString(R.string.day_two_desc_fifth));
 
-                btnDay2.setBackgroundColor(333);
-                btnDay1.setBackgroundColor(111);
+
+                btnDay1.setBackground(ContextCompat.getDrawable(MainActivity.this,
+                        R.drawable.main_activity_button_left));
+                btnDay2.setBackground(ContextCompat.getDrawable(MainActivity.this,
+                        R.drawable.main_activity_button_right_pressed));
             }
         });
     }

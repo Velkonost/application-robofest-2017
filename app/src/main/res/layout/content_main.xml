@@ -53,7 +53,7 @@
                 android:id="@+id/llBtnDay"
                 android:orientation="horizontal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/mapImage"
                 xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_centerInParent="true"
@@ -65,7 +65,6 @@
                     android:layout_weight="1"
                     android:text="День 1"
                     android:id="@+id/buttonDay1"
-                    android:layout_gravity="bottom"
                     android:textColor="#FFF"
                     android:background="@drawable/main_activity_button_left"
                     android:textStyle="bold"
@@ -79,7 +78,6 @@
                     android:layout_weight="1"
                     android:text="День 2"
                     android:id="@+id/buttonDay2"
-                    android:layout_gravity="bottom"
                     android:textColor="#FFF"
                     android:background="@drawable/main_activity_button_right"
                     android:textStyle="bold"
@@ -117,6 +115,7 @@
                           android:layout_width="wrap_content"
                           android:layout_height="wrap_content"
                           android:text="@string/day_one_time_first"
+                          android:textColor="@color/colorWhite"
                           android:id="@+id/firstTime"/>
 
                         <TextView
@@ -124,6 +123,7 @@
                           android:layout_height="wrap_content"
                           android:text="@string/day_one_desc_first"
                           android:layout_marginStart="5dp"
+                          android:textColor="@color/colorWhite"
                           android:id="@+id/firstMeasure"/>
                     </LinearLayout>
                     <LinearLayout
@@ -138,6 +138,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/day_one_time_second"
+                            android:textColor="@color/colorWhite"
                             android:id="@+id/secondTime"/>
 
                         <TextView
@@ -145,6 +146,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/day_one_desc_second"
                             android:layout_marginStart="5dp"
+                            android:textColor="@color/colorWhite"
                             android:id="@+id/secondMeasure"/>
                     </LinearLayout>
                     <LinearLayout
@@ -159,6 +161,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/day_one_time_third"
+                            android:textColor="@color/colorWhite"
                             android:id="@+id/thirdTime"/>
 
                         <TextView
@@ -166,6 +169,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/day_one_desc_third"
                             android:layout_marginStart="5dp"
+                            android:textColor="@color/colorWhite"
                             android:id="@+id/thirdMeasure"/>
                     </LinearLayout>
                     <LinearLayout
@@ -180,6 +184,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/day_one_time_forth"
+                            android:textColor="@color/colorWhite"
                             android:id="@+id/forthTime"/>
 
                         <TextView
@@ -187,6 +192,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/day_one_desc_forth"
                             android:layout_marginStart="5dp"
+                            android:textColor="@color/colorWhite"
                             android:id="@+id/forthMeasure"/>
                     </LinearLayout>
                     <LinearLayout
@@ -201,6 +207,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/day_one_time_fifth"
+                            android:textColor="@color/colorWhite"
                             android:id="@+id/fifthTime"/>
 
                         <TextView
@@ -208,6 +215,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/day_one_desc_fifth"
                             android:layout_marginStart="5dp"
+                            android:textColor="@color/colorWhite"
                             android:id="@+id/fifthMeasure"/>
                     </LinearLayout>
 
