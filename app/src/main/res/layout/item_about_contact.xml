@@ -6,19 +6,20 @@
               android:layout_height="wrap_content"
               android:layout_marginTop="5dp"
               android:layout_marginBottom="5dp"
-              android:layout_marginLeft="12dp"
-              android:layout_marginRight="12dp">
+              >
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/cardView"
-        card:cardElevation="2dp"
-        card:cardUseCompatPadding="true">
+        card:cardElevation="20dp"
+        card:cardPreventCornerOverlap="false">
 
         <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/background_about">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -30,24 +31,28 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/title"
                     android:padding="10dp"
+                    android:textColor="@color/colorWhite"
                     android:text="Телефон"
                     android:textAlignment="center"
-                    android:textSize="14sp"
+                    android:textSize="12sp"
                     android:gravity="center"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/desc"
+                    android:textColor="@color/colorWhite"
                     android:layout_below="@id/title"
                     android:padding="10dp"
-                    android:layout_marginLeft="20dp"/>
+                    android:textSize="16sp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="5dp"/>
             </RelativeLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/colorBlack"
+                android:background="@color/colorWhite"
                 android:id="@+id/line"
                 android:layout_below="@id/rlPhone"
                 android:layout_marginLeft="10dp"
@@ -63,18 +68,22 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/title2"
                     android:padding="10dp"
+                    android:textColor="@color/colorWhite"
                     android:text="E-mail"
                     android:textAlignment="center"
-                    android:textSize="14sp"
+                    android:textSize="12sp"
                     android:gravity="center"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/desc2"
+                    android:textColor="@color/colorWhite"
                     android:layout_below="@id/title2"
                     android:padding="10dp"
-                    android:layout_marginLeft="20dp"/>
+                    android:textSize="16sp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="5dp"/>
             </RelativeLayout>
         </RelativeLayout>
 

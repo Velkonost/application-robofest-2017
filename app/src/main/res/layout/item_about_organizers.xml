@@ -6,19 +6,20 @@
               android:layout_height="wrap_content"
               android:layout_marginTop="5dp"
               android:layout_marginBottom="5dp"
-              android:layout_marginLeft="12dp"
-              android:layout_marginRight="12dp">
+              >
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/cardView"
-        card:cardElevation="2dp"
-        card:cardUseCompatPadding="true">
+        card:cardElevation="20dp"
+        card:cardPreventCornerOverlap="false">
 
         <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/background_about">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -29,9 +30,10 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/title1"
                     android:padding="10dp"
+                    android:textColor="@color/colorWhite"
                     android:text="Председатель организационного комитета"
                     android:textAlignment="center"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:gravity="center"/>
 
                 <TextView
@@ -40,6 +42,7 @@
                     android:id="@+id/name1"
                     android:layout_below="@id/title1"
                     android:padding="10dp"
+                    android:textColor="@color/colorWhite"
                     android:layout_marginLeft="20dp"
                     android:text="Александр Михайлович Тимофеечев"/>
             </RelativeLayout>
@@ -47,7 +50,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/colorBlack"
+                android:background="@color/colorWhite"
                 android:id="@+id/line"
                 android:layout_below="@id/rlContact1"
                 android:layout_marginLeft="10dp"
@@ -63,9 +66,10 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/title2"
                     android:padding="10dp"
+                    android:textColor="@color/colorWhite"
                     android:text="Главный судья соревнований"
                     android:textAlignment="center"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:gravity="center"/>
 
                 <TextView
@@ -74,6 +78,7 @@
                     android:id="@+id/desc2"
                     android:layout_below="@id/title2"
                     android:padding="10dp"
+                    android:textColor="@color/colorWhite"
                     android:layout_marginLeft="20dp"
                     android:text="Сергей Павлович Шинкевич"/>
             </RelativeLayout>
@@ -81,7 +86,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/colorBlack"
+                android:background="@color/colorWhite"
                 android:id="@+id/line2"
                 android:layout_below="@id/rlContact2"
                 android:layout_marginLeft="10dp"
@@ -97,15 +102,17 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/title3"
                     android:padding="10dp"
+                    android:textColor="@color/colorWhite"
                     android:text="Лектории и интерактивные площадки"
                     android:textAlignment="center"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:gravity="center"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/desc3"
+                    android:textColor="@color/colorWhite"
                     android:layout_below="@id/title3"
                     android:padding="10dp"
                     android:layout_marginLeft="20dp"
@@ -115,7 +122,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/colorBlack"
+                android:background="@color/colorWhite"
                 android:id="@+id/line3"
                 android:layout_below="@id/rlContact3"
                 android:layout_marginLeft="10dp"
@@ -131,15 +138,17 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/title4"
                     android:padding="10dp"
+                    android:textColor="@color/colorWhite"
                     android:text="Партнерство и СМИ"
                     android:textAlignment="center"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:gravity="center"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/desc4"
+                    android:textColor="@color/colorWhite"
                     android:layout_below="@id/title4"
                     android:padding="10dp"
                     android:layout_marginLeft="20dp"
@@ -151,5 +160,4 @@
 
 
     </android.support.v7.widget.CardView>
-
 </LinearLayout>
