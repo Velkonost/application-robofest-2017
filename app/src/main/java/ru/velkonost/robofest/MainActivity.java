@@ -236,6 +236,63 @@ public class MainActivity extends AppCompatActivity
                     fifthTimePopup.setText(R.string.day1_btn1_fifth + "     ");
                     sixthTimePopup.setText(R.string.day1_btn1_sixth + "     ");
                     seventhTimePopup.setText(R.string.day1_btn1_seventh + "     ");
+
+
+
+                } else {
+
+                }
+            }
+        });
+
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                areaName.setText(R.string.area_name_2);
+
+                if (day == 1) {
+
+                } else {
+
+                }
+            }
+        });
+
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                areaName.setText(R.string.area_name_3);
+
+                if (day == 1) {
+
+                } else {
+
+                }
+            }
+        });
+
+        btn4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                areaName.setText(R.string.area_name_4);
+
+                if (day == 1) {
+
+                } else {
+
+                }
+            }
+        });
+
+        btn5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                areaName.setText(R.string.area_name_5);
+
+                if (day == 1) {
+
+                } else {
+
                 }
             }
         });
