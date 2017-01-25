@@ -3,7 +3,6 @@ package adapters;
 import android.content.Context;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
-import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,16 +41,16 @@ public class CompetitionAdapter extends RecyclerView.Adapter<CompetitionAdapter.
         //holder.title.setText(text);
         holder.title.setText(text);
         holder.title.setTextSize(0);
+
+        if (!holder.isLangProg){
+            holder.langProgTxt.setTextSize(0);
+            holder.langProgTxtName.setTextSize(0);
+        }
     }
 
     @Override
     public int getItemCount() {
         return 1;
-    }
-
-    private int dp2px(int dp) {
-        return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp,
-                mContext.getResources().getDisplayMetrics());
     }
 
     public static class CompetitionViewHolder extends RecyclerView.ViewHolder {
@@ -63,6 +62,8 @@ public class CompetitionAdapter extends RecyclerView.Adapter<CompetitionAdapter.
         Button showMoreBtn;
         String goURL = null;
         boolean check = false;
+
+        boolean isLangProg = true;
 
 
         public CompetitionViewHolder(View itemView) {
@@ -97,6 +98,8 @@ public class CompetitionAdapter extends RecyclerView.Adapter<CompetitionAdapter.
                     langProgTxt.setVisibility(View.INVISIBLE);
                     goURL = "http://robofest.ru/sorevnovaniya/JrFLL/";
                     compImg.setImageResource(R.drawable.jrfll);
+
+                    isLangProg = false;
 
                     break;
                 case 3:

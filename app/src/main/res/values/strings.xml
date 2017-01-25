@@ -33,9 +33,7 @@
 
     <string name="fll_age">Школьники от 9 до 14 лет</string>
     <string name="jrfll_age">Школьники от 6 до 9 лет</string>
-    <string name="hr_age">Возрастные группы:\n
-        Младшая  – возраст участников 9-10 лет\n
-        Старшая  – возраст участников 11-12 лет</string>
+    <string name="hr_age"> Младшая гр.  – возраст участников 9-10 лет\nСтаршая гр.  – возраст участников 11-12 лет</string>
     <string name="fs_age">--</string>
 
     <string name="fll_team">3-6 человек</string>
