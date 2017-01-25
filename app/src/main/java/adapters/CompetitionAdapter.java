@@ -3,14 +3,11 @@ package adapters;
 import android.content.Context;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
-import android.text.TextUtils;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -52,7 +49,13 @@ public class CompetitionAdapter extends RecyclerView.Adapter<CompetitionAdapter.
         return 1;
     }
 
+    private int dp2px(int dp) {
+        return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp,
+                mContext.getResources().getDisplayMetrics());
+    }
+
     public static class CompetitionViewHolder extends RecyclerView.ViewHolder {
+
 
         CardView cardView;
         ImageView compImg;
@@ -94,6 +97,7 @@ public class CompetitionAdapter extends RecyclerView.Adapter<CompetitionAdapter.
                     langProgTxt.setVisibility(View.INVISIBLE);
                     goURL = "http://robofest.ru/sorevnovaniya/JrFLL/";
                     compImg.setImageResource(R.drawable.jrfll);
+
                     break;
                 case 3:
                     ageTxt.setText(R.string.hr_age);

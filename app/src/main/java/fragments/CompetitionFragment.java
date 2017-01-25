@@ -15,13 +15,10 @@ import android.view.ViewGroup;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
 
 import java.io.IOException;
 import java.util.List;
 
-import adapters.AboutAdapter;
 import adapters.CompetitionAdapter;
 import ru.velkonost.robofest.R;
 
@@ -121,8 +118,8 @@ public class CompetitionFragment extends AbstractTabFragment {
             //text = doc.select("div.content").text();
 
             List title2 = doc.select("div.content-wrapper").select("div.content").select("p");
-            textHistory = "KLIMENKO DAUN";
-            text = "KLIMENKO DAUN";
+            textHistory = "";
+            text = "";
             switch (competitionId) {
                 case 1:
                     text = TextUtils.join(" ", title2.subList(5, 7));
