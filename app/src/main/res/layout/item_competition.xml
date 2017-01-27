@@ -143,6 +143,7 @@
                                 <ImageView
                                     android:layout_width="15sp"
                                     android:layout_height="20sp"
+                                    android:id="@+id/img_showmore"
                                     android:src="@drawable/icon_btn_showmore"
                                     android:scaleType="fitXY"/>
                             </LinearLayout>

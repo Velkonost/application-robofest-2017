@@ -57,7 +57,7 @@ public class CompetitionAdapter extends RecyclerView.Adapter<CompetitionAdapter.
 
 
         CardView cardView;
-        ImageView compImg;
+        ImageView compImg, showMoreImg;
         TextView title, ageTxt, teamTxt, robotTxt, langProgTxt, langProgTxtName;
         Button showMoreBtn;
         String goURL = null;
@@ -79,6 +79,7 @@ public class CompetitionAdapter extends RecyclerView.Adapter<CompetitionAdapter.
             title = (TextView) itemView.findViewById(R.id.title_comp);
             compImg = (ImageView) itemView.findViewById(R.id.comp_img);
             showMoreBtn = (Button) itemView.findViewById(R.id.btn_showmore);
+            showMoreImg = (ImageView) itemView.findViewById(R.id.img_showmore);
 
 
             switch (competitionId) {
@@ -125,10 +126,12 @@ public class CompetitionAdapter extends RecyclerView.Adapter<CompetitionAdapter.
                     if(check) {
                         title.setVisibility(View.VISIBLE);
                         title.setTextSize(14);
+                        showMoreImg.setImageResource(R.drawable.icon_btn_showmore2);
                 //        title.setText(text2);
                     }else{
                         title.setVisibility(View.INVISIBLE);
                         title.setTextSize(0);
+                        showMoreImg.setImageResource(R.drawable.icon_btn_showmore);
                 //        title.setText("");
                     }
                 }
