@@ -25,6 +25,7 @@
         <activity android:name=".FullScreenPhotoActivity"/>
         <activity android:name=".CompetitionActivity"/>
         <activity android:name=".AboutActivity"/>
+        <activity android:name=".TranslationActivity"/>
 
         <receiver
             android:name=".ScheduledReceiver"

@@ -343,7 +343,7 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.competition) {
             nextIntent = new Intent(MainActivity.this, CompetitionActivity.class);
         } else if (id == R.id.translations) {
-//            nextIntent = new Intent(MainActivity.this, TranslationsActivity.class);
+            nextIntent = new Intent(MainActivity.this, TranslationActivity.class);
         } else if (id == R.id.about) {
             nextIntent = new Intent(MainActivity.this, AboutActivity.class);
         }

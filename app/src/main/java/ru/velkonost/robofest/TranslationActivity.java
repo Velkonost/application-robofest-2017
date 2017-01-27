@@ -14,10 +14,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import adapters.CompetitionTabsFragmentAdapter;
+import adapters.TranslationTabsFragmentAdapter;
 
 import static managers.Initializations.changeActivityCompat;
 
-public class CompetitionActivity extends AppCompatActivity
+/**
+ * Created by Andrey on 27.01.2017.
+ */
+public class TranslationActivity  extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private ViewPager viewPager;
@@ -26,9 +30,9 @@ public class CompetitionActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_competition);
+        setContentView(R.layout.activity_translation);
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("Соревнования");
+        toolbar.setTitle("Трансляции");
         setSupportActionBar(toolbar);
 
         final DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -59,10 +63,10 @@ public class CompetitionActivity extends AppCompatActivity
     }
 
     private void initTabs() {
-        viewPager = (ViewPager) findViewById(R.id.viewPagerCompetition);
+        viewPager = (ViewPager) findViewById(R.id.viewPagerTranslation);
 
-        CompetitionTabsFragmentAdapter adapter
-                = new CompetitionTabsFragmentAdapter(this, getSupportFragmentManager());
+        TranslationTabsFragmentAdapter adapter
+                = new TranslationTabsFragmentAdapter(this, getSupportFragmentManager());
 
         viewPager.setAdapter(adapter);
 
@@ -98,13 +102,13 @@ public class CompetitionActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.main) {
-            nextIntent = new Intent(CompetitionActivity.this, MainActivity.class);
+            nextIntent = new Intent(TranslationActivity.this, MainActivity.class);
         } else if (id == R.id.competition) {
-            nextIntent = new Intent(CompetitionActivity.this, CompetitionActivity.class);
+            nextIntent = new Intent(TranslationActivity.this, CompetitionActivity.class);
         } else if (id == R.id.translations) {
-            nextIntent = new Intent(CompetitionActivity.this, TranslationActivity.class);
+            nextIntent = new Intent(TranslationActivity.this, TranslationActivity.class);
         } else if (id == R.id.about) {
-            nextIntent = new Intent(CompetitionActivity.this, AboutActivity.class);
+            nextIntent = new Intent(TranslationActivity.this, AboutActivity.class);
         }
 
         final Intent finalNextIntent = nextIntent;
@@ -112,7 +116,7 @@ public class CompetitionActivity extends AppCompatActivity
             @Override
             public void run() {
 
-                changeActivityCompat(CompetitionActivity.this, finalNextIntent);
+                changeActivityCompat(TranslationActivity.this, finalNextIntent);
             }
         }, 350);
 
@@ -121,3 +125,4 @@ public class CompetitionActivity extends AppCompatActivity
         return true;
     }
 }
+
