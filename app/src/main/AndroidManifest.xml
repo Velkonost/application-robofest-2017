@@ -29,9 +29,9 @@
         <activity android:name=".BrowserActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
-                <action android:name="ru.alexanderklimov.Browser" />
+                <action android:name="ru.velkonost.Browser" />
                 <category android:name="android.intent.category.DEFAULT" />
-                <data android:scheme="http" />
+                <data android:scheme="https" />
             </intent-filter>
         </activity>
 

@@ -50,8 +50,6 @@ public class MainActivity extends AppCompatActivity
     private ImageView imageMap;
     private int day;
 
-    private WebView mWebView;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -1514,23 +1512,12 @@ public class MainActivity extends AppCompatActivity
     public void openGoogleForms(View view) {
 
         Intent intent =
-                new Intent("ru.velkonost.robofest.BrowserActivity");
-        intent.setData(Uri.parse("http://developer.alexanderklimov.ru/android/"));
+                new Intent("ru.velkonost.Browser");
+        intent.setData(Uri.parse(
+                "https://docs.google.com/forms/d/e/1FAIpQLSfg7od0RMlO5CCML1MZB2dxVnS-3KG8rqTGZ2hitnVY2tdpxg/formResponse"
+        ));
         startActivity(intent);
 
-    }
-
-    @Override
-    public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else if(mWebView.canGoBack()) {
-            mWebView.goBack();
-        } else {
-            super.onBackPressed();
-        }
     }
 
 
