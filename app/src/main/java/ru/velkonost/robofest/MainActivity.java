@@ -1515,6 +1515,11 @@ public class MainActivity extends AppCompatActivity
 
     }
 
+    public void openGoogleForms(View view) {
+
+    }
+
+
     private int dp2px(int dp) {
         return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp,
                 MainActivity.this.getResources().getDisplayMetrics());
