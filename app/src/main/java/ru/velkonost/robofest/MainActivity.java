@@ -262,20 +262,62 @@ public class MainActivity extends AppCompatActivity
                 if (day == 1) {
 
                     firstTimePopup.setText(getResources().getString(R.string.day1_btn1_first) + "     ");
+                    firstTimePopup.setVisibility(View.VISIBLE);
+                    firstTimePopup.setTextSize(14);
+
                     secondTimePopup.setText(getResources().getString(R.string.day1_btn1_second) + "     ");
+                    secondTimePopup.setVisibility(View.VISIBLE);
+                    secondTimePopup.setTextSize(14);
+
                     thirdTimePopup.setText(getResources().getString(R.string.day1_btn1_third) + "     ");
+                    thirdTimePopup.setVisibility(View.VISIBLE);
+                    thirdTimePopup.setTextSize(14);
+
                     forthTimePopup.setText(getResources().getString(R.string.day1_btn1_forth) + "     ");
+                    forthTimePopup.setVisibility(View.VISIBLE);
+                    forthTimePopup.setTextSize(14);
+
                     fifthTimePopup.setText(getResources().getString(R.string.day1_btn1_fifth) + "     ");
+                    fifthTimePopup.setVisibility(View.VISIBLE);
+                    fifthTimePopup.setTextSize(14);
+
                     sixthTimePopup.setText(getResources().getString(R.string.day1_btn1_sixth) + "     ");
+                    sixthTimePopup.setVisibility(View.VISIBLE);
+                    sixthTimePopup.setTextSize(14);
+
                     seventhTimePopup.setText(getResources().getString(R.string.day1_btn1_seventh) + "     ");
+                    seventhTimePopup.setVisibility(View.VISIBLE);
+                    seventhTimePopup.setTextSize(14);
+
 
                     firstHeaderPopup.setText(R.string.day1_btn1_first_header);
+                    firstHeaderPopup.setVisibility(View.VISIBLE);
+                    firstHeaderPopup.setTextSize(16);
+
                     secondHeaderPopup.setText(R.string.day1_btn1_second_header);
+                    secondHeaderPopup.setVisibility(View.VISIBLE);
+                    secondHeaderPopup.setTextSize(16);
+
                     thirdHeaderPopup.setText(R.string.day1_btn1_third_header);
+                    thirdHeaderPopup.setVisibility(View.VISIBLE);
+                    thirdHeaderPopup.setTextSize(16);
+
                     forthHeaderPopup.setText(R.string.day1_btn1_forth_header);
+                    forthHeaderPopup.setVisibility(View.VISIBLE);
+                    forthHeaderPopup.setTextSize(16);
+
                     fifthHeaderPopup.setText(R.string.day1_btn1_fifth_header);
+                    fifthHeaderPopup.setVisibility(View.VISIBLE);
+                    fifthHeaderPopup.setTextSize(16);
+
                     sixthHeaderPopup.setText(R.string.day1_btn1_sixth_header);
+                    sixthHeaderPopup.setVisibility(View.VISIBLE);
+                    sixthHeaderPopup.setTextSize(16);
+
                     seventhHeaderPopup.setText(R.string.day1_btn1_seventh_header);
+                    seventhHeaderPopup.setVisibility(View.VISIBLE);
+                    seventhHeaderPopup.setTextSize(16);
+
 
                     firstMeasurePopup.setVisibility(View.INVISIBLE);
                     firstMeasurePopup.setTextSize(0);
@@ -311,22 +353,61 @@ public class MainActivity extends AppCompatActivity
                 } else {
 
                     firstTimePopup.setText(getResources().getString(R.string.day2_btn1_first) + "     ");
+                    firstTimePopup.setVisibility(View.VISIBLE);
+                    firstTimePopup.setTextSize(14);
+
                     secondTimePopup.setText(getResources().getString(R.string.day2_btn1_second) + "     ");
+                    secondTimePopup.setVisibility(View.VISIBLE);
+                    secondTimePopup.setTextSize(14);
+
                     thirdTimePopup.setText(getResources().getString(R.string.day2_btn1_third) + "     ");
+                    thirdTimePopup.setVisibility(View.VISIBLE);
+                    thirdTimePopup.setTextSize(14);
+
                     forthTimePopup.setText(getResources().getString(R.string.day2_btn1_forth) + "     ");
+                    forthTimePopup.setVisibility(View.VISIBLE);
+                    forthTimePopup.setTextSize(14);
+
                     fifthTimePopup.setText(getResources().getString(R.string.day2_btn1_fifth) + "     ");
+                    fifthTimePopup.setVisibility(View.VISIBLE);
+                    fifthTimePopup.setTextSize(14);
+
                     sixthTimePopup.setText(getResources().getString(R.string.day2_btn1_sixth) + "     ");
+                    sixthTimePopup.setVisibility(View.VISIBLE);
+                    sixthTimePopup.setTextSize(14);
+
                     seventhTimePopup.setText(getResources().getString(R.string.day2_btn1_seventh) + "     ");
                     seventhTimePopup.setVisibility(View.VISIBLE);
+                    seventhTimePopup.setTextSize(14);
+
 
                     firstHeaderPopup.setText(R.string.day2_btn1_first_header);
+                    firstHeaderPopup.setVisibility(View.VISIBLE);
+                    firstHeaderPopup.setTextSize(16);
+
                     secondHeaderPopup.setText(R.string.day2_btn1_second_header);
+                    secondHeaderPopup.setVisibility(View.VISIBLE);
+                    secondHeaderPopup.setTextSize(16);
+
                     thirdHeaderPopup.setText(R.string.day2_btn1_third_header);
+                    thirdHeaderPopup.setVisibility(View.VISIBLE);
+                    thirdHeaderPopup.setTextSize(16);
+
                     forthHeaderPopup.setText(R.string.day2_btn1_forth_header);
+                    forthHeaderPopup.setVisibility(View.VISIBLE);
+                    forthHeaderPopup.setTextSize(16);
+
                     fifthHeaderPopup.setText(R.string.day2_btn1_fifth_header);
+                    fifthHeaderPopup.setVisibility(View.VISIBLE);
+                    fifthHeaderPopup.setTextSize(16);
+
                     sixthHeaderPopup.setText(R.string.day2_btn1_sixth_header);
+                    sixthHeaderPopup.setVisibility(View.VISIBLE);
+                    sixthHeaderPopup.setTextSize(16);
+
                     seventhHeaderPopup.setText(R.string.day2_btn1_seventh_header);
-                    seventhTimePopup.setVisibility(View.VISIBLE);
+                    seventhHeaderPopup.setVisibility(View.VISIBLE);
+                    seventhHeaderPopup.setTextSize(16);
 
                     firstMeasurePopup.setText(R.string.day2_btn1_first_desc);
                     secondMeasurePopup.setText(R.string.day2_btn1_second_desc);
@@ -367,20 +448,61 @@ public class MainActivity extends AppCompatActivity
                 if (day == 1) {
 
                     firstTimePopup.setText(getResources().getString(R.string.day1_btn2_first) + "     ");
+                    firstTimePopup.setVisibility(View.VISIBLE);
+                    firstTimePopup.setTextSize(14);
+
                     secondTimePopup.setText(getResources().getString(R.string.day1_btn2_second) + "     ");
+                    secondTimePopup.setVisibility(View.VISIBLE);
+                    secondTimePopup.setTextSize(14);
+
                     thirdTimePopup.setText(getResources().getString(R.string.day1_btn2_third) + "     ");
+                    thirdTimePopup.setVisibility(View.VISIBLE);
+                    thirdTimePopup.setTextSize(14);
+
                     forthTimePopup.setText(getResources().getString(R.string.day1_btn2_forth) + "     ");
+                    forthTimePopup.setVisibility(View.VISIBLE);
+                    forthTimePopup.setTextSize(14);
+
                     fifthTimePopup.setText(getResources().getString(R.string.day1_btn2_fifth) + "     ");
+                    fifthTimePopup.setVisibility(View.VISIBLE);
+                    fifthTimePopup.setTextSize(14);
+
                     sixthTimePopup.setText(getResources().getString(R.string.day1_btn2_sixth) + "     ");
+                    sixthTimePopup.setVisibility(View.VISIBLE);
+                    sixthTimePopup.setTextSize(14);
+
                     seventhTimePopup.setText(getResources().getString(R.string.day1_btn2_seventh) + "     ");
+                    seventhTimePopup.setVisibility(View.VISIBLE);
+                    seventhTimePopup.setTextSize(14);
+
 
                     firstHeaderPopup.setText(R.string.day1_btn2_first_header);
+                    firstHeaderPopup.setVisibility(View.VISIBLE);
+                    firstHeaderPopup.setTextSize(16);
+
                     secondHeaderPopup.setText(R.string.day1_btn2_second_header);
+                    secondHeaderPopup.setVisibility(View.VISIBLE);
+                    secondHeaderPopup.setTextSize(16);
+
                     thirdHeaderPopup.setText(R.string.day1_btn2_third_header);
+                    thirdHeaderPopup.setVisibility(View.VISIBLE);
+                    thirdHeaderPopup.setTextSize(16);
+
                     forthHeaderPopup.setText(R.string.day1_btn2_forth_header);
+                    forthHeaderPopup.setVisibility(View.VISIBLE);
+                    forthHeaderPopup.setTextSize(16);
+
                     fifthHeaderPopup.setText(R.string.day1_btn2_fifth_header);
+                    fifthHeaderPopup.setVisibility(View.VISIBLE);
+                    fifthHeaderPopup.setTextSize(16);
+
                     sixthHeaderPopup.setText(R.string.day1_btn2_sixth_header);
+                    sixthHeaderPopup.setVisibility(View.VISIBLE);
+                    sixthHeaderPopup.setTextSize(16);
+
                     seventhHeaderPopup.setText(R.string.day1_btn2_seventh_header);
+                    seventhHeaderPopup.setVisibility(View.VISIBLE);
+                    seventhHeaderPopup.setTextSize(16);
 
                     firstMeasurePopup.setVisibility(View.INVISIBLE);
                     firstMeasurePopup.setTextSize(0);
@@ -413,19 +535,55 @@ public class MainActivity extends AppCompatActivity
                 } else {
 
                     firstTimePopup.setText(getResources().getString(R.string.day2_btn2_first) + "     ");
+                    firstTimePopup.setVisibility(View.VISIBLE);
+                    firstTimePopup.setTextSize(14);
+
                     secondTimePopup.setText(getResources().getString(R.string.day2_btn2_second) + "     ");
+                    secondTimePopup.setVisibility(View.VISIBLE);
+                    secondTimePopup.setTextSize(14);
+
                     thirdTimePopup.setText(getResources().getString(R.string.day2_btn2_third) + "     ");
+                    thirdTimePopup.setVisibility(View.VISIBLE);
+                    thirdTimePopup.setTextSize(14);
+
                     forthTimePopup.setText(getResources().getString(R.string.day2_btn2_forth) + "     ");
+                    forthTimePopup.setVisibility(View.VISIBLE);
+                    forthTimePopup.setTextSize(14);
+
                     fifthTimePopup.setText(getResources().getString(R.string.day2_btn2_fifth) + "     ");
+                    fifthTimePopup.setVisibility(View.VISIBLE);
+                    fifthTimePopup.setTextSize(14);
+
                     sixthTimePopup.setText(getResources().getString(R.string.day2_btn2_sixth) + "     ");
+                    sixthTimePopup.setVisibility(View.VISIBLE);
+                    sixthTimePopup.setTextSize(14);
+
                     seventhTimePopup.setVisibility(View.INVISIBLE);
 
                     firstHeaderPopup.setText(R.string.day2_btn2_first_header);
+                    firstHeaderPopup.setVisibility(View.VISIBLE);
+                    firstHeaderPopup.setTextSize(16);
+
                     secondHeaderPopup.setText(R.string.day2_btn2_second_header);
+                    secondHeaderPopup.setVisibility(View.VISIBLE);
+                    secondHeaderPopup.setTextSize(16);
+
                     thirdHeaderPopup.setText(R.string.day2_btn2_third_header);
+                    thirdHeaderPopup.setVisibility(View.VISIBLE);
+                    thirdHeaderPopup.setTextSize(16);
+
                     forthHeaderPopup.setText(R.string.day2_btn2_forth_header);
+                    forthHeaderPopup.setVisibility(View.VISIBLE);
+                    forthHeaderPopup.setTextSize(16);
+
                     fifthHeaderPopup.setText(R.string.day2_btn2_fifth_header);
+                    fifthHeaderPopup.setVisibility(View.VISIBLE);
+                    fifthHeaderPopup.setTextSize(16);
+
                     sixthHeaderPopup.setText(R.string.day2_btn2_sixth_header);
+                    sixthHeaderPopup.setVisibility(View.VISIBLE);
+                    sixthHeaderPopup.setTextSize(16);
+
                     seventhHeaderPopup.setVisibility(View.INVISIBLE);
 
                     firstMeasurePopup.setText(R.string.day2_btn2_first_desc);
@@ -464,20 +622,61 @@ public class MainActivity extends AppCompatActivity
                 if (day == 1) {
 
                     firstTimePopup.setText(getResources().getString(R.string.day1_btn3_first) + "     ");
+                    firstTimePopup.setVisibility(View.VISIBLE);
+                    firstTimePopup.setTextSize(14);
+
                     secondTimePopup.setText(getResources().getString(R.string.day1_btn3_second) + "     ");
+                    secondTimePopup.setVisibility(View.VISIBLE);
+                    secondTimePopup.setTextSize(14);
+
                     thirdTimePopup.setText(getResources().getString(R.string.day1_btn3_third) + "     ");
+                    thirdTimePopup.setVisibility(View.VISIBLE);
+                    thirdTimePopup.setTextSize(14);
+
                     forthTimePopup.setText(getResources().getString(R.string.day1_btn3_forth) + "     ");
+                    forthTimePopup.setVisibility(View.VISIBLE);
+                    forthTimePopup.setTextSize(14);
+
                     fifthTimePopup.setText(getResources().getString(R.string.day1_btn3_fifth) + "     ");
+                    fifthTimePopup.setVisibility(View.VISIBLE);
+                    fifthTimePopup.setTextSize(14);
+
                     sixthTimePopup.setText(getResources().getString(R.string.day1_btn3_sixth) + "     ");
+                    sixthTimePopup.setVisibility(View.VISIBLE);
+                    sixthTimePopup.setTextSize(14);
+
                     seventhTimePopup.setText(getResources().getString(R.string.day1_btn3_seventh) + "     ");
+                    seventhTimePopup.setVisibility(View.VISIBLE);
+                    seventhTimePopup.setTextSize(14);
 
                     firstHeaderPopup.setText(R.string.day1_btn3_first_header);
+                    firstHeaderPopup.setVisibility(View.VISIBLE);
+                    firstHeaderPopup.setTextSize(16);
+
                     secondHeaderPopup.setText(R.string.day1_btn3_second_header);
+                    secondHeaderPopup.setVisibility(View.VISIBLE);
+                    secondHeaderPopup.setTextSize(16);
+
                     thirdHeaderPopup.setText(R.string.day1_btn3_third_header);
+                    thirdHeaderPopup.setVisibility(View.VISIBLE);
+                    thirdHeaderPopup.setTextSize(16);
+
                     forthHeaderPopup.setText(R.string.day1_btn3_forth_header);
+                    forthHeaderPopup.setVisibility(View.VISIBLE);
+                    forthHeaderPopup.setTextSize(16);
+
                     fifthHeaderPopup.setText(R.string.day1_btn3_fifth_header);
+                    fifthHeaderPopup.setVisibility(View.VISIBLE);
+                    fifthHeaderPopup.setTextSize(16);
+
                     sixthHeaderPopup.setText(R.string.day1_btn3_sixth_header);
+                    sixthHeaderPopup.setVisibility(View.VISIBLE);
+                    sixthHeaderPopup.setTextSize(16);
+
                     seventhHeaderPopup.setText(R.string.day1_btn3_seventh_header);
+                    seventhHeaderPopup.setVisibility(View.VISIBLE);
+                    seventhHeaderPopup.setTextSize(16);
+
 
                     firstMeasurePopup.setVisibility(View.INVISIBLE);
                     firstMeasurePopup.setTextSize(0);
@@ -515,19 +714,55 @@ public class MainActivity extends AppCompatActivity
                 } else {
 
                     firstTimePopup.setText(getResources().getString(R.string.day2_btn3_first) + "     ");
+                    firstTimePopup.setVisibility(View.VISIBLE);
+                    firstTimePopup.setTextSize(14);
+
                     secondTimePopup.setText(getResources().getString(R.string.day2_btn3_second) + "     ");
+                    secondTimePopup.setVisibility(View.VISIBLE);
+                    secondTimePopup.setTextSize(14);
+
                     thirdTimePopup.setText(getResources().getString(R.string.day2_btn3_third) + "     ");
+                    thirdTimePopup.setVisibility(View.VISIBLE);
+                    thirdTimePopup.setTextSize(14);
+
                     forthTimePopup.setText(getResources().getString(R.string.day2_btn3_forth) + "     ");
+                    forthTimePopup.setVisibility(View.VISIBLE);
+                    forthTimePopup.setTextSize(14);
+
                     fifthTimePopup.setText(getResources().getString(R.string.day2_btn3_fifth) + "     ");
+                    fifthTimePopup.setVisibility(View.VISIBLE);
+                    fifthTimePopup.setTextSize(14);
+
                     sixthTimePopup.setText(getResources().getString(R.string.day2_btn3_sixth) + "     ");
+                    sixthTimePopup.setVisibility(View.VISIBLE);
+                    sixthTimePopup.setTextSize(14);
+
                     seventhTimePopup.setVisibility(View.INVISIBLE);
 
                     firstHeaderPopup.setText(R.string.day2_btn3_first_header);
+                    firstHeaderPopup.setVisibility(View.VISIBLE);
+                    firstHeaderPopup.setTextSize(16);
+
                     secondHeaderPopup.setText(R.string.day2_btn3_second_header);
+                    secondHeaderPopup.setVisibility(View.VISIBLE);
+                    secondHeaderPopup.setTextSize(16);
+
                     thirdHeaderPopup.setText(R.string.day2_btn3_third_header);
+                    thirdHeaderPopup.setVisibility(View.VISIBLE);
+                    thirdHeaderPopup.setTextSize(16);
+
                     forthHeaderPopup.setText(R.string.day2_btn3_forth_header);
+                    forthHeaderPopup.setVisibility(View.VISIBLE);
+                    forthHeaderPopup.setTextSize(16);
+
                     fifthHeaderPopup.setText(R.string.day2_btn3_fifth_header);
+                    fifthHeaderPopup.setVisibility(View.VISIBLE);
+                    fifthHeaderPopup.setTextSize(16);
+
                     sixthHeaderPopup.setText(R.string.day2_btn3_sixth_header);
+                    sixthHeaderPopup.setVisibility(View.VISIBLE);
+                    sixthHeaderPopup.setTextSize(16);
+
                     seventhHeaderPopup.setVisibility(View.INVISIBLE);
 
                     firstMeasurePopup.setText(R.string.day2_btn3_first_desc);
@@ -570,20 +805,60 @@ public class MainActivity extends AppCompatActivity
                 if (day == 1) {
 
                     firstTimePopup.setText(getResources().getString(R.string.day1_btn4_first) + "     ");
+                    firstTimePopup.setVisibility(View.VISIBLE);
+                    firstTimePopup.setTextSize(14);
+
                     secondTimePopup.setText(getResources().getString(R.string.day1_btn4_second) + "     ");
+                    secondTimePopup.setVisibility(View.VISIBLE);
+                    secondTimePopup.setTextSize(14);
+
                     thirdTimePopup.setText(getResources().getString(R.string.day1_btn4_third) + "     ");
+                    thirdTimePopup.setVisibility(View.VISIBLE);
+                    thirdTimePopup.setTextSize(14);
+
                     forthTimePopup.setText(getResources().getString(R.string.day1_btn4_forth) + "     ");
+                    forthTimePopup.setVisibility(View.VISIBLE);
+                    forthTimePopup.setTextSize(14);
+
                     fifthTimePopup.setText(getResources().getString(R.string.day1_btn4_fifth) + "     ");
+                    fifthTimePopup.setVisibility(View.VISIBLE);
+                    fifthTimePopup.setTextSize(14);
+
                     sixthTimePopup.setText(getResources().getString(R.string.day1_btn4_sixth) + "     ");
+                    sixthTimePopup.setVisibility(View.VISIBLE);
+                    sixthTimePopup.setTextSize(14);
+
                     seventhTimePopup.setText(getResources().getString(R.string.day1_btn4_seventh) + "     ");
+                    seventhTimePopup.setVisibility(View.VISIBLE);
+                    seventhTimePopup.setTextSize(14);
 
                     firstHeaderPopup.setText(R.string.day1_btn4_first_header);
+                    firstHeaderPopup.setVisibility(View.VISIBLE);
+                    firstHeaderPopup.setTextSize(16);
+
                     secondHeaderPopup.setText(R.string.day1_btn4_second_header);
+                    secondHeaderPopup.setVisibility(View.VISIBLE);
+                    secondHeaderPopup.setTextSize(16);
+
                     thirdHeaderPopup.setText(R.string.day1_btn4_third_header);
+                    thirdHeaderPopup.setVisibility(View.VISIBLE);
+                    thirdHeaderPopup.setTextSize(16);
+
                     forthHeaderPopup.setText(R.string.day1_btn4_forth_header);
+                    forthHeaderPopup.setVisibility(View.VISIBLE);
+                    forthHeaderPopup.setTextSize(16);
+
                     fifthHeaderPopup.setText(R.string.day1_btn4_fifth_header);
+                    fifthHeaderPopup.setVisibility(View.VISIBLE);
+                    fifthHeaderPopup.setTextSize(16);
+
                     sixthHeaderPopup.setText(R.string.day1_btn4_sixth_header);
+                    sixthHeaderPopup.setVisibility(View.VISIBLE);
+                    sixthHeaderPopup.setTextSize(16);
+
                     seventhHeaderPopup.setText(R.string.day1_btn4_seventh_header);
+                    seventhHeaderPopup.setVisibility(View.VISIBLE);
+                    seventhHeaderPopup.setTextSize(16);
 
                     firstMeasurePopup.setVisibility(View.INVISIBLE);
                     firstMeasurePopup.setTextSize(0);
@@ -618,19 +893,55 @@ public class MainActivity extends AppCompatActivity
                 } else {
 
                     firstTimePopup.setText(getResources().getString(R.string.day2_btn4_first) + "     ");
+                    firstTimePopup.setVisibility(View.VISIBLE);
+                    firstTimePopup.setTextSize(14);
+
                     secondTimePopup.setText(getResources().getString(R.string.day2_btn4_second) + "     ");
+                    secondTimePopup.setVisibility(View.VISIBLE);
+                    secondTimePopup.setTextSize(14);
+
                     thirdTimePopup.setText(getResources().getString(R.string.day2_btn4_third) + "     ");
+                    thirdTimePopup.setVisibility(View.VISIBLE);
+                    thirdTimePopup.setTextSize(14);
+
                     forthTimePopup.setText(getResources().getString(R.string.day2_btn4_forth) + "     ");
+                    forthTimePopup.setVisibility(View.VISIBLE);
+                    forthTimePopup.setTextSize(14);
+
                     fifthTimePopup.setText(getResources().getString(R.string.day2_btn4_fifth) + "     ");
+                    fifthTimePopup.setVisibility(View.VISIBLE);
+                    fifthTimePopup.setTextSize(14);
+
                     sixthTimePopup.setText(getResources().getString(R.string.day2_btn4_sixth) + "     ");
+                    sixthTimePopup.setVisibility(View.VISIBLE);
+                    sixthTimePopup.setTextSize(14);
+
                     seventhTimePopup.setVisibility(View.INVISIBLE);
 
                     firstHeaderPopup.setText(R.string.day2_btn4_first_header);
+                    firstHeaderPopup.setVisibility(View.VISIBLE);
+                    firstHeaderPopup.setTextSize(16);
+
                     secondHeaderPopup.setText(R.string.day2_btn4_second_header);
+                    secondHeaderPopup.setVisibility(View.VISIBLE);
+                    secondHeaderPopup.setTextSize(16);
+
                     thirdHeaderPopup.setText(R.string.day2_btn4_third_header);
+                    thirdHeaderPopup.setVisibility(View.VISIBLE);
+                    thirdHeaderPopup.setTextSize(16);
+
                     forthHeaderPopup.setText(R.string.day2_btn4_forth_header);
+                    forthHeaderPopup.setVisibility(View.VISIBLE);
+                    forthHeaderPopup.setTextSize(16);
+
                     fifthHeaderPopup.setText(R.string.day2_btn4_fifth_header);
+                    fifthHeaderPopup.setVisibility(View.VISIBLE);
+                    fifthHeaderPopup.setTextSize(16);
+
                     sixthHeaderPopup.setText(R.string.day2_btn4_sixth_header);
+                    sixthHeaderPopup.setVisibility(View.VISIBLE);
+                    sixthHeaderPopup.setTextSize(16);
+
                     seventhHeaderPopup.setVisibility(View.INVISIBLE);
 
                     firstMeasurePopup.setText(R.string.day2_btn4_first_desc);
@@ -669,20 +980,62 @@ public class MainActivity extends AppCompatActivity
                 if (day == 1) {
 
                     firstTimePopup.setText(getResources().getString(R.string.day1_btn5_first) + "     ");
+                    firstTimePopup.setVisibility(View.VISIBLE);
+                    firstTimePopup.setTextSize(14);
+
                     secondTimePopup.setText(getResources().getString(R.string.day1_btn5_second) + "     ");
+                    secondTimePopup.setVisibility(View.VISIBLE);
+                    secondTimePopup.setTextSize(14);
+
                     thirdTimePopup.setText(getResources().getString(R.string.day1_btn5_third) + "     ");
+                    thirdTimePopup.setVisibility(View.VISIBLE);
+                    thirdTimePopup.setTextSize(14);
+
                     forthTimePopup.setText(getResources().getString(R.string.day1_btn5_forth) + "     ");
+                    forthTimePopup.setVisibility(View.VISIBLE);
+                    forthTimePopup.setTextSize(14);
+
                     fifthTimePopup.setText(getResources().getString(R.string.day1_btn5_fifth) + "     ");
+                    fifthTimePopup.setVisibility(View.VISIBLE);
+                    fifthTimePopup.setTextSize(14);
+
                     sixthTimePopup.setText(getResources().getString(R.string.day1_btn5_sixth) + "     ");
+                    sixthTimePopup.setVisibility(View.VISIBLE);
+                    sixthTimePopup.setTextSize(14);
+
                     seventhTimePopup.setText(getResources().getString(R.string.day1_btn5_seventh) + "     ");
+                    seventhTimePopup.setVisibility(View.VISIBLE);
+                    seventhTimePopup.setTextSize(14);
+
 
                     firstHeaderPopup.setText(R.string.day1_btn5_first_header);
+                    firstHeaderPopup.setVisibility(View.VISIBLE);
+                    firstHeaderPopup.setTextSize(16);
+
                     secondHeaderPopup.setText(R.string.day1_btn5_second_header);
+                    secondHeaderPopup.setVisibility(View.VISIBLE);
+                    secondHeaderPopup.setTextSize(16);
+
                     thirdHeaderPopup.setText(R.string.day1_btn5_third_header);
+                    thirdHeaderPopup.setVisibility(View.VISIBLE);
+                    thirdHeaderPopup.setTextSize(16);
+
                     forthHeaderPopup.setText(R.string.day1_btn5_forth_header);
+                    forthHeaderPopup.setVisibility(View.VISIBLE);
+                    forthHeaderPopup.setTextSize(16);
+
                     fifthHeaderPopup.setText(R.string.day1_btn5_fifth_header);
+                    fifthHeaderPopup.setVisibility(View.VISIBLE);
+                    fifthHeaderPopup.setTextSize(16);
+
                     sixthHeaderPopup.setText(R.string.day1_btn5_sixth_header);
+                    sixthHeaderPopup.setVisibility(View.VISIBLE);
+                    sixthHeaderPopup.setTextSize(16);
+
                     seventhHeaderPopup.setText(R.string.day1_btn5_seventh_header);
+                    seventhHeaderPopup.setVisibility(View.VISIBLE);
+                    seventhHeaderPopup.setTextSize(16);
+
 
                     firstMeasurePopup.setText(R.string.day1_btn5_first_desc);
                     firstMeasurePopup.setVisibility(View.VISIBLE);
@@ -716,19 +1069,55 @@ public class MainActivity extends AppCompatActivity
                 } else {
 
                     firstTimePopup.setText(getResources().getString(R.string.day2_btn5_first) + "     ");
+                    firstTimePopup.setVisibility(View.VISIBLE);
+                    firstTimePopup.setTextSize(14);
+
                     secondTimePopup.setText(getResources().getString(R.string.day2_btn5_second) + "     ");
+                    secondTimePopup.setVisibility(View.VISIBLE);
+                    secondTimePopup.setTextSize(14);
+
                     thirdTimePopup.setText(getResources().getString(R.string.day2_btn5_third) + "     ");
+                    thirdTimePopup.setVisibility(View.VISIBLE);
+                    thirdTimePopup.setTextSize(14);
+
                     forthTimePopup.setText(getResources().getString(R.string.day2_btn5_forth) + "     ");
+                    forthTimePopup.setVisibility(View.VISIBLE);
+                    forthTimePopup.setTextSize(14);
+
                     fifthTimePopup.setText(getResources().getString(R.string.day2_btn5_fifth) + "     ");
+                    fifthTimePopup.setVisibility(View.VISIBLE);
+                    fifthTimePopup.setTextSize(14);
+
                     sixthTimePopup.setText(getResources().getString(R.string.day2_btn5_sixth) + "     ");
+                    sixthTimePopup.setVisibility(View.VISIBLE);
+                    sixthTimePopup.setTextSize(14);
+
                     seventhTimePopup.setVisibility(View.INVISIBLE);
 
                     firstHeaderPopup.setText(R.string.day2_btn5_first_header);
+                    firstHeaderPopup.setVisibility(View.VISIBLE);
+                    firstHeaderPopup.setTextSize(16);
+
                     secondHeaderPopup.setText(R.string.day2_btn5_second_header);
+                    secondHeaderPopup.setVisibility(View.VISIBLE);
+                    secondHeaderPopup.setTextSize(16);
+
                     thirdHeaderPopup.setText(R.string.day2_btn5_third_header);
+                    thirdHeaderPopup.setVisibility(View.VISIBLE);
+                    thirdHeaderPopup.setTextSize(16);
+
                     forthHeaderPopup.setText(R.string.day2_btn5_forth_header);
+                    forthHeaderPopup.setVisibility(View.VISIBLE);
+                    forthHeaderPopup.setTextSize(16);
+
                     fifthHeaderPopup.setText(R.string.day2_btn5_fifth_header);
+                    fifthHeaderPopup.setVisibility(View.VISIBLE);
+                    fifthHeaderPopup.setTextSize(16);
+
                     sixthHeaderPopup.setText(R.string.day2_btn5_sixth_header);
+                    sixthHeaderPopup.setVisibility(View.VISIBLE);
+                    sixthHeaderPopup.setTextSize(16);
+
                     seventhHeaderPopup.setVisibility(View.INVISIBLE);
 
                     firstMeasurePopup.setText(R.string.day2_btn5_first_desc);
@@ -773,12 +1162,32 @@ public class MainActivity extends AppCompatActivity
         if (day == 1) {
 
             firstTimePopup.setText(getResources().getString(R.string.day1_btn1_first) + "     ");
+            firstTimePopup.setVisibility(View.VISIBLE);
+            firstTimePopup.setTextSize(14);
+
             secondTimePopup.setText(getResources().getString(R.string.day1_btn1_second) + "     ");
+            secondTimePopup.setVisibility(View.VISIBLE);
+            secondTimePopup.setTextSize(14);
+
             thirdTimePopup.setText(getResources().getString(R.string.day1_btn1_third) + "     ");
+            thirdTimePopup.setVisibility(View.VISIBLE);
+            thirdTimePopup.setTextSize(14);
+
             forthTimePopup.setText(getResources().getString(R.string.day1_btn1_forth) + "     ");
+            forthTimePopup.setVisibility(View.VISIBLE);
+            forthTimePopup.setTextSize(14);
+
             fifthTimePopup.setText(getResources().getString(R.string.day1_btn1_fifth) + "     ");
+            fifthTimePopup.setVisibility(View.VISIBLE);
+            fifthTimePopup.setTextSize(14);
+
             sixthTimePopup.setText(getResources().getString(R.string.day1_btn1_sixth) + "     ");
+            sixthTimePopup.setVisibility(View.VISIBLE);
+            sixthTimePopup.setTextSize(14);
+
             seventhTimePopup.setText(getResources().getString(R.string.day1_btn1_seventh) + "     ");
+            seventhTimePopup.setVisibility(View.VISIBLE);
+            seventhTimePopup.setTextSize(14);
 
             firstHeaderPopup.setText(R.string.day1_btn1_first_header);
             secondHeaderPopup.setText(R.string.day1_btn1_second_header);
@@ -820,13 +1229,32 @@ public class MainActivity extends AppCompatActivity
         } else {
 
             firstTimePopup.setText(getResources().getString(R.string.day2_btn1_first) + "     ");
+            firstTimePopup.setVisibility(View.VISIBLE);
+            firstTimePopup.setTextSize(14);
+
             secondTimePopup.setText(getResources().getString(R.string.day2_btn1_second) + "     ");
+            secondTimePopup.setVisibility(View.VISIBLE);
+            secondTimePopup.setTextSize(14);
+
             thirdTimePopup.setText(getResources().getString(R.string.day2_btn1_third) + "     ");
+            thirdTimePopup.setVisibility(View.VISIBLE);
+            thirdTimePopup.setTextSize(14);
+
             forthTimePopup.setText(getResources().getString(R.string.day2_btn1_forth) + "     ");
+            forthTimePopup.setVisibility(View.VISIBLE);
+            forthTimePopup.setTextSize(14);
+
             fifthTimePopup.setText(getResources().getString(R.string.day2_btn1_fifth) + "     ");
+            fifthTimePopup.setVisibility(View.VISIBLE);
+            fifthTimePopup.setTextSize(14);
+
             sixthTimePopup.setText(getResources().getString(R.string.day2_btn1_sixth) + "     ");
+            sixthTimePopup.setVisibility(View.VISIBLE);
+            sixthTimePopup.setTextSize(14);
+
             seventhTimePopup.setText(getResources().getString(R.string.day2_btn1_seventh) + "     ");
             seventhTimePopup.setVisibility(View.VISIBLE);
+            seventhTimePopup.setTextSize(14);
 
             firstHeaderPopup.setText(R.string.day2_btn1_first_header);
             secondHeaderPopup.setText(R.string.day2_btn1_second_header);
