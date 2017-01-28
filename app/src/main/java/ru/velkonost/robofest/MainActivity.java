@@ -325,9 +325,17 @@ public class MainActivity extends AppCompatActivity
                     secondMeasurePopup.setText(R.string.day1_btn1_second_desc);
                     thirdMeasurePopup.setText(R.string.day1_btn1_third_desc);
                     forthMeasurePopup.setText(R.string.day1_btn1_forth_desc);
+                    forthMeasurePopup.setVisibility(View.VISIBLE);
+                    forthMeasurePopup.setTextSize(12);
+
                     fifthMeasurePopup.setText(R.string.day1_btn1_fifth_desc);
+                    fifthMeasurePopup.setVisibility(View.VISIBLE);
+                    fifthMeasurePopup.setTextSize(12);
+
                     sixthMeasurePopup.setText(R.string.day1_btn1_sixth_desc);
                     seventhMeasurePopup.setText(R.string.day1_btn1_seventh_desc);
+                    seventhMeasurePopup.setVisibility(View.VISIBLE);
+                    seventhMeasurePopup.setTextSize(12);
 
                     firstAudiencePopup.setVisibility(View.INVISIBLE);
                     firstAudiencePopup.setTextSize(0);
@@ -348,6 +356,8 @@ public class MainActivity extends AppCompatActivity
                     fifthFooterPopup.setText(R.string.day1_btn1_fifth_footer);
                     sixthFooterPopup.setText(R.string.day1_btn1_sixth_footer);
                     seventhFooterPopup.setText(R.string.day1_btn1_seventh_footer);
+                    seventhFooterPopup.setVisibility(View.VISIBLE);
+                    seventhFooterPopup.setTextSize(12);
 
 
                 } else {
@@ -410,15 +420,28 @@ public class MainActivity extends AppCompatActivity
                     seventhHeaderPopup.setTextSize(16);
 
                     firstMeasurePopup.setText(R.string.day2_btn1_first_desc);
+                    firstMeasurePopup.setVisibility(View.VISIBLE);
+                    firstMeasurePopup.setTextSize(14);
+
                     secondMeasurePopup.setText(R.string.day2_btn1_second_desc);
                     thirdMeasurePopup.setText(R.string.day2_btn1_third_desc);
                     forthMeasurePopup.setText(R.string.day2_btn1_forth_desc);
+                    forthMeasurePopup.setVisibility(View.VISIBLE);
+                    forthMeasurePopup.setTextSize(12);
+
                     fifthMeasurePopup.setText(R.string.day2_btn1_fifth_desc);
+                    fifthMeasurePopup.setVisibility(View.VISIBLE);
+                    fifthMeasurePopup.setTextSize(12);
+
                     sixthMeasurePopup.setText(R.string.day2_btn1_sixth_desc);
                     seventhMeasurePopup.setText(R.string.day2_btn1_seventh_desc);
-                    seventhTimePopup.setVisibility(View.VISIBLE);
+                    seventhMeasurePopup.setVisibility(View.VISIBLE);
+                    seventhMeasurePopup.setTextSize(12);
 
                     firstAudiencePopup.setText(R.string.day2_btn1_first_audience);
+                    firstAudiencePopup.setVisibility(View.VISIBLE);
+                    firstAudiencePopup.setTextSize(12);
+
                     secondAudiencePopup.setText(R.string.day2_btn1_second_audience);
                     thirdAudiencePopup.setText(R.string.day2_btn1_third_audience);
                     forthAudiencePopup.setText(R.string.day2_btn1_forth_audience);
@@ -428,13 +451,17 @@ public class MainActivity extends AppCompatActivity
                     seventhTimePopup.setVisibility(View.VISIBLE);
 
                     firstFooterPopup.setText(R.string.day2_btn1_first_footer);
+                    firstFooterPopup.setVisibility(View.VISIBLE);
+                    firstFooterPopup.setTextSize(12);
+
                     secondFooterPopup.setText(R.string.day2_btn1_second_footer);
                     thirdFooterPopup.setText(R.string.day2_btn1_third_footer);
                     forthFooterPopup.setText(R.string.day2_btn1_forth_footer);
                     fifthFooterPopup.setText(R.string.day2_btn1_fifth_footer);
                     sixthFooterPopup.setText(R.string.day2_btn1_sixth_footer);
                     seventhFooterPopup.setText(R.string.day2_btn1_seventh_footer);
-                    seventhTimePopup.setVisibility(View.VISIBLE);
+                    seventhFooterPopup.setVisibility(View.VISIBLE);
+                    seventhFooterPopup.setTextSize(12);
 
                 }
             }
@@ -510,9 +537,17 @@ public class MainActivity extends AppCompatActivity
                     secondMeasurePopup.setText(R.string.day1_btn2_second_desc);
                     thirdMeasurePopup.setText(R.string.day1_btn2_third_desc);
                     forthMeasurePopup.setText(R.string.day1_btn2_forth_desc);
+                    forthMeasurePopup.setVisibility(View.VISIBLE);
+                    forthMeasurePopup.setTextSize(12);
+
                     fifthMeasurePopup.setText(R.string.day1_btn2_fifth_desc);
+                    fifthMeasurePopup.setVisibility(View.VISIBLE);
+                    fifthMeasurePopup.setTextSize(12);
+
                     sixthMeasurePopup.setText(R.string.day1_btn2_sixth_desc);
                     seventhMeasurePopup.setText(R.string.day1_btn2_seventh_desc);
+                    seventhMeasurePopup.setVisibility(View.VISIBLE);
+                    seventhMeasurePopup.setTextSize(12);
 
                     firstAudiencePopup.setVisibility(View.INVISIBLE);
                     firstAudiencePopup.setTextSize(0);
@@ -524,13 +559,17 @@ public class MainActivity extends AppCompatActivity
                     sixthAudiencePopup.setText(R.string.day1_btn2_sixth_audience);
                     seventhAudiencePopup.setText(R.string.day1_btn2_seventh_audience);
 
-                    firstFooterPopup.setText(R.string.day1_btn2_first_footer);
+                    firstFooterPopup.setVisibility(View.INVISIBLE);
+                    firstFooterPopup.setTextSize(0);
+
                     secondFooterPopup.setText(R.string.day1_btn2_second_footer);
                     thirdFooterPopup.setText(R.string.day1_btn2_third_footer);
                     forthFooterPopup.setText(R.string.day1_btn2_forth_footer);
                     fifthFooterPopup.setText(R.string.day1_btn2_fifth_footer);
                     sixthFooterPopup.setText(R.string.day1_btn2_sixth_footer);
                     seventhFooterPopup.setText(R.string.day1_btn2_seventh_footer);
+                    seventhFooterPopup.setVisibility(View.VISIBLE);
+                    seventhFooterPopup.setTextSize(12);
 
                 } else {
 
@@ -589,16 +628,28 @@ public class MainActivity extends AppCompatActivity
                     seventhHeaderPopup.setTextSize(0);
 
                     firstMeasurePopup.setText(R.string.day2_btn2_first_desc);
+                    firstMeasurePopup.setVisibility(View.VISIBLE);
+                    firstMeasurePopup.setTextSize(14);
+
                     secondMeasurePopup.setText(R.string.day2_btn2_second_desc);
                     thirdMeasurePopup.setText(R.string.day2_btn2_third_desc);
                     forthMeasurePopup.setText(R.string.day2_btn2_forth_desc);
+                    forthMeasurePopup.setVisibility(View.VISIBLE);
+                    forthMeasurePopup.setTextSize(12);
+
                     fifthMeasurePopup.setText(R.string.day2_btn2_fifth_desc);
+                    fifthMeasurePopup.setVisibility(View.VISIBLE);
+                    fifthMeasurePopup.setTextSize(12);
+
                     sixthMeasurePopup.setText(R.string.day2_btn2_sixth_desc);
 
                     seventhMeasurePopup.setVisibility(View.INVISIBLE);
                     seventhMeasurePopup.setTextSize(0);
 
                     firstAudiencePopup.setText(R.string.day2_btn2_first_audience);
+                    firstAudiencePopup.setVisibility(View.VISIBLE);
+                    firstAudiencePopup.setTextSize(12);
+
                     secondAudiencePopup.setText(R.string.day2_btn2_second_audience);
                     thirdAudiencePopup.setText(R.string.day2_btn2_third_audience);
                     forthAudiencePopup.setText(R.string.day2_btn2_forth_audience);
@@ -606,9 +657,12 @@ public class MainActivity extends AppCompatActivity
                     sixthAudiencePopup.setText(R.string.day2_btn2_sixth_audience);
 
                     seventhAudiencePopup.setVisibility(View.INVISIBLE);
-                    seventhMeasurePopup.setTextSize(0);
+                    seventhAudiencePopup.setTextSize(0);
 
                     firstFooterPopup.setText(R.string.day2_btn2_first_footer);
+                    firstFooterPopup.setVisibility(View.VISIBLE);
+                    firstFooterPopup.setTextSize(12);
+
                     secondFooterPopup.setText(R.string.day2_btn2_second_footer);
                     thirdFooterPopup.setText(R.string.day2_btn2_third_footer);
                     forthFooterPopup.setText(R.string.day2_btn2_forth_footer);
@@ -700,6 +754,8 @@ public class MainActivity extends AppCompatActivity
 
                     sixthMeasurePopup.setText(R.string.day1_btn3_sixth_desc);
                     seventhMeasurePopup.setText(R.string.day1_btn3_seventh_desc);
+                    seventhMeasurePopup.setVisibility(View.VISIBLE);
+                    seventhMeasurePopup.setTextSize(12);
 
                     firstAudiencePopup.setVisibility(View.INVISIBLE);
                     firstAudiencePopup.setTextSize(0);
@@ -710,14 +766,20 @@ public class MainActivity extends AppCompatActivity
                     fifthAudiencePopup.setText(R.string.day1_btn3_fifth_audience);
                     sixthAudiencePopup.setText(R.string.day1_btn3_sixth_audience);
                     seventhAudiencePopup.setText(R.string.day1_btn3_seventh_audience);
+                    seventhAudiencePopup.setVisibility(View.VISIBLE);
+                    seventhAudiencePopup.setTextSize(12);
 
-                    firstFooterPopup.setText(R.string.day1_btn3_first_footer);
+                    firstFooterPopup.setVisibility(View.INVISIBLE);
+                    firstFooterPopup.setTextSize(0);
+
                     secondFooterPopup.setText(R.string.day1_btn3_second_footer);
                     thirdFooterPopup.setText(R.string.day1_btn3_third_footer);
                     forthFooterPopup.setText(R.string.day1_btn3_forth_footer);
                     fifthFooterPopup.setText(R.string.day1_btn3_fifth_footer);
                     sixthFooterPopup.setText(R.string.day1_btn3_sixth_footer);
                     seventhFooterPopup.setText(R.string.day1_btn3_seventh_footer);
+                    seventhFooterPopup.setVisibility(View.VISIBLE);
+                    seventhFooterPopup.setTextSize(12);
 
                 } else {
 
@@ -776,9 +838,14 @@ public class MainActivity extends AppCompatActivity
                     seventhHeaderPopup.setTextSize(0);
 
                     firstMeasurePopup.setText(R.string.day2_btn3_first_desc);
+                    firstMeasurePopup.setVisibility(View.VISIBLE);
+                    firstMeasurePopup.setTextSize(14);
+
                     secondMeasurePopup.setText(R.string.day2_btn3_second_desc);
                     thirdMeasurePopup.setText(R.string.day2_btn3_third_desc);
                     forthMeasurePopup.setText(R.string.day2_btn3_forth_desc);
+                    forthMeasurePopup.setVisibility(View.VISIBLE);
+                    forthMeasurePopup.setTextSize(12);
 
                     fifthMeasurePopup.setVisibility(View.INVISIBLE);
                     fifthMeasurePopup.setTextSize(0);
@@ -790,6 +857,9 @@ public class MainActivity extends AppCompatActivity
                     seventhMeasurePopup.setTextSize(0);
 
                     firstAudiencePopup.setText(R.string.day2_btn3_first_audience);
+                    firstAudiencePopup.setVisibility(View.VISIBLE);
+                    firstAudiencePopup.setTextSize(12);
+
                     secondAudiencePopup.setText(R.string.day2_btn3_second_audience);
                     thirdAudiencePopup.setText(R.string.day2_btn3_third_audience);
                     forthAudiencePopup.setText(R.string.day2_btn3_forth_audience);
@@ -800,6 +870,9 @@ public class MainActivity extends AppCompatActivity
                     seventhAudiencePopup.setTextSize(0);
 
                     firstFooterPopup.setText(R.string.day2_btn3_first_footer);
+                    firstFooterPopup.setVisibility(View.VISIBLE);
+                    firstFooterPopup.setTextSize(12);
+
                     secondFooterPopup.setText(R.string.day2_btn3_second_footer);
                     thirdFooterPopup.setText(R.string.day2_btn3_third_footer);
                     forthFooterPopup.setText(R.string.day2_btn3_forth_footer);
@@ -884,9 +957,17 @@ public class MainActivity extends AppCompatActivity
 
                     thirdMeasurePopup.setText(R.string.day1_btn4_third_desc);
                     forthMeasurePopup.setText(R.string.day1_btn4_forth_desc);
+                    forthMeasurePopup.setVisibility(View.VISIBLE);
+                    forthMeasurePopup.setTextSize(12);
+
                     fifthMeasurePopup.setText(R.string.day1_btn4_fifth_desc);
+                    fifthMeasurePopup.setVisibility(View.VISIBLE);
+                    fifthMeasurePopup.setTextSize(12);
+
                     sixthMeasurePopup.setText(R.string.day1_btn4_sixth_desc);
                     seventhMeasurePopup.setText(R.string.day1_btn4_seventh_desc);
+                    seventhMeasurePopup.setVisibility(View.VISIBLE);
+                    seventhMeasurePopup.setTextSize(12);
 
                     firstAudiencePopup.setVisibility(View.INVISIBLE);
                     firstAudiencePopup.setTextSize(0);
@@ -897,14 +978,20 @@ public class MainActivity extends AppCompatActivity
                     fifthAudiencePopup.setText(R.string.day1_btn4_fifth_audience);
                     sixthAudiencePopup.setText(R.string.day1_btn4_sixth_audience);
                     seventhAudiencePopup.setText(R.string.day1_btn4_seventh_audience);
+                    seventhAudiencePopup.setVisibility(View.VISIBLE);
+                    seventhAudiencePopup.setTextSize(12);
 
-                    firstFooterPopup.setText(R.string.day1_btn4_first_footer);
+                    firstFooterPopup.setVisibility(View.INVISIBLE);
+                    firstFooterPopup.setTextSize(0);
+
                     secondFooterPopup.setText(R.string.day1_btn4_second_footer);
                     thirdFooterPopup.setText(R.string.day1_btn4_third_footer);
                     forthFooterPopup.setText(R.string.day1_btn4_forth_footer);
                     fifthFooterPopup.setText(R.string.day1_btn4_fifth_footer);
                     sixthFooterPopup.setText(R.string.day1_btn4_sixth_footer);
                     seventhFooterPopup.setText(R.string.day1_btn4_seventh_footer);
+                    seventhFooterPopup.setVisibility(View.VISIBLE);
+                    seventhFooterPopup.setTextSize(12);
 
                 } else {
 
@@ -963,16 +1050,28 @@ public class MainActivity extends AppCompatActivity
                     seventhHeaderPopup.setTextSize(0);
 
                     firstMeasurePopup.setText(R.string.day2_btn4_first_desc);
+                    firstMeasurePopup.setVisibility(View.VISIBLE);
+                    firstMeasurePopup.setTextSize(14);
+
                     secondMeasurePopup.setText(R.string.day2_btn4_second_desc);
                     thirdMeasurePopup.setText(R.string.day2_btn4_third_desc);
                     forthMeasurePopup.setText(R.string.day2_btn4_forth_desc);
+                    forthMeasurePopup.setVisibility(View.VISIBLE);
+                    forthMeasurePopup.setTextSize(12);
+
                     fifthMeasurePopup.setText(R.string.day2_btn4_fifth_desc);
+                    fifthMeasurePopup.setVisibility(View.VISIBLE);
+                    fifthMeasurePopup.setTextSize(12);
+
                     sixthMeasurePopup.setText(R.string.day2_btn4_sixth_desc);
 
                     seventhMeasurePopup.setVisibility(View.INVISIBLE);
                     seventhMeasurePopup.setTextSize(0);
 
                     firstAudiencePopup.setText(R.string.day2_btn4_first_audience);
+                    firstAudiencePopup.setVisibility(View.VISIBLE);
+                    firstAudiencePopup.setTextSize(12);
+
                     secondAudiencePopup.setText(R.string.day2_btn4_second_audience);
                     thirdAudiencePopup.setText(R.string.day2_btn4_third_audience);
                     forthAudiencePopup.setText(R.string.day2_btn4_forth_audience);
@@ -983,6 +1082,9 @@ public class MainActivity extends AppCompatActivity
                     seventhAudiencePopup.setTextSize(0);
 
                     firstFooterPopup.setText(R.string.day2_btn4_first_footer);
+                    firstFooterPopup.setVisibility(View.VISIBLE);
+                    firstFooterPopup.setTextSize(12);
+
                     secondFooterPopup.setText(R.string.day2_btn4_second_footer);
                     thirdFooterPopup.setText(R.string.day2_btn4_third_footer);
                     forthFooterPopup.setText(R.string.day2_btn4_forth_footer);
@@ -1063,33 +1165,50 @@ public class MainActivity extends AppCompatActivity
 
                     firstMeasurePopup.setText(R.string.day1_btn5_first_desc);
                     firstMeasurePopup.setVisibility(View.VISIBLE);
-                    firstMeasurePopup.setTextSize(12);
+                    firstMeasurePopup.setTextSize(14);
 
                     secondMeasurePopup.setText(R.string.day1_btn5_second_desc);
                     thirdMeasurePopup.setText(R.string.day1_btn5_third_desc);
                     forthMeasurePopup.setText(R.string.day1_btn5_forth_desc);
+                    forthMeasurePopup.setVisibility(View.VISIBLE);
+                    forthMeasurePopup.setTextSize(12);
+
                     fifthMeasurePopup.setText(R.string.day1_btn5_fifth_desc);
+                    fifthMeasurePopup.setVisibility(View.VISIBLE);
+                    fifthMeasurePopup.setTextSize(12);
 
                     sixthMeasurePopup.setVisibility(View.INVISIBLE);
                     sixthMeasurePopup.setTextSize(0);
 
                     seventhMeasurePopup.setText(R.string.day1_btn5_seventh_desc);
+                    seventhMeasurePopup.setVisibility(View.VISIBLE);
+                    seventhMeasurePopup.setTextSize(12);
 
                     firstAudiencePopup.setText(R.string.day1_btn5_first_audience);
+                    firstAudiencePopup.setVisibility(View.VISIBLE);
+                    firstAudiencePopup.setTextSize(12);
+
                     secondAudiencePopup.setText(R.string.day1_btn5_second_audience);
                     thirdAudiencePopup.setText(R.string.day1_btn5_third_audience);
                     forthAudiencePopup.setText(R.string.day1_btn5_forth_audience);
                     fifthAudiencePopup.setText(R.string.day1_btn5_fifth_audience);
                     sixthAudiencePopup.setText(R.string.day1_btn5_sixth_audience);
                     seventhAudiencePopup.setText(R.string.day1_btn5_seventh_audience);
+                    seventhAudiencePopup.setVisibility(View.VISIBLE);
+                    seventhAudiencePopup.setTextSize(12);
 
                     firstFooterPopup.setText(R.string.day1_btn5_first_footer);
+                    firstFooterPopup.setVisibility(View.VISIBLE);
+                    firstFooterPopup.setTextSize(12);
+
                     secondFooterPopup.setText(R.string.day1_btn5_second_footer);
                     thirdFooterPopup.setText(R.string.day1_btn5_third_footer);
                     forthFooterPopup.setText(R.string.day1_btn5_forth_footer);
                     fifthFooterPopup.setText(R.string.day1_btn5_fifth_footer);
                     sixthFooterPopup.setText(R.string.day1_btn5_sixth_footer);
                     seventhFooterPopup.setText(R.string.day1_btn5_seventh_footer);
+                    seventhFooterPopup.setVisibility(View.VISIBLE);
+                    seventhFooterPopup.setTextSize(12);
 
                 } else {
 
@@ -1148,10 +1267,18 @@ public class MainActivity extends AppCompatActivity
                     seventhHeaderPopup.setTextSize(0);
 
                     firstMeasurePopup.setText(R.string.day2_btn5_first_desc);
+                    firstMeasurePopup.setVisibility(View.VISIBLE);
+                    firstMeasurePopup.setTextSize(14);
+
                     secondMeasurePopup.setText(R.string.day2_btn5_second_desc);
                     thirdMeasurePopup.setText(R.string.day2_btn5_third_desc);
                     forthMeasurePopup.setText(R.string.day2_btn5_forth_desc);
+                    forthMeasurePopup.setVisibility(View.VISIBLE);
+                    forthMeasurePopup.setTextSize(12);
+
                     fifthMeasurePopup.setText(R.string.day2_btn5_fifth_desc);
+                    fifthMeasurePopup.setVisibility(View.VISIBLE);
+                    fifthMeasurePopup.setTextSize(12);
 
                     sixthMeasurePopup.setVisibility(View.INVISIBLE);
                     sixthMeasurePopup.setTextSize(0);
@@ -1160,6 +1287,9 @@ public class MainActivity extends AppCompatActivity
                     seventhMeasurePopup.setTextSize(0);
 
                     firstAudiencePopup.setText(R.string.day2_btn5_first_audience);
+                    firstAudiencePopup.setVisibility(View.VISIBLE);
+                    firstAudiencePopup.setTextSize(12);
+
                     secondAudiencePopup.setText(R.string.day2_btn5_second_audience);
                     thirdAudiencePopup.setText(R.string.day2_btn5_third_audience);
                     forthAudiencePopup.setText(R.string.day2_btn5_forth_audience);
@@ -1170,6 +1300,9 @@ public class MainActivity extends AppCompatActivity
                     seventhAudiencePopup.setTextSize(0);
 
                     firstFooterPopup.setText(R.string.day2_btn5_first_footer);
+                    firstFooterPopup.setVisibility(View.VISIBLE);
+                    firstFooterPopup.setTextSize(12);
+
                     secondFooterPopup.setText(R.string.day2_btn5_second_footer);
                     thirdFooterPopup.setText(R.string.day2_btn5_third_footer);
                     forthFooterPopup.setText(R.string.day2_btn5_forth_footer);
@@ -1256,9 +1389,17 @@ public class MainActivity extends AppCompatActivity
             secondMeasurePopup.setText(R.string.day1_btn1_second_desc);
             thirdMeasurePopup.setText(R.string.day1_btn1_third_desc);
             forthMeasurePopup.setText(R.string.day1_btn1_forth_desc);
+            forthMeasurePopup.setVisibility(View.VISIBLE);
+            forthMeasurePopup.setTextSize(12);
+
             fifthMeasurePopup.setText(R.string.day1_btn1_fifth_desc);
+            fifthMeasurePopup.setVisibility(View.VISIBLE);
+            fifthMeasurePopup.setTextSize(12);
+
             sixthMeasurePopup.setText(R.string.day1_btn1_sixth_desc);
             seventhMeasurePopup.setText(R.string.day1_btn1_seventh_desc);
+            seventhMeasurePopup.setVisibility(View.VISIBLE);
+            seventhMeasurePopup.setTextSize(12);
 
             firstAudiencePopup.setVisibility(View.INVISIBLE);
             firstAudiencePopup.setTextSize(0);
@@ -1269,6 +1410,8 @@ public class MainActivity extends AppCompatActivity
             fifthAudiencePopup.setText(R.string.day1_btn1_fifth_audience);
             sixthAudiencePopup.setText(R.string.day1_btn1_sixth_audience);
             seventhAudiencePopup.setText(R.string.day1_btn1_seventh_audience);
+            seventhAudiencePopup.setVisibility(View.VISIBLE);
+            seventhAudiencePopup.setTextSize(12);
 
             firstFooterPopup.setVisibility(View.INVISIBLE);
             firstFooterPopup.setTextSize(0);
@@ -1279,6 +1422,9 @@ public class MainActivity extends AppCompatActivity
             fifthFooterPopup.setText(R.string.day1_btn1_fifth_footer);
             sixthFooterPopup.setText(R.string.day1_btn1_sixth_footer);
             seventhFooterPopup.setText(R.string.day1_btn1_seventh_footer);
+            seventhFooterPopup.setVisibility(View.VISIBLE);
+            seventhFooterPopup.setTextSize(12);
+
         } else {
 
             firstTimePopup.setText(getResources().getString(R.string.day2_btn1_first) + "     ");
@@ -1319,31 +1465,49 @@ public class MainActivity extends AppCompatActivity
             seventhTimePopup.setVisibility(View.VISIBLE);
 
             firstMeasurePopup.setText(R.string.day2_btn1_first_desc);
+            firstMeasurePopup.setVisibility(View.VISIBLE);
+            firstMeasurePopup.setTextSize(14);
+
             secondMeasurePopup.setText(R.string.day2_btn1_second_desc);
             thirdMeasurePopup.setText(R.string.day2_btn1_third_desc);
             forthMeasurePopup.setText(R.string.day2_btn1_forth_desc);
+            forthMeasurePopup.setVisibility(View.VISIBLE);
+            forthMeasurePopup.setTextSize(12);
+
             fifthMeasurePopup.setText(R.string.day2_btn1_fifth_desc);
+            fifthMeasurePopup.setVisibility(View.VISIBLE);
+            fifthMeasurePopup.setTextSize(12);
+
             sixthMeasurePopup.setText(R.string.day2_btn1_sixth_desc);
             seventhMeasurePopup.setText(R.string.day2_btn1_seventh_desc);
-            seventhTimePopup.setVisibility(View.VISIBLE);
+            seventhMeasurePopup.setVisibility(View.VISIBLE);
+            seventhMeasurePopup.setTextSize(12);
 
             firstAudiencePopup.setText(R.string.day2_btn1_first_audience);
+            firstAudiencePopup.setVisibility(View.VISIBLE);
+            firstAudiencePopup.setTextSize(12);
+
             secondAudiencePopup.setText(R.string.day2_btn1_second_audience);
             thirdAudiencePopup.setText(R.string.day2_btn1_third_audience);
             forthAudiencePopup.setText(R.string.day2_btn1_forth_audience);
             fifthAudiencePopup.setText(R.string.day2_btn1_fifth_audience);
             sixthAudiencePopup.setText(R.string.day2_btn1_sixth_audience);
             seventhAudiencePopup.setText(R.string.day2_btn1_seventh_audience);
-            seventhTimePopup.setVisibility(View.VISIBLE);
+            seventhAudiencePopup.setVisibility(View.VISIBLE);
+            seventhAudiencePopup.setTextSize(12);
 
             firstFooterPopup.setText(R.string.day2_btn1_first_footer);
+            firstFooterPopup.setVisibility(View.VISIBLE);
+            firstFooterPopup.setTextSize(12);
+
             secondFooterPopup.setText(R.string.day2_btn1_second_footer);
             thirdFooterPopup.setText(R.string.day2_btn1_third_footer);
             forthFooterPopup.setText(R.string.day2_btn1_forth_footer);
             fifthFooterPopup.setText(R.string.day2_btn1_fifth_footer);
             sixthFooterPopup.setText(R.string.day2_btn1_sixth_footer);
             seventhFooterPopup.setText(R.string.day2_btn1_seventh_footer);
-            seventhTimePopup.setVisibility(View.VISIBLE);
+            seventhFooterPopup.setVisibility(View.VISIBLE);
+            seventhFooterPopup.setTextSize(12);
 
         }
 
