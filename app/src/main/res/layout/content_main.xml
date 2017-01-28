@@ -27,6 +27,8 @@
                 android:text="Робофест в омске!"
                 android:id="@+id/welcomeText"
                 android:gravity="top"
+                android:textColor="@color/colorBlack"
+                android:textSize="22sp"
                 android:layout_centerHorizontal="true"/>
 
             <LinearLayout

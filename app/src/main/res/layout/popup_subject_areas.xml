@@ -3,7 +3,7 @@
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:background="@drawable/popup">
+              android:background="@drawable/main_activity_day_desc">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -59,6 +59,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/area_name"
         android:padding="10dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="14sp"
         android:textAlignment="center"/>
 
     <ScrollView
@@ -89,17 +91,52 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/day_one_time_first"
                 android:textColor="@color/colorWhite"
                 android:id="@+id/firstTimePopup"/>
 
-            <TextView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/day_one_desc_first"
-                android:layout_marginStart="5dp"
-                android:textColor="@color/colorWhite"
-                android:id="@+id/firstMeasurePopup"/>
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:id="@+id/firstHeaderPopup"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:textColor="@color/colorWhite"
+                    android:id="@+id/firstMeasurePopup"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="12sp"
+                    android:paddingTop="10dp"
+                    android:id="@+id/firstAudiencePopup"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:textSize="12sp"
+                    android:textStyle="italic"
+                    android:textColor="@color/colorWhite"
+                    android:id="@+id/firstFooterPopup"/>
+
+            </LinearLayout>
+
+
+
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -112,17 +149,50 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/day_one_time_second"
                 android:textColor="@color/colorWhite"
                 android:id="@+id/secondTimePopup"/>
 
-            <TextView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/day_one_desc_second"
-                android:layout_marginStart="5dp"
-                android:textColor="@color/colorWhite"
-                android:id="@+id/secondMeasurePopup"/>
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:id="@+id/secondHeaderPopup"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:textColor="@color/colorWhite"
+                    android:id="@+id/secondMeasurePopup"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:layout_marginStart="5dp"
+                    android:textColor="@color/colorWhite"
+                    android:id="@+id/secondAudiencePopup"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textStyle="italic"
+                    android:layout_marginStart="5dp"
+                    android:textColor="@color/colorWhite"
+                    android:id="@+id/secondFooterPopup"/>
+
+            </LinearLayout>
+
+
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -135,17 +205,48 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/day_one_time_third"
                 android:textColor="@color/colorWhite"
                 android:id="@+id/thirdTimePopup"/>
 
-            <TextView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/day_one_desc_third"
-                android:layout_marginStart="5dp"
-                android:textColor="@color/colorWhite"
-                android:id="@+id/thirdMeasurePopup"/>
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:id="@+id/thirdHeaderPopup"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:textColor="@color/colorWhite"
+                    android:id="@+id/thirdMeasurePopup"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:layout_marginStart="5dp"
+                    android:textColor="@color/colorWhite"
+                    android:id="@+id/thirdAudiencePopup"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textStyle="italic"
+                    android:layout_marginStart="5dp"
+                    android:textColor="@color/colorWhite"
+                    android:id="@+id/thirdFooterPopup"/>
+
+            </LinearLayout>
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -158,17 +259,48 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/day_one_time_forth"
                 android:textColor="@color/colorWhite"
                 android:id="@+id/forthTimePopup"/>
 
-            <TextView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/day_one_desc_forth"
-                android:layout_marginStart="5dp"
-                android:textColor="@color/colorWhite"
-                android:id="@+id/forthMeasurePopup"/>
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:id="@+id/forthHeaderPopup"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:textColor="@color/colorWhite"
+                    android:id="@+id/forthMeasurePopup"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:layout_marginStart="5dp"
+                    android:textColor="@color/colorWhite"
+                    android:id="@+id/forthAudiencePopup"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textStyle="italic"
+                    android:layout_marginStart="5dp"
+                    android:textColor="@color/colorWhite"
+                    android:id="@+id/forthFooterPopup"/>
+
+            </LinearLayout>
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -181,17 +313,48 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/day_one_time_fifth"
                 android:textColor="@color/colorWhite"
                 android:id="@+id/fifthTimePopup"/>
 
-            <TextView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/day_one_desc_fifth"
-                android:layout_marginStart="5dp"
-                android:textColor="@color/colorWhite"
-                android:id="@+id/fifthMeasurePopup"/>
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:id="@+id/fifthHeaderPopup"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:textColor="@color/colorWhite"
+                    android:id="@+id/fifthMeasurePopup"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:layout_marginStart="5dp"
+                    android:textColor="@color/colorWhite"
+                    android:id="@+id/fifthAudiencePopup"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textStyle="italic"
+                    android:layout_marginStart="5dp"
+                    android:textColor="@color/colorWhite"
+                    android:id="@+id/fifthFooterPopup"/>
+
+            </LinearLayout>
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -204,17 +367,48 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/day_one_time_fifth"
                 android:textColor="@color/colorWhite"
                 android:id="@+id/sixthTimePopup"/>
 
-            <TextView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/day_one_desc_fifth"
-                android:layout_marginStart="5dp"
-                android:textColor="@color/colorWhite"
-                android:id="@+id/sixthMeasurePopup"/>
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:id="@+id/sixthHeaderPopup"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:textColor="@color/colorWhite"
+                    android:id="@+id/sixthMeasurePopup"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:layout_marginStart="5dp"
+                    android:textColor="@color/colorWhite"
+                    android:id="@+id/sixthAudiencePopup"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textStyle="italic"
+                    android:layout_marginStart="5dp"
+                    android:textColor="@color/colorWhite"
+                    android:id="@+id/sixthFooterPopup"/>
+
+            </LinearLayout>
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -227,17 +421,48 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/day_one_time_fifth"
                 android:textColor="@color/colorWhite"
                 android:id="@+id/seventhTimePopup"/>
 
-            <TextView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/day_one_desc_fifth"
-                android:layout_marginStart="5dp"
-                android:textColor="@color/colorWhite"
-                android:id="@+id/seventhMeasurePopup"/>
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"
+                    android:id="@+id/seventhHeaderPopup"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:textColor="@color/colorWhite"
+                    android:id="@+id/seventhMeasurePopup"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorWhite"
+                    android:id="@+id/seventhAudiencePopup"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textStyle="italic"
+                    android:layout_marginStart="5dp"
+                    android:textColor="@color/colorWhite"
+                    android:id="@+id/seventhFooterPopup"/>
+
+            </LinearLayout>
         </LinearLayout>
 
         <View

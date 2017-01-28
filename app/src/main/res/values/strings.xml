@@ -51,7 +51,6 @@
     <string name="hr_langProg">LEGO MINDSTORMS+ EV3, RoboLab, или NXT-G</string>
     <string name="fs_langProg">--</string>
 
-
     <string name="area_name_1">Выставочный павильон, открытая площадка No1</string>
     <string name="area_name_2">Выставочный павильон, открытая площадка No2</string>
     <string name="area_name_3">Выставочный павильон, открытая площадка No3</string>
@@ -114,15 +113,13 @@
     <string name="day2_btn2_forth">13.00–13.45  </string>
     <string name="day2_btn2_fifth">14.00–14.45  </string>
     <string name="day2_btn2_sixth">15.00–15.45  </string>
-    <string name="day2_btn2_seventh"></string>
 
     <string name="day2_btn3_first">10.00–10.45  </string>
     <string name="day2_btn3_second">11.00–11.45  </string>
     <string name="day2_btn3_third">12.00–12.45  </string>
-    <string name="day2_btn3_forth">13.00-13.45  </string>
+    <string name="day2_btn3_forth">13.00–13.45  </string>
     <string name="day2_btn3_fifth">14.00–14.45  </string>
     <string name="day2_btn3_sixth">15.00–15.45  </string>
-    <string name="day2_btn3_seventh"></string>
 
     <string name="day2_btn4_first">10.00–10.45  </string>
     <string name="day2_btn4_second">11.00–11.45  </string>
@@ -130,7 +127,6 @@
     <string name="day2_btn4_forth">13.00–13.45  </string>
     <string name="day2_btn4_fifth">14.00–14.45  </string>
     <string name="day2_btn4_sixth">15.00–15.45  </string>
-    <string name="day2_btn4_seventh"></string>
 
     <string name="day2_btn5_first">10.00–10.40  </string>
     <string name="day2_btn5_second">11.00–11.40  </string>
@@ -138,7 +134,6 @@
     <string name="day2_btn5_forth">13.00–13.40  </string>
     <string name="day2_btn5_fifth">14.00–14.40  </string>
     <string name="day2_btn5_sixth">15.00–15.40  </string>
-    <string name="day2_btn5_seventh"></string>
 
 
 
@@ -222,8 +217,6 @@
 
 
 
-
-    <string name="day1_btn1_first_desc"></string>
     <string name="day1_btn1_second_desc">Ребенку дается возможность попробовать себя в роли конструктора, программиста, создать робототехническую модель, которая может двигаться и издавать звуки, реагировать на действия человека. </string>
     <string name="day1_btn1_third_desc">Мастерская сопровождается разбором на доступном и понятном для детей языке научных принципов, благодаря которым функционируют конструируемые устройства, а также служат отправной точкой для дальнейшего развития идей, заложенных в создаваемые модели, при этом творчество ограничивается только детской фантазией. </string>
     <string name="day1_btn1_forth_desc">Строительный материал - детский конструктор размером XXL, позволяющий строить различные фигуры в полный рост ребенка. </string>
@@ -231,7 +224,6 @@
     <string name="day1_btn1_sixth_desc">Строительный материал - детский конструктор размером XXL, позволяющий строить различные фигуры в полный рост ребенка </string>
     <string name="day1_btn1_seventh_desc">Тренинг-семинар-мастер-класс </string>
 
-    <string name="day1_btn2_first_desc"></string>
     <string name="day1_btn2_second_desc">Создаем красивое и полезное своими руками. </string>
     <string name="day1_btn2_third_desc">Создаем красивое и полезное своими руками. </string>
     <string name="day1_btn2_forth_desc">Чувства в век технического прогресса (мастер-класс по драме) </string>
@@ -239,18 +231,14 @@
     <string name="day1_btn2_sixth_desc">Первые шаги в общении на европейских языках… </string>
     <string name="day1_btn2_seventh_desc">Первые шаги в общении на европейских языках… </string>
 
-    <string name="day1_btn3_first_desc"></string>
+
     <string name="day1_btn3_second_desc">Первые шаги в общении на европейских языках… </string>
     <string name="day1_btn3_third_desc">Первые шаги в общении на европейских языках… </string>
-    <string name="day1_btn3_forth_desc"></string>
-    <string name="day1_btn3_fifth_desc"></string>
     <string name="day1_btn3_sixth_desc">Мастер-класс от Российско-Британской школы
 Законы природы в физических и химических экспериментах. </string>
     <string name="day1_btn3_seventh_desc">Мастер-класс от Российско-Британской школы
 Законы природы в физических и химических экспериментах. </string>
 
-    <string name="day1_btn4_first_desc"></string>
-    <string name="day1_btn4_second_desc"></string>
     <string name="day1_btn4_third_desc">Презентация о том, каким будет наше общество к 2030 году, на какие тенденции стоит опираться при выборе профессии, какие профессии будут востребованы. От Международного Образовательного Агентства и Российско-Британской Школы. </string>
     <string name="day1_btn4_forth_desc">Презентация о том, каким будет наше общество к 2030 году, на какие тенденции стоит опираться при выборе профессии, какие профессии будут востребованы. От Международного Образовательного Агентства и Российско-Британской Школы. </string>
     <string name="day1_btn4_fifth_desc">Учебный центр (УЦ) «Джей энд Эс» в on-line среде. </string>
@@ -263,7 +251,6 @@
     <string name="day1_btn5_third_desc">Советы для родителей: c чего начать обучение ребенка робототехнике. </string>
     <string name="day1_btn5_forth_desc">Как научиться работать с информацией для успешной учёбы и карьеры. </string>
     <string name="day1_btn5_fifth_desc">Промышленная робототехника в России и за рубежом. Краткий обзор роботизации, проблем и перспектив внедрения промышленных роботов на отечественных предприятиях. </string>
-    <string name="day1_btn5_sixth_desc"></string>
     <string name="day1_btn5_seventh_desc">Способы передачи скрытой информации, возможности телевизорной установки для обеспечения информационной безопасности и т.д. </string>
 
 
@@ -290,8 +277,6 @@
     <string name="day2_btn3_second_desc">Мастер-класс. </string>
     <string name="day2_btn3_third_desc">Язык- это не просто слова, это культура … </string>
     <string name="day2_btn3_forth_desc">Новые технологии в изучении английского языка </string>
-    <string name="day2_btn3_fifth_desc"></string>
-    <string name="day2_btn3_sixth_desc"></string>>
 
     <string name="day2_btn4_first_desc">Тайм-менеджмент и стрессоустойчивость в тренинговом режиме. От Российско-британской школы </string>
     <string name="day2_btn4_second_desc">Аргументированная дискуссия с открытым финалом от Международного Образовательного Агентства </string>
@@ -306,93 +291,86 @@
     <string name="day2_btn5_forth_desc">Электронный учебник как эффективное средство для повышения качества образования. Этапы внедрения его в образовательный процесс. </string>
     <string name="day2_btn5_fifth_desc">Ты хочешь стать айтишником. Как сделать первые шаги к своей мечте? Что ждет тебя через 5 лет? Как живут и что делают инженеры в Омске?
 Эта лекция станет для тебя решающим фактором в выборе будущей карьеры </string>
-    <string name="day2_btn5_sixth_desc"></string>
 
 
 
 
-    <string name="day1_btn1_first_audience"></string>
-    <string name="day1_btn1_second_audience">дети от 9 до 11 лет </string>
-    <string name="day1_btn1_third_audience">дети 6 до 11 лет </string>
-    <string name="day1_btn1_forth_audience">дети от 2-х и до 12 лет </string>
-    <string name="day1_btn1_fifth_audience">дети от 5 до 10 лет </string>
-    <string name="day1_btn1_sixth_audience">дети от 2-х и до 12 лет </string>
-    <string name="day1_btn1_seventh_audience">учащиеся 10–11 классов </string>
+    <string name="day1_btn1_second_audience">Аудитория: дети от 9 до 11 лет </string>
+    <string name="day1_btn1_third_audience">Аудитория: дети 6 до 11 лет </string>
+    <string name="day1_btn1_forth_audience">Аудитория: дети от 2-х и до 12 лет </string>
+    <string name="day1_btn1_fifth_audience">Аудитория: дети от 5 до 10 лет </string>
+    <string name="day1_btn1_sixth_audience">Аудитория: дети от 2-х и до 12 лет </string>
+    <string name="day1_btn1_seventh_audience">Аудитория: учащиеся 10–11 классов </string>
 
-    <string name="day1_btn2_first_audience"></string>
-    <string name="day1_btn2_second_audience">дети от 10 до 12 лет </string>
-    <string name="day1_btn2_third_audience">дети от 10 до 12 лет </string>
-    <string name="day1_btn2_forth_audience">дети от 13 до 14 лет </string>
-    <string name="day1_btn2_fifth_audience">дети от 13 до 14 лет </string>
-    <string name="day1_btn2_sixth_audience">дети от 10 до 12 лет </string>
-    <string name="day1_btn2_seventh_audience">дети от 10 до 12 лет </string>
+    <string name="day1_btn2_second_audience">Аудитория: дети от 10 до 12 лет </string>
+    <string name="day1_btn2_third_audience">Аудитория: дети от 10 до 12 лет </string>
+    <string name="day1_btn2_forth_audience">Аудитория: дети от 13 до 14 лет </string>
+    <string name="day1_btn2_fifth_audience">Аудитория: дети от 13 до 14 лет </string>
+    <string name="day1_btn2_sixth_audience">Аудитория: дети от 10 до 12 лет </string>
+    <string name="day1_btn2_seventh_audience">Аудитория: дети от 10 до 12 лет </string>
 
-    <string name="day1_btn3_first_audience"></string>
-    <string name="day1_btn3_second_audience">дети от 10 до 12 лет </string>
-    <string name="day1_btn3_third_audience">дети от 10 до 12 лет </string>
-    <string name="day1_btn3_forth_audience">дети от 13 до 14 лет </string>
-    <string name="day1_btn3_fifth_audience">дети от 13 до 14 лет </string>
-    <string name="day1_btn3_sixth_audience">дети от 10 до 12 лет </string>
-    <string name="day1_btn3_seventh_audience">дети от 10 до 12 лет </string>
+    <string name="day1_btn3_second_audience">Аудитория: дети от 10 до 12 лет </string>
+    <string name="day1_btn3_third_audience">Аудитория: дети от 10 до 12 лет </string>
+    <string name="day1_btn3_forth_audience">Аудитория: дети от 13 до 14 лет </string>
+    <string name="day1_btn3_fifth_audience">Аудитория: дети от 13 до 14 лет </string>
+    <string name="day1_btn3_sixth_audience">Аудитория: дети от 10 до 12 лет </string>
+    <string name="day1_btn3_seventh_audience">Аудитория: дети от 10 до 12 лет </string>
 
-    <string name="day1_btn4_first_audience"></string>
-    <string name="day1_btn4_second_audience">преподаватели, родители, дети 15+ </string>
-    <string name="day1_btn4_third_audience">преподаватели, родители, дети 15+ </string>
-    <string name="day1_btn4_forth_audience">преподаватели, родители, дети 15+ </string>
-    <string name="day1_btn4_fifth_audience">преподаватели, родители, дети 15+ </string>
-    <string name="day1_btn4_sixth_audience">преподаватели, родители, дети 15+ </string>
-    <string name="day1_btn4_seventh_audience">преподаватели, родители, дети 15+ </string>
+    <string name="day1_btn4_second_audience">Аудитория: преподаватели, родители, дети 15+ </string>
+    <string name="day1_btn4_third_audience">Аудитория: преподаватели, родители, дети 15+ </string>
+    <string name="day1_btn4_forth_audience">Аудитория: преподаватели, родители, дети 15+ </string>
+    <string name="day1_btn4_fifth_audience">Аудитория: преподаватели, родители, дети 15+ </string>
+    <string name="day1_btn4_sixth_audience">Аудитория: преподаватели, родители, дети 15+ </string>
+    <string name="day1_btn4_seventh_audience">Аудитория: преподаватели, родители, дети 15+ </string>
 
-    <string name="day1_btn5_first_audience">учащиеся 8–11 класс, родители </string>
-    <string name="day1_btn5_second_audience">преподаватели, родители </string>
-    <string name="day1_btn5_third_audience">преподаватели, родители </string>
-    <string name="day1_btn5_forth_audience">преподаватели, родители, дети </string>
-    <string name="day1_btn5_fifth_audience">преподаватели, родители, учащиеся 9–11классов, студенты технических ВУЗов </string>
-    <string name="day1_btn5_sixth_audience">учителя физики, математики, информатики, педагоги дополнительного образования технического направления, школьники и студенты технических ВУЗов</string>
-    <string name="day1_btn5_seventh_audience">преподаватели, родители, учащиеся 10–11классов, студенты технических ВУЗов </string>
+    <string name="day1_btn5_first_audience">Аудитория: учащиеся 8–11 класс, родители </string>
+    <string name="day1_btn5_second_audience">Аудитория: преподаватели, родители </string>
+    <string name="day1_btn5_third_audience">Аудитория: преподаватели, родители </string>
+    <string name="day1_btn5_forth_audience">Аудитория: преподаватели, родители, дети </string>
+    <string name="day1_btn5_fifth_audience">Аудитория: преподаватели, родители, учащиеся 9–11классов, студенты технических ВУЗов </string>
+    <string name="day1_btn5_sixth_audience">Аудитория: учителя физики, математики, информатики, педагоги дополнительного образования технического направления, школьники и студенты технических ВУЗов</string>
+    <string name="day1_btn5_seventh_audience">Аудитория: преподаватели, родители, учащиеся 10–11классов, студенты технических ВУЗов </string>
 
 
 
-    <string name="day2_btn1_first_audience">дети от 5 до 10 лет </string>
-    <string name="day2_btn1_second_audience">дети от 2-х и до 12 лет </string>
-    <string name="day2_btn1_third_audience">преподаватели, родители, дети </string>
-    <string name="day2_btn1_forth_audience">преподаватели, родители, дети </string>
-    <string name="day2_btn1_fifth_audience">дети от 2-х и до 12 лет </string>
-    <string name="day2_btn1_sixth_audience">преподаватели, родители, дети </string>
-    <string name="day2_btn1_seventh_audience">дети с 7 до 12 лет </string>
+    <string name="day2_btn1_first_audience">Аудитория: дети от 5 до 10 лет </string>
+    <string name="day2_btn1_second_audience">Аудитория: дети от 2-х и до 12 лет </string>
+    <string name="day2_btn1_third_audience">Аудитория: преподаватели, родители, дети </string>
+    <string name="day2_btn1_forth_audience">Аудитория: преподаватели, родители, дети </string>
+    <string name="day2_btn1_fifth_audience">Аудитория: дети от 2-х и до 12 лет </string>
+    <string name="day2_btn1_sixth_audience">Аудитория: преподаватели, родители, дети </string>
+    <string name="day2_btn1_seventh_audience">Аудитория: дети с 7 до 12 лет </string>
 
-    <string name="day2_btn2_first_audience">дети от 10 до 12 лет </string>
-    <string name="day2_btn2_second_audience">дети от 10 до 12 лет </string>
-    <string name="day2_btn2_third_audience">дети от 10 до 12 лет </string>
-    <string name="day2_btn2_forth_audience">дети от 10 до 12 лет </string>
-    <string name="day2_btn2_fifth_audience">дети от 10 до 12 лет </string>
-    <string name="day2_btn2_sixth_audience">дети от 10 до 12 лет </string>
+    <string name="day2_btn2_first_audience">Аудитория: дети от 10 до 12 лет </string>
+    <string name="day2_btn2_second_audience">Аудитория: дети от 10 до 12 лет </string>
+    <string name="day2_btn2_third_audience">Аудитория: дети от 10 до 12 лет </string>
+    <string name="day2_btn2_forth_audience">Аудитория: дети от 10 до 12 лет </string>
+    <string name="day2_btn2_fifth_audience">Аудитория: дети от 10 до 12 лет </string>
+    <string name="day2_btn2_sixth_audience">Аудитория: дети от 10 до 12 лет </string>
 
-    <string name="day2_btn3_first_audience">дети от 10 до 12 лет </string>
-    <string name="day2_btn3_second_audience">дети от 10 до 12 лет </string>
-    <string name="day2_btn3_third_audience">дети от 10 до 12 лет </string>
-    <string name="day2_btn3_forth_audience">дети от 10 до 12 лет </string>
-    <string name="day2_btn3_fifth_audience">дети от 13 до 14 лет </string>
-    <string name="day2_btn3_sixth_audience">дети от 13 до 14 лет </string>
+    <string name="day2_btn3_first_audience">Аудитория: дети от 10 до 12 лет </string>
+    <string name="day2_btn3_second_audience">Аудитория: дети от 10 до 12 лет </string>
+    <string name="day2_btn3_third_audience">Аудитория: дети от 10 до 12 лет </string>
+    <string name="day2_btn3_forth_audience">Аудитория: дети от 10 до 12 лет </string>
+    <string name="day2_btn3_fifth_audience">Аудитория: дети от 13 до 14 лет </string>
+    <string name="day2_btn3_sixth_audience">Аудитория: дети от 13 до 14 лет </string>
 
-    <string name="day2_btn4_first_audience">преподаватели, родители, дети от 15+ </string>
-    <string name="day2_btn4_second_audience">преподаватели, родители, дети от 15+ </string>
-    <string name="day2_btn4_third_audience">преподаватели, родители, дети от 15+ </string>
-    <string name="day2_btn4_forth_audience">преподаватели, родители, дети от 15+ </string>
-    <string name="day2_btn4_fifth_audience">преподаватели, родители, дети от 15+ </string>
-    <string name="day2_btn4_sixth_audience">преподаватели, родители, дети от 15+ </string>
-    <string name="day2_btn4_seventh_audience">преподаватели, родители, дети от 15+ </string>
+    <string name="day2_btn4_first_audience">Аудитория: преподаватели, родители, дети от 15+ </string>
+    <string name="day2_btn4_second_audience">Аудитория: преподаватели, родители, дети от 15+ </string>
+    <string name="day2_btn4_third_audience">Аудитория: преподаватели, родители, дети от 15+ </string>
+    <string name="day2_btn4_forth_audience">Аудитория: преподаватели, родители, дети от 15+ </string>
+    <string name="day2_btn4_fifth_audience">Аудитория: преподаватели, родители, дети от 15+ </string>
+    <string name="day2_btn4_sixth_audience">Аудитория: преподаватели, родители, дети от 15+ </string>
+    <string name="day2_btn4_seventh_audience">Аудитория: преподаватели, родители, дети от 15+ </string>
 
-    <string name="day2_btn5_first_audience">преподаватели, родители, студенты технических ВУЗов </string>
-    <string name="day2_btn5_second_audience">преподаватели, родители, студенты технических ВУЗов </string>
-    <string name="day2_btn5_third_audience">преподаватели, родители, студенты технических ВУЗов ФГБОУ ВПО Омский региональный опорный технический университет </string>
-    <string name="day2_btn5_forth_audience">преподаватели, родители </string>
-    <string name="day2_btn5_fifth_audience">учащиеся 8–11 класс, родители </string>
-    <string name="day2_btn5_sixth_audience">учителя физики, математики, информатики, педагоги дополнительного образования технического направления, школьники и студенты технических ВУЗов </string>
+    <string name="day2_btn5_first_audience">Аудитория: преподаватели, родители, студенты технических ВУЗов </string>
+    <string name="day2_btn5_second_audience">Аудитория: преподаватели, родители, студенты технических ВУЗов </string>
+    <string name="day2_btn5_third_audience">Аудитория: преподаватели, родители, студенты технических ВУЗов ФГБОУ ВПО Омский региональный опорный технический университет </string>
+    <string name="day2_btn5_forth_audience">Аудитория: преподаватели, родители </string>
+    <string name="day2_btn5_fifth_audience">Аудитория: учащиеся 8–11 класс, родители </string>
+    <string name="day2_btn5_sixth_audience">Аудитория: учителя физики, математики, информатики, педагоги дополнительного образования технического направления, школьники и студенты технических ВУЗов </string>
 
 
-
-    <string name="day1_btn1_first_footer"></string>
     <string name="day1_btn1_second_footer">БОУ г.Омска «Лицей БИТ», г.Омск </string>
     <string name="day1_btn1_third_footer">ЦОР «РобоПолигон», г. Омск. </string>
     <string name="day1_btn1_forth_footer">Детский игровой клуб "КУБРИК" </string>
