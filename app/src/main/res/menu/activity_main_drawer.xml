@@ -4,19 +4,15 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/main"
-            android:icon="@drawable/ic_menu_camera"
             android:title="Главная"/>
         <item
             android:id="@+id/competition"
-            android:icon="@drawable/ic_menu_gallery"
             android:title="Соревнования"/>
         <item
             android:id="@+id/translations"
-            android:icon="@drawable/ic_menu_slideshow"
             android:title="Трансляции"/>
         <item
             android:id="@+id/about"
-            android:icon="@drawable/ic_menu_manage"
             android:title="О фестивале"/>
     </group>
 </menu>
