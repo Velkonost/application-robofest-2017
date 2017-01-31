@@ -22,8 +22,6 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.PopupWindow;
@@ -1575,15 +1573,5 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
-    }
-
-    public class MyWebViewClient extends WebViewClient
-    {
-        @Override
-        public boolean shouldOverrideUrlLoading(WebView view, String url)
-        {
-            view.loadUrl(url);
-            return true;
-        }
     }
 }

@@ -1,6 +1,7 @@
 package ru.velkonost.robofest;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.design.widget.NavigationView;
@@ -12,6 +13,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
 
 import adapters.CompetitionTabsFragmentAdapter;
 
@@ -71,6 +73,17 @@ public class CompetitionActivity extends AppCompatActivity
 
         tabLayout.setupWithViewPager(viewPager);
         tabLayout.setTabMode(TabLayout.MODE_FIXED);
+
+    }
+
+    public void openGoogleForms(View view) {
+
+        Intent intent =
+                new Intent("ru.velkonost.Browser");
+        intent.setData(Uri.parse(
+                "https://docs.google.com/forms/d/e/1FAIpQLSfg7od0RMlO5CCML1MZB2dxVnS-3KG8rqTGZ2hitnVY2tdpxg/formResponse"
+        ));
+        startActivity(intent);
 
     }
 

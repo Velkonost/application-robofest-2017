@@ -141,6 +141,17 @@ public class AboutActivity extends AppCompatActivity
         startActivity(intent);
     }
 
+    public void openGoogleForms(View view) {
+
+        Intent intent =
+                new Intent("ru.velkonost.Browser");
+        intent.setData(Uri.parse(
+                "https://docs.google.com/forms/d/e/1FAIpQLSfg7od0RMlO5CCML1MZB2dxVnS-3KG8rqTGZ2hitnVY2tdpxg/formResponse"
+        ));
+        startActivity(intent);
+
+    }
+
 
     public void onClickEmail(View view) {
         Intent intent = new Intent(Intent.ACTION_VIEW);
