@@ -8,7 +8,8 @@ import android.widget.TextView;
 
 import ru.velkonost.robofest.R;
 
-public class AboutContactAdapter extends RecyclerView.Adapter<AboutContactAdapter.AboutContactViewHolder>{
+public class AboutContactAdapter
+        extends RecyclerView.Adapter<AboutContactAdapter.AboutContactViewHolder>{
 
 
     public AboutContactAdapter(){}
@@ -22,7 +23,7 @@ public class AboutContactAdapter extends RecyclerView.Adapter<AboutContactAdapte
 
     @Override
     public void onBindViewHolder(AboutContactViewHolder holder,int position){
-            holder.desc.setText("8-800-2222-108");
+            holder.desc.setText("8-(3812)-53-22-33");
             holder.desc2.setText("robofestomsk@mail.ru");
     }
 

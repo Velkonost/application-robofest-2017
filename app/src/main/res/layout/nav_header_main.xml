@@ -50,7 +50,7 @@
             android:layout_gravity="bottom"
             android:layout_alignParentBottom="true"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:text="Экспоцентр ул. 70 лет Октября"/>
+            android:text="Экспоцентр ул. 70 лет Октября, 25/2"/>
 
         <TextView
             android:id="@+id/textView"
@@ -61,7 +61,7 @@
             android:layout_above="@id/textView2"
 
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:text="26-27 февраля 2017г."/>
+            android:text="17-18 февраля 2017г."/>
 
 
 

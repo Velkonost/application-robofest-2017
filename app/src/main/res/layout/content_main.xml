@@ -45,9 +45,8 @@
                     android:layout_width="match_parent"
                     android:id="@+id/imageMap"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/robofestomsk_sheme"
-                    android:fitsSystemWindows="true"
-                    android:adjustViewBounds="true"/>
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"/>
 
             </LinearLayout>
 

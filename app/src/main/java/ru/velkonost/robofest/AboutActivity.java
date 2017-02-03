@@ -137,7 +137,7 @@ public class AboutActivity extends AppCompatActivity
 
     public void onClickPhoneNumber(View view) {
         Intent intent = new Intent(Intent.ACTION_DIAL);
-        intent.setData(Uri.parse("tel: 8-800-2222-108"));
+        intent.setData(Uri.parse("tel: 53-22-33"));
         startActivity(intent);
     }
 

@@ -28,6 +28,8 @@ import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
 import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
 import static managers.Initializations.changeActivityCompat;
 
@@ -74,6 +76,19 @@ public class MainActivity extends AppCompatActivity
         fifthMeasure = (TextView) findViewById(R.id.fifthMeasure);
 
         imageMap = (ImageView) findViewById(R.id.imageMap);
+
+        Display display = getWindowManager().getDefaultDisplay();
+        Point sizeP = new Point();
+        display.getSize(sizeP);
+        int width = sizeP.x;
+        int height = sizeP.y;
+
+        Glide.with(MainActivity.this)
+                .load("http://www.robofestomsk.ru/images/robofestomsk_sheme.jpg")
+                .placeholder(R.mipmap.ic_launcher)
+                .override(width, 200)
+                .into(imageMap);
+
 
         final DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -1574,4 +1589,5 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
 }
