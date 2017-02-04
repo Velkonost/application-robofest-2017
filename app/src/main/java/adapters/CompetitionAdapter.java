@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.List;
@@ -112,6 +113,16 @@ public class CompetitionAdapter extends RecyclerView.Adapter<CompetitionAdapter.
                     compImg.setImageResource(R.drawable.hr);
                     break;
                 case 4:
+                    ageTxt.setText(R.string.robocarusel_age);
+                    teamTxt.setText(R.string.robocarusel_team);
+                    robotTxt.setText(R.string.robocarusel_robot);
+                    langProgTxt.setText(R.string.robocarusel_langProg);
+                    goURL = "http://robofest.ru/sorevnovaniya/robokarusel/";
+                   // compImg.setImageResource(R.drawable.hr);
+                    LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) compImg.getLayoutParams();
+                    params.height = 0;
+                    compImg.setLayoutParams(params);
+                    //compImg.setVisibility(View.INVISIBLE);
                     break;
                 default:
 

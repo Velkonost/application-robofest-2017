@@ -34,22 +34,23 @@
     <string name="fll_age">Школьники от 9 до 14 лет</string>
     <string name="jrfll_age">Школьники от 6 до 9 лет</string>
     <string name="hr_age"> Младшая гр.  – возраст участников 9-10 лет\nСтаршая гр.  – возраст участников 11-12 лет</string>
-    <string name="fs_age">--</string>
+    <string name="robocarusel_age">Школьники 7-11 класса </string>
 
     <string name="fll_team">3-6 человек</string>
     <string name="jrfll_team">2-6 детей</string>
     <string name="hr_team">1-2 человека во главе с тренером</string>
-    <string name="fs_team">--</string>
+    <string name="robocarusel_team">3-6 человек</string>
 
     <string name="fll_robot">Набор LEGO MINDSTORMS</string>
     <string name="jrfll_robot">Из элементов LEGO</string>
     <string name="hr_robot">Набор LEGO MINDSTORMS</string>
-    <string name="fs_robot">--</string>
+    <string name="robocarusel_robot">Набор LEGO® MINDSTORMS® / Набор на усмотрение участника </string>
 
     <string name="fll_langProg">LEGO MINDSTORMS+ EV3, RoboLab, или NXT-G</string>
     <string name="jrfll_langProg"></string>
     <string name="hr_langProg">LEGO MINDSTORMS+ EV3, RoboLab, или NXT-G</string>
-    <string name="fs_langProg">--</string>
+    <string name="robocarusel_langProg">LEGO MINDSTORMS+ EV3, RoboLab, или NXT-G / на усмотрение участника</string>
+
 
     <string name="area_name_1">Выставочный павильон, открытая площадка No1</string>
     <string name="area_name_2">Выставочный павильон, открытая площадка No2</string>

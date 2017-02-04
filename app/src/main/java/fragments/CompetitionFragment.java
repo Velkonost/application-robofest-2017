@@ -89,7 +89,7 @@ public class CompetitionFragment extends AbstractTabFragment {
                     goURL = "http://robofest.ru/sorevnovaniya/HR/";
                     break;
                 case 4:
-                    goURL = "http://robofest.ru/sorevnovaniya/JrFLL/";
+                    goURL = "http://robofest.ru/sorevnovaniya/robokarusel/";
                     break;
                 default:
 
@@ -122,10 +122,12 @@ public class CompetitionFragment extends AbstractTabFragment {
             text = "";
             switch (competitionId) {
                 case 1:
-                    text = TextUtils.join(" ", title2.subList(5, 7));
+                    text = TextUtils.join(" ", title2.subList(7, 9));
                     text+="\n";
-                    text = "First Lego League (FLL)\n"+text+"\n"+"Ссылки: "+"\n";
+                    text = "First Lego League (FLL)\n"+text+"\n"+""+"\n";
                     text+="\nИнформация взята отсюда: \nhttp://robofest.ru/sorevnovaniya/FLL/";
+                    text+="\n"+"Регламенты(Русская версия):"+"\n"+ "http://russianrobotics.ru/upload/iblock/8c9/8c9d0e32a8970389e374e7ce5522343d.pdf" +
+                            "\n"+"Регламенты(Английская версия):"+"http://russianrobotics.ru/upload/iblock/759/759da69bad26d4e9fa137ade9e98b1a0.pdf";
                  /*   Elements links = doc2.select("div.content-wrapper")
                             .select("div.content")
                             .select("div.two-cell")
@@ -138,20 +140,22 @@ public class CompetitionFragment extends AbstractTabFragment {
                     // text+= TextUtils.join(" ", title2.subList(4, 7));*/
                     break;
                 case 2:
-                    text = TextUtils.join(" ", title2.subList(2, 5));
+                    text = TextUtils.join(" ", title2.subList(6, 7));
                     text = "Junior First Lego League (Jr.FLL)\n"+text;
                     text+="\n";
-                    text+= TextUtils.join(" ", title2.subList(7, 7));
-                    text+="\nИнформация взята отсюда: \nhttp://robofest.ru/sorevnovaniya/JrFLL/";
+                    text+= TextUtils.join(" ", title2.subList(8, 9));
+                    text+="\nИнформация взята отсюда: \nhttp://robofest.ru/sorevnovaniya/JrFLL/"+
+                    "\n"+"Руководство для тренера JrFLL: "+"\n"+"http://robofest.ru/userfiles/JrFLL/FINAL_Jr%20FLL_Coaches_Guide%202012_Super_Seniors_RU.pdf";
                     break;
                 case 3:
-                    text = TextUtils.join(" ", title2.subList(1, 3));
+                    text = TextUtils.join(" ", title2.subList(3, 3));
                     text = "HELLO, ROBOT!\n"+text;
                     text+="\n";
                     text+= TextUtils.join(" ", title2.subList(3, 8));
                     text+="\n";
                     text+= TextUtils.join(" ", title2.subList(5, 8));
-                    text+="\nИнформация взята отсюда: \nhttp://robofest.ru/sorevnovaniya/HR/";
+                    text+="\nИнформация взята отсюда: \nhttp://robofest.ru/sorevnovaniya/HR/"
+                            +"\nРегламент: http://russianrobotics.ru/upload/iblock/196/19634dfc40c6bf5e211c193e2b799ffc.pdf\n";
 
                /*     text+="Ссылки: "+"\n";
                     Elements links2 = doc2.select("div.content-wrapper")
@@ -164,6 +168,12 @@ public class CompetitionFragment extends AbstractTabFragment {
                     }*/
                     break;
                 case 4:
+                    text = "РОБОКАРУСЕЛЬ!\n"+text;
+                    text+="\n";
+                    text+="\n";
+                    text+="Как принять участие в РобоКарусели:\n http://russianrobotics.ru/upload/iblock/32b/32b33402e6ac7630f6f9ba734a4b7da5.pdf\n";
+                    text+="\nИнформация взята отсюда: \nhttp://robofest.ru/sorevnovaniya/robokarusel/";
+                    text+="\nРегламент: \n http://russianrobotics.ru/upload/iblock/4ad/4ad9ffbbe3d2019b9c1e04d382e65aff.pdf\n";
                     break;
                 default:
 
