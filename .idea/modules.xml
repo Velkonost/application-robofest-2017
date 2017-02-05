@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/App-Robofest2017.iml" filepath="$PROJECT_DIR$/App-Robofest2017.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Robofest.iml" filepath="$PROJECT_DIR$/Robofest.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

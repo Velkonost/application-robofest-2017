@@ -125,27 +125,15 @@ public class CompetitionFragment extends AbstractTabFragment {
                     text = TextUtils.join(" ", title2.subList(7, 9));
                     text+="\n";
                     text = "First Lego League (FLL)\n"+text+"\n"+""+"\n";
-                    text+="\nИнформация взята отсюда: \nhttp://robofest.ru/sorevnovaniya/FLL/";
-                    text+="\n"+"Регламенты(Русская версия):"+"\n"+ "http://russianrobotics.ru/upload/iblock/8c9/8c9d0e32a8970389e374e7ce5522343d.pdf" +
-                            "\n"+"Регламенты(Английская версия):"+"http://russianrobotics.ru/upload/iblock/759/759da69bad26d4e9fa137ade9e98b1a0.pdf";
-                 /*   Elements links = doc2.select("div.content-wrapper")
-                            .select("div.content")
-                            .select("div.two-cell")
-                            .select("a");
-                    for (Element link : links) {
-                        // myList.add(link.text());
-                        // linksList.add(link.attr("href"));
-                        text+=(link.text() + ":"+ "\n" + link.attr("href") + "\n");
-                    }
-                    // text+= TextUtils.join(" ", title2.subList(4, 7));*/
+                   // text+=getResources().getString(R.string.url_fll);
+                   // text+="\n"+getResources().getString(R.string.url1_fll)+"\n"+getResources().getString(R.string.url2_fll)+"\n";
                     break;
                 case 2:
                     text = TextUtils.join(" ", title2.subList(6, 7));
                     text = "Junior First Lego League (Jr.FLL)\n"+text;
                     text+="\n";
-                    text+= TextUtils.join(" ", title2.subList(8, 9));
-                    text+="\nИнформация взята отсюда: \nhttp://robofest.ru/sorevnovaniya/JrFLL/"+
-                    "\n"+"Руководство для тренера JrFLL: "+"\n"+"http://robofest.ru/userfiles/JrFLL/FINAL_Jr%20FLL_Coaches_Guide%202012_Super_Seniors_RU.pdf";
+                    text+= TextUtils.join(" ", title2.subList(8, 9))+"\n";
+                 //   text+=getResources().getString(R.string.url_jrfll)+"\n";
                     break;
                 case 3:
                     text = TextUtils.join(" ", title2.subList(3, 3));
@@ -153,27 +141,17 @@ public class CompetitionFragment extends AbstractTabFragment {
                     text+="\n";
                     text+= TextUtils.join(" ", title2.subList(3, 8));
                     text+="\n";
-                    text+= TextUtils.join(" ", title2.subList(5, 8));
-                    text+="\nИнформация взята отсюда: \nhttp://robofest.ru/sorevnovaniya/HR/"
-                            +"\nРегламент: http://russianrobotics.ru/upload/iblock/196/19634dfc40c6bf5e211c193e2b799ffc.pdf\n";
-
-               /*     text+="Ссылки: "+"\n";
-                    Elements links2 = doc2.select("div.content-wrapper")
-                            .select("div.content")
-                            .select("a");
-                    for (Element link : links2) {
-                        // myList.add(link.text());
-                        // linksList.add(link.attr("href"));
-                        text+=(link.text() + ":"+ "\n" + link.attr("href") + "\n");
-                    }*/
+                    text+= TextUtils.join(" ", title2.subList(5, 8))+"\n";
+                 /*   text+=getResources().getString(R.string.url_hr)+"\n";
+                    text+="\n"+getResources().getString(R.string.url1_hr)+"\n";*/
                     break;
                 case 4:
                     text = "РОБОКАРУСЕЛЬ!\n"+text;
                     text+="\n";
                     text+="\n";
-                    text+="Как принять участие в РобоКарусели:\n http://russianrobotics.ru/upload/iblock/32b/32b33402e6ac7630f6f9ba734a4b7da5.pdf\n";
-                    text+="\nИнформация взята отсюда: \nhttp://robofest.ru/sorevnovaniya/robokarusel/";
-                    text+="\nРегламент: \n http://russianrobotics.ru/upload/iblock/4ad/4ad9ffbbe3d2019b9c1e04d382e65aff.pdf\n";
+                /*    text+="\n"+getResources().getString(R.string.url1_robocarusel)+"\n";
+                    text+="\n"+getResources().getString(R.string.url_robocarusel)+"\n";
+                    text+="\n"+getResources().getString(R.string.url2_robocarusel)+"\n";*/
                     break;
                 default:
 

@@ -3,6 +3,8 @@ package adapters;
 import android.content.Context;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
+import android.text.Html;
+import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -59,7 +61,7 @@ public class CompetitionAdapter extends RecyclerView.Adapter<CompetitionAdapter.
 
         CardView cardView;
         ImageView compImg, showMoreImg;
-        TextView title, ageTxt, teamTxt, robotTxt, langProgTxt, langProgTxtName;
+        TextView title, ageTxt, teamTxt, robotTxt, langProgTxt, langProgTxtName, url1, url2;
         Button showMoreBtn;
         String goURL = null;
         boolean check = false;
@@ -77,11 +79,17 @@ public class CompetitionAdapter extends RecyclerView.Adapter<CompetitionAdapter.
             langProgTxtName = (TextView) itemView.findViewById(R.id.text_langProg_name);
 
             cardView = (CardView) itemView.findViewById(R.id.cardViewCompetition);
+
             title = (TextView) itemView.findViewById(R.id.title_comp);
+            url1 = (TextView) itemView.findViewById(R.id.url1);
+            url2 = (TextView) itemView.findViewById(R.id.url2);
+
             compImg = (ImageView) itemView.findViewById(R.id.comp_img);
             showMoreBtn = (Button) itemView.findViewById(R.id.btn_showmore);
             showMoreImg = (ImageView) itemView.findViewById(R.id.img_showmore);
 
+            url1.setMovementMethod(LinkMovementMethod.getInstance());
+            url2.setMovementMethod(LinkMovementMethod.getInstance());
 
             switch (competitionId) {
                 case 1:
@@ -91,6 +99,12 @@ public class CompetitionAdapter extends RecyclerView.Adapter<CompetitionAdapter.
                     langProgTxt.setText(R.string.fll_langProg);
                     goURL = "http://robofest.ru/sorevnovaniya/FLL/";
                     compImg.setImageResource(R.drawable.fll);
+
+                  /*  url1.setTextSize(14);
+                    url2.setTextSize(14);*/
+                    url1.setText(Html.fromHtml(itemView.getResources().getString(R.string.url1_fll)));
+                    url2.setText(Html.fromHtml(itemView.getResources().getString(R.string.url2_fll)));
+
                     break;
                 case 2:
                     ageTxt.setText(R.string.jrfll_age);
@@ -100,6 +114,10 @@ public class CompetitionAdapter extends RecyclerView.Adapter<CompetitionAdapter.
                     langProgTxt.setVisibility(View.INVISIBLE);
                     goURL = "http://robofest.ru/sorevnovaniya/JrFLL/";
                     compImg.setImageResource(R.drawable.jrfll);
+
+                  /*  url1.setTextSize(14);
+                    url2.setTextSize(0);*/
+                    url1.setText(Html.fromHtml(itemView.getResources().getString(R.string.url1_jrfll)));
 
                     isLangProg = false;
 
@@ -111,6 +129,11 @@ public class CompetitionAdapter extends RecyclerView.Adapter<CompetitionAdapter.
                     langProgTxt.setText(R.string.hr_langProg);
                     goURL = "http://robofest.ru/sorevnovaniya/HR/";
                     compImg.setImageResource(R.drawable.hr);
+
+                 /*   url1.setTextSize(14);
+                    url2.setTextSize(0);*/
+                    url1.setText(Html.fromHtml(itemView.getResources().getString(R.string.url1_hr)));
+
                     break;
                 case 4:
                     ageTxt.setText(R.string.robocarusel_age);
@@ -118,11 +141,13 @@ public class CompetitionAdapter extends RecyclerView.Adapter<CompetitionAdapter.
                     robotTxt.setText(R.string.robocarusel_robot);
                     langProgTxt.setText(R.string.robocarusel_langProg);
                     goURL = "http://robofest.ru/sorevnovaniya/robokarusel/";
-                   // compImg.setImageResource(R.drawable.hr);
                     LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) compImg.getLayoutParams();
                     params.height = 0;
                     compImg.setLayoutParams(params);
-                    //compImg.setVisibility(View.INVISIBLE);
+                  /*  url1.setTextSize(14);
+                    url2.setTextSize(14);*/
+                    url1.setText(Html.fromHtml(itemView.getResources().getString(R.string.url1_robocarusel)));
+                    url2.setText(Html.fromHtml(itemView.getResources().getString(R.string.url2_robocarusel)));
                     break;
                 default:
 
@@ -137,11 +162,26 @@ public class CompetitionAdapter extends RecyclerView.Adapter<CompetitionAdapter.
                     if(check) {
                         title.setVisibility(View.VISIBLE);
                         title.setTextSize(14);
+
+
+                        url1.setVisibility(View.VISIBLE);
+                        url1.setTextSize(14);
+
+                        url2.setVisibility(View.VISIBLE);
+                        url2.setTextSize(14);
+
                         showMoreImg.setImageResource(R.drawable.icon_btn_showmore2);
                 //        title.setText(text2);
                     }else{
                         title.setVisibility(View.INVISIBLE);
                         title.setTextSize(0);
+
+                        url1.setVisibility(View.INVISIBLE);
+                        url1.setTextSize(0);
+
+                        url2.setVisibility(View.INVISIBLE);
+                        url2.setTextSize(0);
+
                         showMoreImg.setImageResource(R.drawable.icon_btn_showmore);
                 //        title.setText("");
                     }

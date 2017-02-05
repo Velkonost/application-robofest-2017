@@ -444,5 +444,21 @@
     <string name="day2_btn5_forth_footer">Компания «Альком», г. Омск </string>
     <string name="day2_btn5_fifth_footer">Компания по разработке программного обеспечения «Тамтэк» </string>
     <string name="day2_btn5_sixth_footer">БУ ДО «Омская областная станция юных техников» </string>
+    
+    <string name="url_fll"><![CDATA[<a href = "http://robofest.ru/sorevnovaniya/FLL/">Информация взята отсюда</a>]]></string>
+    <string name="url_jrfll"><![CDATA[<a href = "http://robofest.ru/sorevnovaniya/JrFLL/">Информация взята отсюда</a>]]></string>
+    <string name="url_hr"><![CDATA[<a href = "http://robofest.ru/sorevnovaniya/HR/">Информация взята отсюда</a>]]></string>
+    <string name="url_robocarusel"><![CDATA[<a href = "http://robofest.ru/sorevnovaniya/robokarusel/">Информация взята отсюда</a>]]></string>
+
+    <string name="url1_fll"><![CDATA[<a href = "http://russianrobotics.ru/upload/iblock/8c9/8c9d0e32a8970389e374e7ce5522343d.pdf">Регламенты(Русская версия)</a>]]></string>
+    <string name="url2_fll"><![CDATA[<a href = "http://russianrobotics.ru/upload/iblock/759/759da69bad26d4e9fa137ade9e98b1a0.pdf">Регламенты(Английская версия)</a>]]></string>
+
+    <string name="url1_jrfll"><![CDATA[<a href = "http://robofest.ru/userfiles/JrFLL/FINAL_Jr%20FLL_Coaches_Guide%202012_Super_Seniors_RU.pdf">Руководство для тренера JrFLL</a>]]></string>
+
+    <string name="url1_hr"><![CDATA[<a href = "http://russianrobotics.ru/upload/iblock/196/19634dfc40c6bf5e211c193e2b799ffc.pdf">Регламент</a>]]></string>
+
+    <string name="url1_robocarusel"><![CDATA[<a href = "http://russianrobotics.ru/upload/iblock/32b/32b33402e6ac7630f6f9ba734a4b7da5.pdf">Как принять участие в РобоКарусели</a>]]></string>
+    <string name="url2_robocarusel"><![CDATA[<a href = "http://russianrobotics.ru/upload/iblock/4ad/4ad9ffbbe3d2019b9c1e04d382e65aff.pdf">Регламент</a>]]></string>
+
 
 </resources>
