@@ -24,6 +24,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -41,14 +42,16 @@ public class MainActivity extends AppCompatActivity
 
     private RelativeLayout rlDayDesc;
 
-    private TextView firstTime, firstMeasure;
-    private TextView secondTime, secondMeasure;
-    private TextView thirdTime, thirdMeasure;
-    private TextView forthTime, forthMeasure;
-    private TextView fifthTime, fifthMeasure;
+//    private TextView firstTime, firstMeasure;
+//    private TextView secondTime, secondMeasure;
+//    private TextView thirdTime, thirdMeasure;
+//    private TextView forthTime, forthMeasure;
+//    private TextView fifthTime, fifthMeasure;
 
-    private ImageView imageMap;
+    private ImageView imageMap, imageGraphic, imageDay;
     private int day;
+
+    private LinearLayout dayImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,21 +64,25 @@ public class MainActivity extends AppCompatActivity
         btnDay1 = (Button) findViewById(R.id.buttonDay1);
         btnDay2 = (Button) findViewById(R.id.buttonDay2);
 
-        rlDayDesc = (RelativeLayout) findViewById(R.id.rlDayDesc);
+//        rlDayDesc = (RelativeLayout) findViewById(R.id.rlDayDesc);
 
-        firstTime = (TextView) findViewById(R.id.firstTime);
-        secondTime = (TextView) findViewById(R.id.secondTime);
-        thirdTime = (TextView) findViewById(R.id.thirdTime);
-        forthTime = (TextView) findViewById(R.id.forthTime);
-        fifthTime = (TextView) findViewById(R.id.fifthTime);
+//        firstTime = (TextView) findViewById(R.id.firstTime);
+//        secondTime = (TextView) findViewById(R.id.secondTime);
+//        thirdTime = (TextView) findViewById(R.id.thirdTime);
+//        forthTime = (TextView) findViewById(R.id.forthTime);
+//        fifthTime = (TextView) findViewById(R.id.fifthTime);
+//
+//        firstMeasure = (TextView) findViewById(R.id.firstMeasure);
+//        secondMeasure = (TextView) findViewById(R.id.secondMeasure);
+//        thirdMeasure = (TextView) findViewById(R.id.thirdMeasure);
+//        forthMeasure = (TextView) findViewById(R.id.forthMeasure);
+//        fifthMeasure = (TextView) findViewById(R.id.fifthMeasure);
 
-        firstMeasure = (TextView) findViewById(R.id.firstMeasure);
-        secondMeasure = (TextView) findViewById(R.id.secondMeasure);
-        thirdMeasure = (TextView) findViewById(R.id.thirdMeasure);
-        forthMeasure = (TextView) findViewById(R.id.forthMeasure);
-        fifthMeasure = (TextView) findViewById(R.id.fifthMeasure);
+        dayImage = (LinearLayout) findViewById(R.id.dayImage);
 
         imageMap = (ImageView) findViewById(R.id.imageMap);
+        imageGraphic = (ImageView) findViewById(R.id.imageGraphic);
+        imageDay = (ImageView) findViewById(R.id.imageDay);
 
         Display display = getWindowManager().getDefaultDisplay();
         Point sizeP = new Point();
@@ -110,22 +117,46 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
+        imageGraphic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, FullScreenPhotoActivity.class);
+                intent.putExtra("Photo", 2);
+                MainActivity.this.startActivity(intent);
+            }
+        });
+
+        imageDay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(MainActivity.this, FullScreenPhotoActivity.class);
+                intent.putExtra("Photo", day == 1 ? 3 : 4);
+                MainActivity.this.startActivity(intent);
+
+            }
+        });
+
         btnDay1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                rlDayDesc.setVisibility(View.VISIBLE);
+//                rlDayDesc.setVisibility(View.VISIBLE);
 
-                firstTime.setText(getResources().getString(R.string.day_one_time_first) + "     ");
-                secondTime.setText(getResources().getString(R.string.day_one_time_second) + "     ");
-                thirdTime.setText(getResources().getString(R.string.day_one_time_third) + "     ");
-                forthTime.setText(getResources().getString(R.string.day_one_time_forth) + "     ");
-                fifthTime.setText(getResources().getString(R.string.day_one_time_fifth) + "     ");
+                dayImage.setVisibility(View.VISIBLE);
+                imageDay.setImageDrawable(getResources().getDrawable(R.drawable.day1));
 
-                firstMeasure.setText(getResources().getString(R.string.day_one_desc_first));
-                secondMeasure.setText(getResources().getString(R.string.day_one_desc_second));
-                thirdMeasure.setText(getResources().getString(R.string.day_one_desc_third));
-                forthMeasure.setText(getResources().getString(R.string.day_one_desc_forth));
-                fifthMeasure.setText(getResources().getString(R.string.day_one_desc_fifth));
+
+//                firstTime.setText(getResources().getString(R.string.day_one_time_first) + "     ");
+//                secondTime.setText(getResources().getString(R.string.day_one_time_second) + "     ");
+//                thirdTime.setText(getResources().getString(R.string.day_one_time_third) + "     ");
+//                forthTime.setText(getResources().getString(R.string.day_one_time_forth) + "     ");
+//                fifthTime.setText(getResources().getString(R.string.day_one_time_fifth) + "     ");
+//
+//                firstMeasure.setText(getResources().getString(R.string.day_one_desc_first));
+//                secondMeasure.setText(getResources().getString(R.string.day_one_desc_second));
+//                thirdMeasure.setText(getResources().getString(R.string.day_one_desc_third));
+//                forthMeasure.setText(getResources().getString(R.string.day_one_desc_forth));
+//                fifthMeasure.setText(getResources().getString(R.string.day_one_desc_fifth));
 
 
 
@@ -142,20 +173,25 @@ public class MainActivity extends AppCompatActivity
         btnDay2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                rlDayDesc.setVisibility(View.VISIBLE);
 
-                firstTime.setText(getResources().getString(R.string.day_two_time_first) + "     ");
-                secondTime.setText(getResources().getString(R.string.day_two_time_second) + "     ");
-                thirdTime.setText(getResources().getString(R.string.day_two_time_third) + "     ");
-                forthTime.setText(getResources().getString(R.string.day_two_time_forth) + "     ");
-                fifthTime.setText(getResources().getString(R.string.day_two_time_fifth) + "     ");
 
-                firstMeasure.setText(getResources().getString(R.string.day_two_desc_first));
-                secondMeasure.setText(getResources().getString(R.string.day_two_desc_second));
-                thirdMeasure.setText(getResources().getString(R.string.day_two_desc_third));
-                forthMeasure.setText(getResources().getString(R.string.day_two_desc_forth));
-                fifthMeasure.setText(getResources().getString(R.string.day_two_desc_fifth));
+//                rlDayDesc.setVisibility(View.VISIBLE);
 
+//                firstTime.setText(getResources().getString(R.string.day_two_time_first) + "     ");
+//                secondTime.setText(getResources().getString(R.string.day_two_time_second) + "     ");
+//                thirdTime.setText(getResources().getString(R.string.day_two_time_third) + "     ");
+//                forthTime.setText(getResources().getString(R.string.day_two_time_forth) + "     ");
+//                fifthTime.setText(getResources().getString(R.string.day_two_time_fifth) + "     ");
+//
+//                firstMeasure.setText(getResources().getString(R.string.day_two_desc_first));
+//                secondMeasure.setText(getResources().getString(R.string.day_two_desc_second));
+//                thirdMeasure.setText(getResources().getString(R.string.day_two_desc_third));
+//                forthMeasure.setText(getResources().getString(R.string.day_two_desc_forth));
+//                fifthMeasure.setText(getResources().getString(R.string.day_two_desc_fifth));
+
+                dayImage.setVisibility(View.VISIBLE);
+
+                imageDay.setImageDrawable(getResources().getDrawable(R.drawable.day2));
 
                 btnDay1.setBackground(ContextCompat.getDrawable(MainActivity.this,
                         R.drawable.main_activity_button_left));

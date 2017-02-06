@@ -2,15 +2,11 @@ package ru.velkonost.robofest;
 
 
 import android.content.Intent;
-import android.graphics.Point;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Display;
 import android.view.View;
 import android.widget.ImageView;
-
-import com.bumptech.glide.Glide;
 
 import uk.co.senab.photoview.PhotoViewAttacher;
 
@@ -35,22 +31,28 @@ public class FullScreenPhotoActivity extends AppCompatActivity {
 
         switch (photo) {
             case 1:
-                Display display = getWindowManager().getDefaultDisplay();
-                Point sizeP = new Point();
-                display.getSize(sizeP);
-                int width = sizeP.x;
-                int height = sizeP.y;
 
-                Glide.with(FullScreenPhotoActivity.this)
-                        .load("http://www.robofestomsk.ru/images/robofestomsk_sheme.jpg")
-                        .placeholder(R.mipmap.ic_launcher)
-                        .override(width, 200)
-                        .into(imageView);
-
+                imageView.setImageDrawable(getResources().getDrawable(R.drawable.map));
 
                 setTitle("Схема проведения");
                 break;
+            case 2:
+                imageView.setImageDrawable(getResources().getDrawable(R.drawable.graphic));
 
+                setTitle("Программа соревнований");
+                break;
+
+            case 3:
+                imageView.setImageDrawable(getResources().getDrawable(R.drawable.day1));
+
+                setTitle("17 февраля");
+                break;
+
+            case 4:
+                imageView.setImageDrawable(getResources().getDrawable(R.drawable.day2));
+
+                setTitle("18 февраля");
+                break;
         }
 
         new PhotoViewAttacher(imageView);
