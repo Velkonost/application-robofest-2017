@@ -134,6 +134,7 @@ public class MainActivity extends AppCompatActivity
             nextIntent = new Intent(MainActivity.this, AboutActivity.class);
         }
 
+
         final Intent finalNextIntent = nextIntent;
         new Handler().postDelayed(new Runnable() {
             @Override

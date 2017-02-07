@@ -10,6 +10,7 @@ import java.util.Map;
 
 import fragments.AbstractTabFragment;
 import fragments.FirstMainFragment;
+import fragments.ThirdMainFragment;
 
 public class MainTabsFragmentAdapter extends FragmentPagerAdapter {
 
@@ -43,8 +44,8 @@ public class MainTabsFragmentAdapter extends FragmentPagerAdapter {
 
 
         tabs.put(0, FirstMainFragment.getInstance(context, "Карта"));
-//        tabs.put(1, SecondMainFragment.getInstance(context, 2, "Jr.FLL"));
-//        tabs.put(2, ThirdMainFragment.getInstance(context, 3, "HR"));
+        tabs.put(1, SecondMainFragment.getInstance(context, "Расписание"));
+        tabs.put(2, ThirdMainFragment.getInstance(context,"Схема проезда"));
 
     }
 }
