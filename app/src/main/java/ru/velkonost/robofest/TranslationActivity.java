@@ -113,15 +113,15 @@ public class TranslationActivity  extends AppCompatActivity
 
         int id = item.getItemId();
 
-        if (id == R.id.main) {
-            nextIntent = new Intent(TranslationActivity.this, MainActivity.class);
-        } else if (id == R.id.competition) {
-            nextIntent = new Intent(TranslationActivity.this, CompetitionActivity.class);
-        } else if (id == R.id.translations) {
-            nextIntent = new Intent(TranslationActivity.this, TranslationActivity.class);
-        } else if (id == R.id.about) {
-            nextIntent = new Intent(TranslationActivity.this, AboutActivity.class);
-        }
+//        if (id == R.id.main) {
+//            nextIntent = new Intent(TranslationActivity.this, MainActivity.class);
+//        } else if (id == R.id.competition) {
+//            nextIntent = new Intent(TranslationActivity.this, CompetitionActivity.class);
+//        } else if (id == R.id.translations) {
+//            nextIntent = new Intent(TranslationActivity.this, TranslationActivity.class);
+//        } else if (id == R.id.about) {
+//            nextIntent = new Intent(TranslationActivity.this, AboutActivity.class);
+//        }
 
         final Intent finalNextIntent = nextIntent;
         new Handler().postDelayed(new Runnable() {

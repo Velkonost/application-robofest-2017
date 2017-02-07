@@ -184,15 +184,15 @@ public class AboutActivity extends AppCompatActivity
 
         int id = item.getItemId();
 
-        if (id == R.id.main) {
-            nextIntent = new Intent(AboutActivity.this, MainActivity.class);
-        } else if (id == R.id.competition) {
-            nextIntent = new Intent(AboutActivity.this, CompetitionActivity.class);
-        } else if (id == R.id.translations) {
-//            nextIntent = new Intent(MainActivity.this, TranslationsActivity.class);
-        } else if (id == R.id.about) {
-            nextIntent = new Intent(AboutActivity.this, AboutActivity.class);
-        }
+//        if (id == R.id.main) {
+//            nextIntent = new Intent(AboutActivity.this, MainActivity.class);
+//        } else if (id == R.id.competition) {
+//            nextIntent = new Intent(AboutActivity.this, CompetitionActivity.class);
+//        } else if (id == R.id.translations) {
+////            nextIntent = new Intent(MainActivity.this, TranslationsActivity.class);
+//        } else if (id == R.id.about) {
+//            nextIntent = new Intent(AboutActivity.this, AboutActivity.class);
+//        }
 
         final Intent finalNextIntent = nextIntent;
         new Handler().postDelayed(new Runnable() {

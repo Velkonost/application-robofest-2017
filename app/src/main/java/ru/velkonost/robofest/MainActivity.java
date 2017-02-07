@@ -2,19 +2,18 @@ package ru.velkonost.robofest;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Point;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
-import android.support.v4.content.ContextCompat;
+import android.support.design.widget.TabLayout;
 import android.support.v4.view.GravityCompat;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Display;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -22,7 +21,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import com.bumptech.glide.Glide;
+import adapters.MainTabsFragmentAdapter;
 
 import static managers.Initializations.changeActivityCompat;
 
@@ -37,6 +36,8 @@ public class MainActivity extends AppCompatActivity
 
     private LinearLayout dayImage;
 
+    private ViewPager viewPager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,27 +46,29 @@ public class MainActivity extends AppCompatActivity
         toolbar.setTitle("Главная");
         setSupportActionBar(toolbar);
 
-        btnDay1 = (Button) findViewById(R.id.buttonDay1);
-        btnDay2 = (Button) findViewById(R.id.buttonDay2);
+//        btnDay1 = (Button) findViewById(R.id.buttonDay1);
+//        btnDay2 = (Button) findViewById(R.id.buttonDay2);
+//
+//        dayImage = (LinearLayout) findViewById(R.id.dayImage);
+//
+//        imageMap = (ImageView) findViewById(R.id.imageMap);
+//        imageGraphic = (ImageView) findViewById(R.id.imageGraphic);
+//        imageDay = (ImageView) findViewById(R.id.imageDay);
 
-        dayImage = (LinearLayout) findViewById(R.id.dayImage);
+//        Display display = getWindowManager().getDefaultDisplay();
+//        Point sizeP = new Point();
+//        display.getSize(sizeP);
+//        int width = sizeP.x;
+//        int height = sizeP.y;
 
-        imageMap = (ImageView) findViewById(R.id.imageMap);
-        imageGraphic = (ImageView) findViewById(R.id.imageGraphic);
-        imageDay = (ImageView) findViewById(R.id.imageDay);
+//        Glide.with(MainActivity.this)
+//                .load("http://www.robofestomsk.ru/images/robofestomsk_sheme.jpg")
+//                .placeholder(R.mipmap.ic_launcher)
+//                .override(width, 200)
+//                .into(imageMap);
 
-        Display display = getWindowManager().getDefaultDisplay();
-        Point sizeP = new Point();
-        display.getSize(sizeP);
-        int width = sizeP.x;
-        int height = sizeP.y;
 
-        Glide.with(MainActivity.this)
-                .load("http://www.robofestomsk.ru/images/robofestomsk_sheme.jpg")
-                .placeholder(R.mipmap.ic_launcher)
-                .override(width, 200)
-                .into(imageMap);
-
+        initTabs();
 
         final DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -75,74 +78,8 @@ public class MainActivity extends AppCompatActivity
 
         final NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        navigationView.getMenu().getItem(0).setChecked(true);
 
 
-        imageMap.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, FullScreenPhotoActivity.class);
-                intent.putExtra("Photo", 1);
-                MainActivity.this.startActivity(intent);
-            }
-        });
-
-        imageGraphic.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, FullScreenPhotoActivity.class);
-                intent.putExtra("Photo", 2);
-                MainActivity.this.startActivity(intent);
-            }
-        });
-
-        imageDay.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent intent = new Intent(MainActivity.this, FullScreenPhotoActivity.class);
-                intent.putExtra("Photo", day == 1 ? 3 : 4);
-                MainActivity.this.startActivity(intent);
-
-            }
-        });
-
-        btnDay1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                dayImage.setVisibility(View.VISIBLE);
-                imageDay.setImageDrawable(getResources().getDrawable(R.drawable.day1));
-
-
-
-                btnDay1.setBackground(ContextCompat.getDrawable(MainActivity.this,
-                        R.drawable.main_activity_button_left_pressed));
-                btnDay2.setBackground(ContextCompat.getDrawable(MainActivity.this,
-                        R.drawable.main_activity_button_right));
-
-                day = 1;
-
-            }
-        });
-
-        btnDay2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-
-                dayImage.setVisibility(View.VISIBLE);
-
-                imageDay.setImageDrawable(getResources().getDrawable(R.drawable.day2));
-
-                btnDay1.setBackground(ContextCompat.getDrawable(MainActivity.this,
-                        R.drawable.main_activity_button_left));
-                btnDay2.setBackground(ContextCompat.getDrawable(MainActivity.this,
-                        R.drawable.main_activity_button_right_pressed));
-
-                day = 2;
-            }
-        });
     }
 
 
@@ -153,32 +90,26 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-
-    public void openGoogleForms(View view) {
-
-        Intent intent =
-                new Intent("ru.velkonost.Browser");
-        intent.setData(Uri.parse(
-                "https://docs.google.com/forms/d/e/1FAIpQLSfg7od0RMlO5CCML1MZB2dxVnS-3KG8rqTGZ2hitnVY2tdpxg/formResponse"
-        ));
-        startActivity(intent);
-
+    public void openMap (View view) {
+        Intent intent = new Intent(MainActivity.this, FullScreenPhotoActivity.class);
+        intent.putExtra("Photo", 1);
+        MainActivity.this.startActivity(intent);
     }
 
+    private void initTabs() {
+        viewPager = (ViewPager) findViewById(R.id.viewPagerMain);
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+        MainTabsFragmentAdapter adapter
+                = new MainTabsFragmentAdapter(this, getSupportFragmentManager());
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+        viewPager.setAdapter(adapter);
 
-        return super.onOptionsItemSelected(item);
+
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabLayout);
+
+        tabLayout.setupWithViewPager(viewPager);
+        tabLayout.setTabMode(TabLayout.MODE_FIXED);
+
     }
 
     @SuppressWarnings("StatementWithEmptyBody")
@@ -189,12 +120,16 @@ public class MainActivity extends AppCompatActivity
 
         int id = item.getItemId();
 
-        if (id == R.id.main) {
-            nextIntent = new Intent(MainActivity.this, MainActivity.class);
+        if (id == R.id.registration) {
+
+            nextIntent =
+                    new Intent("ru.velkonost.Browser");
+            nextIntent.setData(Uri.parse(
+                    "https://docs.google.com/forms/d/e/1FAIpQLSfg7od0RMlO5CCML1MZB2dxVnS-3KG8rqTGZ2hitnVY2tdpxg/formResponse"
+            ));
+
         } else if (id == R.id.competition) {
             nextIntent = new Intent(MainActivity.this, CompetitionActivity.class);
-        } else if (id == R.id.translations) {
-            nextIntent = new Intent(MainActivity.this, TranslationActivity.class);
         } else if (id == R.id.about) {
             nextIntent = new Intent(MainActivity.this, AboutActivity.class);
         }
