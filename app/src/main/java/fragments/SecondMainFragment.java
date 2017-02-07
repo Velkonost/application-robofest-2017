@@ -1,10 +1,12 @@
 package fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.CardView;
 import android.text.Html;
 import android.text.TextUtils;
@@ -13,6 +15,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import org.jsoup.Jsoup;
@@ -21,6 +25,7 @@ import org.jsoup.nodes.Document;
 import java.io.IOException;
 import java.util.List;
 
+import ru.velkonost.robofest.FullScreenPhotoActivity;
 import ru.velkonost.robofest.R;
 
 public class SecondMainFragment extends AbstractTabFragment {
@@ -42,9 +47,17 @@ public class SecondMainFragment extends AbstractTabFragment {
     private String textHistory4;
     private String text4;
 
+    private Button btnDay1, btnDay2;
+
     private Document doc = null, doc2 = null;
 
-    private boolean first = true, second = true, third = true, forth = true;
+    private ImageView imageGraphic;
+
+    private int day;
+
+
+    private LinearLayout first, second, third, forth;
+    private TextView fll, jrfll, hr, car;
 
     public static SecondMainFragment getInstance(Context context, String title) {
         Bundle args = new Bundle();
@@ -59,20 +72,171 @@ public class SecondMainFragment extends AbstractTabFragment {
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, final ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(LAYOUT, container, false);
 
-        competitionId = 1;
+        final LinearLayout.LayoutParams layoutParamsVisible
+                = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT);
+
+
+        final LinearLayout.LayoutParams layoutParamsInvisible
+                = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0);
+
+        btnDay1 = (Button) view.findViewById(R.id.day1);
+        btnDay2 = (Button) view.findViewById(R.id.day2);
+
+        imageGraphic = (ImageView) view.findViewById(R.id.imageGraphic);
+
+        fll = (TextView) view.findViewById(R.id.titleFll);
+        jrfll = (TextView) view.findViewById(R.id.titleJrFll);
+        hr = (TextView) view.findViewById(R.id.titleHr);
+        car = (TextView) view.findViewById(R.id.titleCar);
+
+        fll.setBackground(ContextCompat.getDrawable(context,
+                R.drawable.background_main_textview));
+
+        jrfll.setBackground(ContextCompat.getDrawable(context,
+                R.drawable.background_main_textview));
+
+        hr.setBackground(ContextCompat.getDrawable(context,
+                R.drawable.background_main_textview));
+
+        car.setBackground(ContextCompat.getDrawable(context,
+                R.drawable.background_main_textview));
+
+
+
+        first = (LinearLayout) view.findViewById(R.id.descFll);
+        second = (LinearLayout) view.findViewById(R.id.descJrFll);
+        third = (LinearLayout) view.findViewById(R.id.descHr);
+        forth = (LinearLayout) view.findViewById(R.id.descCar);
+
+        fll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                first.setVisibility(View.VISIBLE);
+                second.setVisibility(View.INVISIBLE);
+                third.setVisibility(View.INVISIBLE);
+                forth.setVisibility(View.INVISIBLE);
+
+                first.setLayoutParams(layoutParamsVisible);
+                second.setLayoutParams(layoutParamsInvisible);
+                third.setLayoutParams(layoutParamsInvisible);
+                forth.setLayoutParams(layoutParamsInvisible);
+
+            }
+        });
+
+        jrfll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                second.setVisibility(View.VISIBLE);
+                first.setVisibility(View.INVISIBLE);
+                third.setVisibility(View.INVISIBLE);
+                forth.setVisibility(View.INVISIBLE);
+
+                second.setLayoutParams(layoutParamsVisible);
+                first.setLayoutParams(layoutParamsInvisible);
+                third.setLayoutParams(layoutParamsInvisible);
+                forth.setLayoutParams(layoutParamsInvisible);
+
+            }
+        });
+
+        hr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                third.setVisibility(View.VISIBLE);
+                first.setVisibility(View.INVISIBLE);
+                second.setVisibility(View.INVISIBLE);
+                forth.setVisibility(View.INVISIBLE);
+
+                third.setLayoutParams(layoutParamsVisible);
+                second.setLayoutParams(layoutParamsInvisible);
+                first.setLayoutParams(layoutParamsInvisible);
+                forth.setLayoutParams(layoutParamsInvisible);
+            }
+        });
+
+        car.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                forth.setVisibility(View.VISIBLE);
+                first.setVisibility(View.INVISIBLE);
+                third.setVisibility(View.INVISIBLE);
+                second.setVisibility(View.INVISIBLE);
+
+                forth.setLayoutParams(layoutParamsVisible);
+                second.setLayoutParams(layoutParamsInvisible);
+                third.setLayoutParams(layoutParamsInvisible);
+                first.setLayoutParams(layoutParamsInvisible);
+            }
+        });
+
+
+
+        first.setVisibility(View.INVISIBLE);
+        second.setVisibility(View.INVISIBLE);
+        third.setVisibility(View.INVISIBLE);
+        forth.setVisibility(View.INVISIBLE);
+
+        first.setLayoutParams(layoutParamsInvisible);
+        second.setLayoutParams(layoutParamsInvisible);
+        third.setLayoutParams(layoutParamsInvisible);
+        forth.setLayoutParams(layoutParamsInvisible);
+
+
+        btnDay1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                imageGraphic.setImageDrawable(getResources().getDrawable(R.drawable.day1));
+
+                btnDay1.setBackground(ContextCompat.getDrawable(context,
+                        R.drawable.main_button_pressed));
+                btnDay2.setBackground(ContextCompat.getDrawable(context,
+                        R.drawable.main_button));
+
+                day = 1;
+            }
+        });
+
+        btnDay2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                imageGraphic.setImageDrawable(getResources().getDrawable(R.drawable.day2));
+
+                btnDay2.setBackground(ContextCompat.getDrawable(context,
+                        R.drawable.main_button_pressed));
+                btnDay1.setBackground(ContextCompat.getDrawable(context,
+                        R.drawable.main_button));
+
+
+                day = 2;
+            }
+        });
+
+        imageGraphic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(context, FullScreenPhotoActivity.class);
+                intent.putExtra("Photo", day == 1 ? 3 : 4);
+                context.startActivity(intent);
+
+            }
+        });
+
         new GetHtml().execute(1);
-        competitionId = 2;
         new GetHtml().execute(2);
-        competitionId = 3;
         new GetHtml().execute(3);
-        competitionId = 4;
         new GetHtml().execute(4);
 
         return view;
     }
+
 
     public void setContext(Context context) {
         this.context = context;
