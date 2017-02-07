@@ -96,6 +96,12 @@ public class MainActivity extends AppCompatActivity
         MainActivity.this.startActivity(intent);
     }
 
+    public void openGraphic (View view) {
+        Intent intent = new Intent(MainActivity.this, FullScreenPhotoActivity.class);
+        intent.putExtra("Photo", 2);
+        MainActivity.this.startActivity(intent);
+    }
+
     private void initTabs() {
         viewPager = (ViewPager) findViewById(R.id.viewPagerMain);
 

@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="17 - 18 февраля"
+        android:text="Областной Экспоцентр, г. Омск, ул. 70 Лет Октября, 25/2"
         android:textAlignment="center"
         android:padding="10dp"
         android:textColor="@color/colorBlack"

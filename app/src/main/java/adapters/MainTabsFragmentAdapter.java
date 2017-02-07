@@ -10,6 +10,7 @@ import java.util.Map;
 
 import fragments.AbstractTabFragment;
 import fragments.FirstMainFragment;
+import fragments.SecondMainFragment;
 import fragments.ThirdMainFragment;
 
 public class MainTabsFragmentAdapter extends FragmentPagerAdapter {

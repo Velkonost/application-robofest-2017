@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card="http://schemas.android.com/apk/res-auto"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/llDays"
+                android:orientation="horizontal">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/day1"
+                    android:layout_weight="1"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/day2"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:layout_below="@id/llDays"
+                android:scaleType="fitXY"
+                android:id="@+id/imageGraphic"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/titleFll"
+                android:text="FIRST LEGO League"
+                android:textAlignment="center"
+                android:layout_below="@id/imageGraphic"
+                android:layout_marginTop="40dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_webviewstyle"
+                android:orientation="vertical"
+                android:layout_below="@id/titleFll"
+                android:id="@+id/descFll">
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cardView1"
+                    card:cardElevation="2dp"
+                    card:cardBackgroundColor="@color/colorBlue2"
+                    card:cardUseCompatPadding="true">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <LinearLayout
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:id="@+id/linearlayout1">
+                            <TextView
+                                android:textSize="12sp"
+                                android:text="Возраст"
+                                android:textColor="@color/colorGrey2"
+                                android:paddingBottom="5dp"
+                                android:paddingTop="5dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:layout_marginLeft="6dp"
+                                android:textColor="@color/colorBlack"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:id="@+id/text_age1"/>
+                            <TextView
+                                android:textSize="12sp"
+                                android:text="Команда"
+                                android:paddingBottom="5dp"
+                                android:paddingTop="10dp"
+                                android:textColor="@color/colorGrey2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:layout_marginLeft="6dp"
+                                android:textColor="@color/colorBlack"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:id="@+id/text_team1"/>
+                            <TextView
+                                android:textSize="12sp"
+                                android:text="Робот"
+                                android:paddingBottom="5dp"
+                                android:paddingTop="10dp"
+                                android:textColor="@color/colorGrey2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:layout_marginLeft="6dp"
+                                android:textColor="@color/colorBlack"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:id="@+id/text_robot1"/>
+                            <TextView
+                                android:textColor="@color/colorGrey2"
+                                android:textSize="12sp"
+                                android:text="Язык программирования"
+                                android:paddingBottom="5dp"
+                                android:paddingTop="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/text_langProg_name1"/>
+                            <TextView
+                                android:layout_marginLeft="6dp"
+                                android:textColor="@color/colorBlack"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:id="@+id/text_langProg1"/>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_below="@id/linearlayout1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/title_comp1"
+                            android:text=""
+                            android:lineSpacingMultiplier="1"
+                            android:gravity="center"
+                            android:textSize="14sp"
+                            android:paddingBottom="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_alignParentStart="true" />
+
+                        <TextView
+                            android:paddingRight="10dp"
+                            android:paddingLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:layout_below="@id/title_comp1"
+                            android:id="@+id/url11"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:paddingRight="10dp"
+                            android:paddingLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:layout_below="@id/url11"
+                            android:id="@+id/url21"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/titleJrFll"
+                android:text="Junior FIRST LEGO League"
+                android:textAlignment="center"
+                android:layout_below="@id/descFll"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_webviewstyle"
+                android:orientation="vertical"
+                android:layout_below="@id/titleJrFll"
+                android:id="@+id/descJrFll">
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cardView2"
+                    card:cardElevation="2dp"
+                    card:cardBackgroundColor="@color/colorBlue2"
+                    card:cardUseCompatPadding="true">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <LinearLayout
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:id="@+id/linearlayout2">
+                            <TextView
+                                android:textSize="12sp"
+                                android:text="Возраст"
+                                android:textColor="@color/colorGrey2"
+                                android:paddingBottom="5dp"
+                                android:paddingTop="5dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:layout_marginLeft="6dp"
+                                android:textColor="@color/colorBlack"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:id="@+id/text_age2"/>
+                            <TextView
+                                android:textSize="12sp"
+                                android:text="Команда"
+                                android:paddingBottom="5dp"
+                                android:paddingTop="10dp"
+                                android:textColor="@color/colorGrey2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:layout_marginLeft="6dp"
+                                android:textColor="@color/colorBlack"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:id="@+id/text_team2"/>
+                            <TextView
+                                android:textSize="12sp"
+                                android:text="Робот"
+                                android:paddingBottom="5dp"
+                                android:paddingTop="10dp"
+                                android:textColor="@color/colorGrey2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:layout_marginLeft="6dp"
+                                android:textColor="@color/colorBlack"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:id="@+id/text_robot2"/>
+                            <TextView
+                                android:textColor="@color/colorGrey2"
+                                android:textSize="12sp"
+                                android:text="Язык программирования"
+                                android:paddingBottom="5dp"
+                                android:paddingTop="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/text_langProg_name2"/>
+                            <TextView
+                                android:layout_marginLeft="6dp"
+                                android:textColor="@color/colorBlack"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:id="@+id/text_langProg2"/>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_below="@id/linearlayout2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/title_comp2"
+                            android:text=""
+                            android:lineSpacingMultiplier="1"
+                            android:gravity="center"
+                            android:textSize="14sp"
+                            android:paddingBottom="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_alignParentStart="true" />
+
+                        <TextView
+                            android:paddingRight="10dp"
+                            android:paddingLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:layout_below="@id/title_comp2"
+                            android:id="@+id/url12"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:paddingRight="10dp"
+                            android:paddingLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:layout_below="@id/url12"
+                            android:id="@+id/url22"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/titleHr"
+                android:text="Hello, Robot"
+                android:textAlignment="center"
+                android:layout_below="@id/descJrFll"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_webviewstyle"
+                android:orientation="vertical"
+                android:layout_below="@id/titleHr"
+                android:id="@+id/descHr">
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cardView3"
+                    card:cardElevation="2dp"
+                    card:cardBackgroundColor="@color/colorBlue2"
+                    card:cardUseCompatPadding="true">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <LinearLayout
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:id="@+id/linearlayout3">
+                            <TextView
+                                android:textSize="12sp"
+                                android:text="Возраст"
+                                android:textColor="@color/colorGrey2"
+                                android:paddingBottom="5dp"
+                                android:paddingTop="5dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:layout_marginLeft="6dp"
+                                android:textColor="@color/colorBlack"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:id="@+id/text_age3"/>
+                            <TextView
+                                android:textSize="12sp"
+                                android:text="Команда"
+                                android:paddingBottom="5dp"
+                                android:paddingTop="10dp"
+                                android:textColor="@color/colorGrey2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:layout_marginLeft="6dp"
+                                android:textColor="@color/colorBlack"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:id="@+id/text_team3"/>
+                            <TextView
+                                android:textSize="12sp"
+                                android:text="Робот"
+                                android:paddingBottom="5dp"
+                                android:paddingTop="10dp"
+                                android:textColor="@color/colorGrey2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:layout_marginLeft="6dp"
+                                android:textColor="@color/colorBlack"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:id="@+id/text_robot3"/>
+                            <TextView
+                                android:textColor="@color/colorGrey2"
+                                android:textSize="12sp"
+                                android:text="Язык программирования"
+                                android:paddingBottom="5dp"
+                                android:paddingTop="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/text_langProg_name3"/>
+                            <TextView
+                                android:layout_marginLeft="6dp"
+                                android:textColor="@color/colorBlack"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:id="@+id/text_langProg3"/>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_below="@id/linearlayout3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/title_comp3"
+                            android:text=""
+                            android:lineSpacingMultiplier="1"
+                            android:gravity="center"
+                            android:textSize="14sp"
+                            android:paddingBottom="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_alignParentStart="true" />
+
+                        <TextView
+                            android:paddingRight="10dp"
+                            android:paddingLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:layout_below="@id/title_comp3"
+                            android:id="@+id/url13"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:paddingRight="10dp"
+                            android:paddingLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:layout_below="@id/url13"
+                            android:id="@+id/url23"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/titleCar"
+                android:text="РОБОКАРУСЕЛЬ"
+                android:textAlignment="center"
+                android:layout_below="@id/descHr"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_webviewstyle"
+                android:orientation="vertical"
+                android:layout_below="@id/titleCar"
+                android:id="@+id/descCar">
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cardView"
+                    card:cardElevation="2dp"
+                    card:cardBackgroundColor="@color/colorBlue2"
+                    card:cardUseCompatPadding="true">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <LinearLayout
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:id="@+id/linearlayout">
+                            <TextView
+                                android:textSize="12sp"
+                                android:text="Возраст"
+                                android:textColor="@color/colorGrey2"
+                                android:paddingBottom="5dp"
+                                android:paddingTop="5dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:layout_marginLeft="6dp"
+                                android:textColor="@color/colorBlack"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:id="@+id/text_age"/>
+                            <TextView
+                                android:textSize="12sp"
+                                android:text="Команда"
+                                android:paddingBottom="5dp"
+                                android:paddingTop="10dp"
+                                android:textColor="@color/colorGrey2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:layout_marginLeft="6dp"
+                                android:textColor="@color/colorBlack"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:id="@+id/text_team"/>
+                            <TextView
+                                android:textSize="12sp"
+                                android:text="Робот"
+                                android:paddingBottom="5dp"
+                                android:paddingTop="10dp"
+                                android:textColor="@color/colorGrey2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:layout_marginLeft="6dp"
+                                android:textColor="@color/colorBlack"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:id="@+id/text_robot"/>
+                            <TextView
+                                android:textColor="@color/colorGrey2"
+                                android:textSize="12sp"
+                                android:text="Язык программирования"
+                                android:paddingBottom="5dp"
+                                android:paddingTop="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/text_langProg_name"/>
+                            <TextView
+                                android:layout_marginLeft="6dp"
+                                android:textColor="@color/colorBlack"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:id="@+id/text_langProg"/>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_below="@id/linearlayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/title_comp"
+                            android:text=""
+                            android:lineSpacingMultiplier="1"
+                            android:gravity="center"
+                            android:textSize="14sp"
+                            android:paddingBottom="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_alignParentStart="true" />
+
+                        <TextView
+                            android:paddingRight="10dp"
+                            android:paddingLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:layout_below="@id/title_comp"
+                            android:id="@+id/url1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:paddingRight="10dp"
+                            android:paddingLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:layout_below="@id/url1"
+                            android:id="@+id/url2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
