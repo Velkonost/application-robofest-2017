@@ -20,7 +20,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TimePicker;
-import android.widget.Toast;
 
 import java.util.Calendar;
 
@@ -78,11 +77,6 @@ public class AboutActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.getMenu().getItem(3).setChecked(true);
 
-
-//        Intent myIntent = new Intent(AboutActivity.this,
-//                AlarmService.class);
-//
-//        mPendingIntent = PendingIntent.getService(AboutActivity.this, 0, myIntent, 0);
 //
         AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
 //
@@ -100,11 +94,11 @@ public class AboutActivity extends AppCompatActivity
 
         Log.i(String.valueOf(System.currentTimeMillis()), String.valueOf(calendar.getTimeInMillis()));
 
-        Intent intent = new Intent(this, ScheduledReceiver.class);
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 0,
-                intent, PendingIntent.FLAG_ONE_SHOT);
-        alarmManager.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + (5*1000), pendingIntent);
-        Toast.makeText(AboutActivity.this, "Устанавливаем сигнализацию", Toast.LENGTH_LONG).show();
+//        Intent intent = new Intent(this, ScheduledReceiver.class);
+//        PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 0,
+//                intent, PendingIntent.FLAG_ONE_SHOT);
+//        alarmManager.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + (5*1000), pendingIntent);
+//        Toast.makeText(AboutActivity.this, "Устанавливаем сигнализацию", Toast.LENGTH_LONG).show();
     }
 
 
