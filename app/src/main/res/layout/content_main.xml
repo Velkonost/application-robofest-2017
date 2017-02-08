@@ -45,6 +45,12 @@
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
-
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btnAddBoard"
+        android:layout_margin="10dp"
+        android:layout_gravity="right|bottom"
+        style="@style/FabStyle"
+        android:onClick="registrationOpen"
+        android:src="@mipmap/ic_account_plus"/>
 
 </android.support.design.widget.CoordinatorLayout>

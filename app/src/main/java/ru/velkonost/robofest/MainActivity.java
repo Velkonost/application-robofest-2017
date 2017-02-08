@@ -108,6 +108,21 @@ public class MainActivity extends AppCompatActivity
 
     }
 
+    public void registrationOpen (View view) {
+
+        Intent nextIntent = null;
+
+
+        nextIntent =
+                new Intent("ru.velkonost.Browser");
+        nextIntent.setData(Uri.parse(
+                "https://docs.google.com/forms/d/e/1FAIpQLSfg7od0RMlO5CCML1MZB2dxVnS-3KG8rqTGZ2hitnVY2tdpxg/formResponse"
+        ));
+
+        changeActivityCompat(MainActivity.this, nextIntent);
+
+    }
+
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
