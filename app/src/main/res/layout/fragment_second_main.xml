@@ -22,7 +22,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/day1"
-                    android:background="@drawable/main_button"
+                    android:background="@drawable/background_main_textview"
+                    android:textColor="@color/colorWhite"
                     android:text="ДЕНЬ 1"
                     android:layout_weight="1"/>
 
@@ -31,7 +32,8 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/day2"
                     android:text="ДЕНЬ 2"
-                    android:background="@drawable/main_button"
+                    android:textColor="@color/colorWhite"
+                    android:background="@drawable/background_main_textview"
                     android:layout_weight="1"/>
             </LinearLayout>
             <ImageView
@@ -41,6 +43,7 @@
                 android:layout_below="@id/llDays"
                 android:scaleType="fitXY"
                 android:id="@+id/imageGraphic"
+                android:src="@drawable/day1"
                 android:layout_margin="10dp"/>
 
             <TextView
@@ -50,7 +53,9 @@
                 android:text="FIRST LEGO League"
                 android:textAlignment="center"
                 android:padding="10dp"
-                android:layout_below="@id/imageGraphic"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/colorWhite"
+
                 android:layout_marginTop="40dp"/>
 
             <LinearLayout
@@ -58,14 +63,13 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/background_webviewstyle"
                 android:orientation="vertical"
-                android:layout_below="@id/titleFll"
                 android:id="@+id/descFll">
                 <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/cardView1"
                     card:cardElevation="2dp"
-                    card:cardBackgroundColor="@color/colorBlue2"
+                    card:cardBackgroundColor="@color/colorMain"
                     card:cardUseCompatPadding="true">
 
                     <RelativeLayout
@@ -88,7 +92,7 @@
                                 android:layout_height="wrap_content" />
                             <TextView
                                 android:layout_marginLeft="6dp"
-                                android:textColor="@color/colorBlack"
+                                android:textColor="@color/colorWhite"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:textSize="14sp"
@@ -103,7 +107,7 @@
                                 android:layout_height="wrap_content" />
                             <TextView
                                 android:layout_marginLeft="6dp"
-                                android:textColor="@color/colorBlack"
+                                android:textColor="@color/colorWhite"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:textSize="14sp"
@@ -118,7 +122,7 @@
                                 android:layout_height="wrap_content" />
                             <TextView
                                 android:layout_marginLeft="6dp"
-                                android:textColor="@color/colorBlack"
+                                android:textColor="@color/colorWhite"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:textSize="14sp"
@@ -134,7 +138,7 @@
                                 android:id="@+id/text_langProg_name1"/>
                             <TextView
                                 android:layout_marginLeft="6dp"
-                                android:textColor="@color/colorBlack"
+                                android:textColor="@color/colorWhite"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:textSize="14sp"
@@ -165,7 +169,8 @@
                             android:layout_below="@id/title_comp1"
                             android:id="@+id/url11"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"/>
                         <TextView
                             android:paddingRight="10dp"
                             android:paddingLeft="10dp"
@@ -174,7 +179,8 @@
                             android:layout_below="@id/url11"
                             android:id="@+id/url21"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"/>
 
 
                     </RelativeLayout>
@@ -188,6 +194,9 @@
                 android:padding="10dp"
                 android:text="Junior FIRST LEGO League"
                 android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
                 android:layout_below="@id/descFll"/>
 
             <LinearLayout
@@ -202,7 +211,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/cardView2"
                     card:cardElevation="2dp"
-                    card:cardBackgroundColor="@color/colorBlue2"
+                    card:cardBackgroundColor="@color/colorMain"
                     card:cardUseCompatPadding="true">
 
                     <RelativeLayout
@@ -225,7 +234,7 @@
                                 android:layout_height="wrap_content" />
                             <TextView
                                 android:layout_marginLeft="6dp"
-                                android:textColor="@color/colorBlack"
+                                android:textColor="@color/colorWhite"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:textSize="14sp"
@@ -240,7 +249,7 @@
                                 android:layout_height="wrap_content" />
                             <TextView
                                 android:layout_marginLeft="6dp"
-                                android:textColor="@color/colorBlack"
+                                android:textColor="@color/colorWhite"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:textSize="14sp"
@@ -255,7 +264,7 @@
                                 android:layout_height="wrap_content" />
                             <TextView
                                 android:layout_marginLeft="6dp"
-                                android:textColor="@color/colorBlack"
+                                android:textColor="@color/colorWhite"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:textSize="14sp"
@@ -271,7 +280,7 @@
                                 android:id="@+id/text_langProg_name2"/>
                             <TextView
                                 android:layout_marginLeft="6dp"
-                                android:textColor="@color/colorBlack"
+                                android:textColor="@color/colorWhite"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:textSize="14sp"
@@ -302,7 +311,8 @@
                             android:layout_below="@id/title_comp2"
                             android:id="@+id/url12"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"/>
                         <TextView
                             android:paddingRight="10dp"
                             android:paddingLeft="10dp"
@@ -311,7 +321,8 @@
                             android:layout_below="@id/url12"
                             android:id="@+id/url22"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"/>
 
 
                     </RelativeLayout>
@@ -325,6 +336,9 @@
                 android:text="Hello, Robot"
                 android:padding="10dp"
                 android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
                 android:layout_below="@id/descJrFll"/>
 
             <LinearLayout
@@ -339,7 +353,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/cardView3"
                     card:cardElevation="2dp"
-                    card:cardBackgroundColor="@color/colorBlue2"
+                    card:cardBackgroundColor="@color/colorMain"
                     card:cardUseCompatPadding="true">
 
                     <RelativeLayout
@@ -362,7 +376,7 @@
                                 android:layout_height="wrap_content" />
                             <TextView
                                 android:layout_marginLeft="6dp"
-                                android:textColor="@color/colorBlack"
+                                android:textColor="@color/colorWhite"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:textSize="14sp"
@@ -377,7 +391,7 @@
                                 android:layout_height="wrap_content" />
                             <TextView
                                 android:layout_marginLeft="6dp"
-                                android:textColor="@color/colorBlack"
+                                android:textColor="@color/colorWhite"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:textSize="14sp"
@@ -392,7 +406,7 @@
                                 android:layout_height="wrap_content" />
                             <TextView
                                 android:layout_marginLeft="6dp"
-                                android:textColor="@color/colorBlack"
+                                android:textColor="@color/colorWhite"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:textSize="14sp"
@@ -408,7 +422,7 @@
                                 android:id="@+id/text_langProg_name3"/>
                             <TextView
                                 android:layout_marginLeft="6dp"
-                                android:textColor="@color/colorBlack"
+                                android:textColor="@color/colorWhite"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:textSize="14sp"
@@ -439,7 +453,8 @@
                             android:layout_below="@id/title_comp3"
                             android:id="@+id/url13"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"/>
                         <TextView
                             android:paddingRight="10dp"
                             android:paddingLeft="10dp"
@@ -448,7 +463,8 @@
                             android:layout_below="@id/url13"
                             android:id="@+id/url23"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"/>
 
 
                     </RelativeLayout>
@@ -461,6 +477,9 @@
                 android:padding="10dp"
                 android:id="@+id/titleCar"
                 android:text="РОБОКАРУСЕЛЬ"
+                android:textColor="@color/colorWhite"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
                 android:textAlignment="center"
                 android:layout_below="@id/descHr"/>
 
@@ -476,7 +495,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/cardView"
                     card:cardElevation="2dp"
-                    card:cardBackgroundColor="@color/colorBlue2"
+                    card:cardBackgroundColor="@color/colorMain"
                     card:cardUseCompatPadding="true">
 
                     <RelativeLayout
@@ -499,7 +518,7 @@
                                 android:layout_height="wrap_content" />
                             <TextView
                                 android:layout_marginLeft="6dp"
-                                android:textColor="@color/colorBlack"
+                                android:textColor="@color/colorWhite"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:textSize="14sp"
@@ -514,7 +533,7 @@
                                 android:layout_height="wrap_content" />
                             <TextView
                                 android:layout_marginLeft="6dp"
-                                android:textColor="@color/colorBlack"
+                                android:textColor="@color/colorWhite"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:textSize="14sp"
@@ -529,7 +548,7 @@
                                 android:layout_height="wrap_content" />
                             <TextView
                                 android:layout_marginLeft="6dp"
-                                android:textColor="@color/colorBlack"
+                                android:textColor="@color/colorWhite"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:textSize="14sp"
@@ -545,7 +564,7 @@
                                 android:id="@+id/text_langProg_name"/>
                             <TextView
                                 android:layout_marginLeft="6dp"
-                                android:textColor="@color/colorBlack"
+                                android:textColor="@color/colorWhite"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:textSize="14sp"
@@ -576,7 +595,8 @@
                             android:layout_below="@id/title_comp"
                             android:id="@+id/url1"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"/>
                         <TextView
                             android:paddingRight="10dp"
                             android:paddingLeft="10dp"
@@ -585,7 +605,8 @@
                             android:layout_below="@id/url1"
                             android:id="@+id/url2"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"/>
 
 
                     </RelativeLayout>

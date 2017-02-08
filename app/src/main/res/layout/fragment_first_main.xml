@@ -13,9 +13,11 @@
         android:text="17 - 18 февраля"
         android:textAlignment="center"
         android:padding="10dp"
-        android:textColor="@color/colorBlack"
+        android:layout_margin="10dp"
         android:textSize="20sp"
-        android:layout_marginBottom="40dp"/>
+        android:layout_marginBottom="40dp"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/background_main_textview"/>
 
     <ImageView
         android:layout_width="match_parent"
@@ -24,6 +26,7 @@
         android:adjustViewBounds="true"
         android:scaleType="fitXY"
         android:onClick="openGraphic"
+        android:layout_marginTop="20dp"
         android:layout_marginBottom="40dp"/>
 
     <ImageView

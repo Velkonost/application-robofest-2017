@@ -13,9 +13,11 @@
         android:text="Областной Экспоцентр, г. Омск, ул. 70 Лет Октября, 25/2"
         android:textAlignment="center"
         android:padding="10dp"
-        android:textColor="@color/colorBlack"
         android:textSize="20sp"
-        android:layout_marginBottom="40dp"/>
+        android:textColor="@color/colorWhite"
+        android:layout_marginBottom="40dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/background_main_textview"/>
     <WebView
         android:layout_width="match_parent"
         android:layout_height="match_parent"

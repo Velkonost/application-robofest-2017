@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+    android:background="@color/colorWhite"
     tools:context="ru.velkonost.robofest.MainActivity">
 
     <android.support.design.widget.AppBarLayout
@@ -21,7 +22,7 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="#03A9F4"
+                android:background="@color/colorMain"
                 app:popupTheme="@style/AppTheme.PopupOverlay"/>
             <android.support.design.widget.TabLayout
                 android:id="@+id/tabLayout"
@@ -30,7 +31,7 @@
                 android:layout_marginTop="?attr/actionBarSize"
                 app:tabIndicatorColor="@android:color/white"
                 app:tabIndicatorHeight="6dp"
-                android:background="#03A9F4"
+                android:background="@color/colorMain"
                 app:tabSelectedTextColor="@android:color/white"
                 app:tabTextColor="@android:color/white"/>
 

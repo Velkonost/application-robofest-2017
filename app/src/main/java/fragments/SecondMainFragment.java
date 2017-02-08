@@ -53,7 +53,7 @@ public class SecondMainFragment extends AbstractTabFragment {
 
     private ImageView imageGraphic;
 
-    private int day;
+    private int day = 1;
 
 
     private LinearLayout first, second, third, forth;
@@ -187,6 +187,10 @@ public class SecondMainFragment extends AbstractTabFragment {
         third.setLayoutParams(layoutParamsInvisible);
         forth.setLayoutParams(layoutParamsInvisible);
 
+        btnDay1.setBackground(ContextCompat.getDrawable(context,
+                R.drawable.main_button_pressed));
+        btnDay2.setBackground(ContextCompat.getDrawable(context,
+                R.drawable.main_button));
 
         btnDay1.setOnClickListener(new View.OnClickListener() {
             @Override
