@@ -5,10 +5,6 @@
         <item
             android:id="@+id/registration"
             android:title="Регистрация"/>
-
-        <item
-            android:id="@+id/competition"
-            android:title="Соревнования"/>
         <item
             android:id="@+id/galery"
             android:title="Галерея"/>
@@ -18,7 +14,6 @@
         <item
             android:id="@+id/organizers"
             android:title="Организаторы"/>
-
         <item
             android:id="@+id/contacts"
             android:title="Контакты"/>

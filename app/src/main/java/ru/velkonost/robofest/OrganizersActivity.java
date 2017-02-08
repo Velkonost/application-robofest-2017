@@ -3,8 +3,6 @@ package ru.velkonost.robofest;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
-import android.os.AsyncTask;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.design.widget.NavigationView;
@@ -12,39 +10,21 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.text.Html;
-import android.text.TextUtils;
 import android.view.MenuItem;
 import android.view.View;
 
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-
-import java.io.IOException;
-import java.util.List;
-
-import adapters.AboutAdapter;
-
 import static managers.Initializations.changeActivityCompat;
 
-public class AboutActivity extends AppCompatActivity
+public class OrganizersActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
-    private String textHistory;
-    private String text;
-
-
-    private Document[] doc = {null};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_about);
+        setContentView(R.layout.activity_organizers);
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("О мероприятии");
+        toolbar.setTitle("Организаторы");
         setSupportActionBar(toolbar);
 
         final DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -55,23 +35,8 @@ public class AboutActivity extends AppCompatActivity
 
         final NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        navigationView.getMenu().getItem(2).setChecked(true);
+        navigationView.getMenu().getItem(3).setChecked(true);
 
-        GetHtml getHtml = new GetHtml();
-        getHtml.execute();
-
-    }
-
-
-
-    @Override
-    public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
-        }
     }
 
     public void openMain (View view) {
@@ -85,13 +50,24 @@ public class AboutActivity extends AppCompatActivity
                  * Обновляет страницу.
                  * {@link Initializations#changeActivityCompat(Activity, Intent)}
                  * */
-                changeActivityCompat(AboutActivity.this, finalNextIntent);
+                changeActivityCompat(OrganizersActivity.this, finalNextIntent);
             }
         }, 350);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
 
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
     }
 
     @SuppressWarnings("StatementWithEmptyBody")
@@ -111,13 +87,13 @@ public class AboutActivity extends AppCompatActivity
             ));
 
         } else if (id == R.id.galery) {
-            nextIntent = new Intent(AboutActivity.this, GalleryActivity.class);
+            nextIntent = new Intent(OrganizersActivity.this, GalleryActivity.class);
         } else if (id == R.id.about) {
-            nextIntent = new Intent(AboutActivity.this, AboutActivity.class);
+            nextIntent = new Intent(OrganizersActivity.this, AboutActivity.class);
         } else if (id == R.id.organizers) {
-            nextIntent = new Intent(AboutActivity.this, OrganizersActivity.class);
+            nextIntent = new Intent(OrganizersActivity.this, OrganizersActivity.class);
         } else if (id == R.id.contacts) {
-            nextIntent = new Intent(AboutActivity.this, ContactsActivity.class);
+            nextIntent = new Intent(OrganizersActivity.this, ContactsActivity.class);
         }
 
 
@@ -126,49 +102,12 @@ public class AboutActivity extends AppCompatActivity
             @Override
             public void run() {
 
-                changeActivityCompat(AboutActivity.this, finalNextIntent);
+                changeActivityCompat(OrganizersActivity.this, finalNextIntent);
             }
         }, 350);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
-    }
-
-    private class GetHtml extends AsyncTask<Object, Object, String> {
-        @Override
-        protected String doInBackground(Object... strings) {
-
-            String dataURL = "http://www.robofestomsk.ru/o-festivale.html";
-
-
-            try {
-                doc[0] = Jsoup.connect(dataURL).get();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-            return dataURL;
-        }
-        protected void onPostExecute(String strJson) {
-            super.onPostExecute(strJson);
-
-            List title = doc[0].select("article[class=box post]").select("p");
-
-            textHistory = TextUtils.join(" ", title.subList(1, 2));
-            text = TextUtils.join(" ", title.subList(5, 8));
-
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                textHistory = String.valueOf(Html.fromHtml(textHistory, Html.FROM_HTML_MODE_LEGACY));
-                text = String.valueOf(Html.fromHtml(text, Html.FROM_HTML_MODE_LEGACY));
-            } else {
-                textHistory = String.valueOf(Html.fromHtml(textHistory));
-                text = String.valueOf(Html.fromHtml(text));
-            }
-
-            RecyclerView rv = (RecyclerView) findViewById(R.id.recyclerViewAbout);
-            rv.setLayoutManager(new LinearLayoutManager(AboutActivity.this));
-            rv.setAdapter(new AboutAdapter(textHistory, text, AboutActivity.this));
-        }
     }
 }

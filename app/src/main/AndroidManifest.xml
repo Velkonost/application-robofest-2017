@@ -22,7 +22,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".FullScreenPhotoActivity"/>
-        <activity android:name=".CompetitionActivity"/>
+        <activity android:name=".OrganizersActivity"/>
+        <activity android:name=".ContactsActivity"/>
         <activity android:name=".AboutActivity"/>
         <activity android:name=".TranslationActivity"/>
         <activity android:name=".BrowserActivity">

@@ -3,8 +3,6 @@ package ru.velkonost.robofest;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
-import android.os.AsyncTask;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.design.widget.NavigationView;
@@ -12,39 +10,27 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.text.Html;
-import android.text.TextUtils;
 import android.view.MenuItem;
 import android.view.View;
-
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-
-import java.io.IOException;
-import java.util.List;
-
-import adapters.AboutAdapter;
+import android.widget.TextView;
 
 import static managers.Initializations.changeActivityCompat;
 
-public class AboutActivity extends AppCompatActivity
+public class ContactsActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    private String textHistory;
-    private String text;
+    private TextView desc;
+    private TextView desc2;
 
-
-    private Document[] doc = {null};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_about);
+        setContentView(R.layout.activity_contacts);
+
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("О мероприятии");
+        toolbar.setTitle("Контакты");
         setSupportActionBar(toolbar);
 
         final DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -53,13 +39,16 @@ public class AboutActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
+
         final NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        navigationView.getMenu().getItem(2).setChecked(true);
+        navigationView.getMenu().getItem(4).setChecked(true);
 
-        GetHtml getHtml = new GetHtml();
-        getHtml.execute();
+        desc = (TextView) findViewById(R.id.desc);
+        desc2 = (TextView) findViewById(R.id.desc2);
 
+        desc.setText("8-(3812)-53-22-33");
+        desc2.setText("robofestomsk@mail.ru");
     }
 
 
@@ -74,6 +63,19 @@ public class AboutActivity extends AppCompatActivity
         }
     }
 
+
+    public void onClickPhoneNumber(View view) {
+        Intent intent = new Intent(Intent.ACTION_DIAL);
+        intent.setData(Uri.parse("tel: 53-22-33"));
+        startActivity(intent);
+    }
+
+    public void onClickEmail(View view) {
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse("mailto:"+ "robofestomsk@mail.ru"));
+        startActivity(intent);
+    }
+
     public void openMain (View view) {
 
         final Intent finalNextIntent = new Intent(this, MainActivity.class);
@@ -85,7 +87,7 @@ public class AboutActivity extends AppCompatActivity
                  * Обновляет страницу.
                  * {@link Initializations#changeActivityCompat(Activity, Intent)}
                  * */
-                changeActivityCompat(AboutActivity.this, finalNextIntent);
+                changeActivityCompat(ContactsActivity.this, finalNextIntent);
             }
         }, 350);
 
@@ -93,6 +95,7 @@ public class AboutActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
 
     }
+
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
@@ -111,64 +114,26 @@ public class AboutActivity extends AppCompatActivity
             ));
 
         } else if (id == R.id.galery) {
-            nextIntent = new Intent(AboutActivity.this, GalleryActivity.class);
+            nextIntent = new Intent(ContactsActivity.this, GalleryActivity.class);
         } else if (id == R.id.about) {
-            nextIntent = new Intent(AboutActivity.this, AboutActivity.class);
+            nextIntent = new Intent(ContactsActivity.this, AboutActivity.class);
         } else if (id == R.id.organizers) {
-            nextIntent = new Intent(AboutActivity.this, OrganizersActivity.class);
+            nextIntent = new Intent(ContactsActivity.this, OrganizersActivity.class);
         } else if (id == R.id.contacts) {
-            nextIntent = new Intent(AboutActivity.this, ContactsActivity.class);
+            nextIntent = new Intent(ContactsActivity.this, ContactsActivity.class);
         }
-
 
         final Intent finalNextIntent = nextIntent;
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
 
-                changeActivityCompat(AboutActivity.this, finalNextIntent);
+                changeActivityCompat(ContactsActivity.this, finalNextIntent);
             }
         }, 350);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
-    }
-
-    private class GetHtml extends AsyncTask<Object, Object, String> {
-        @Override
-        protected String doInBackground(Object... strings) {
-
-            String dataURL = "http://www.robofestomsk.ru/o-festivale.html";
-
-
-            try {
-                doc[0] = Jsoup.connect(dataURL).get();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-            return dataURL;
-        }
-        protected void onPostExecute(String strJson) {
-            super.onPostExecute(strJson);
-
-            List title = doc[0].select("article[class=box post]").select("p");
-
-            textHistory = TextUtils.join(" ", title.subList(1, 2));
-            text = TextUtils.join(" ", title.subList(5, 8));
-
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                textHistory = String.valueOf(Html.fromHtml(textHistory, Html.FROM_HTML_MODE_LEGACY));
-                text = String.valueOf(Html.fromHtml(text, Html.FROM_HTML_MODE_LEGACY));
-            } else {
-                textHistory = String.valueOf(Html.fromHtml(textHistory));
-                text = String.valueOf(Html.fromHtml(text));
-            }
-
-            RecyclerView rv = (RecyclerView) findViewById(R.id.recyclerViewAbout);
-            rv.setLayoutManager(new LinearLayoutManager(AboutActivity.this));
-            rv.setAdapter(new AboutAdapter(textHistory, text, AboutActivity.this));
-        }
     }
 }

@@ -46,28 +46,6 @@ public class MainActivity extends AppCompatActivity
         toolbar.setTitle("Главная");
         setSupportActionBar(toolbar);
 
-//        btnDay1 = (Button) findViewById(R.id.buttonDay1);
-//        btnDay2 = (Button) findViewById(R.id.buttonDay2);
-//
-//        dayImage = (LinearLayout) findViewById(R.id.dayImage);
-//
-//        imageMap = (ImageView) findViewById(R.id.imageMap);
-//        imageGraphic = (ImageView) findViewById(R.id.imageGraphic);
-//        imageDay = (ImageView) findViewById(R.id.imageDay);
-
-//        Display display = getWindowManager().getDefaultDisplay();
-//        Point sizeP = new Point();
-//        display.getSize(sizeP);
-//        int width = sizeP.x;
-//        int height = sizeP.y;
-
-//        Glide.with(MainActivity.this)
-//                .load("http://www.robofestomsk.ru/images/robofestomsk_sheme.jpg")
-//                .placeholder(R.mipmap.ic_launcher)
-//                .override(width, 200)
-//                .into(imageMap);
-
-
         initTabs();
 
         final DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -102,6 +80,26 @@ public class MainActivity extends AppCompatActivity
         MainActivity.this.startActivity(intent);
     }
 
+    public void openMain (View view) {
+
+        final Intent finalNextIntent = new Intent(this, MainActivity.class);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+
+                /**
+                 * Обновляет страницу.
+                 * {@link Initializations#changeActivityCompat(Activity, Intent)}
+                 * */
+                changeActivityCompat(MainActivity.this, finalNextIntent);
+            }
+        }, 350);
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+
+    }
+
     private void initTabs() {
         viewPager = (ViewPager) findViewById(R.id.viewPagerMain);
 
@@ -134,10 +132,14 @@ public class MainActivity extends AppCompatActivity
                     "https://docs.google.com/forms/d/e/1FAIpQLSfg7od0RMlO5CCML1MZB2dxVnS-3KG8rqTGZ2hitnVY2tdpxg/formResponse"
             ));
 
-        } else if (id == R.id.competition) {
-            nextIntent = new Intent(MainActivity.this, CompetitionActivity.class);
+        } else if (id == R.id.galery) {
+            nextIntent = new Intent(MainActivity.this, GalleryActivity.class);
         } else if (id == R.id.about) {
             nextIntent = new Intent(MainActivity.this, AboutActivity.class);
+        } else if (id == R.id.organizers) {
+            nextIntent = new Intent(MainActivity.this, OrganizersActivity.class);
+        } else if (id == R.id.contacts) {
+            nextIntent = new Intent(MainActivity.this, ContactsActivity.class);
         }
 
 
