@@ -42,7 +42,15 @@ public class ContactsActivity extends AppCompatActivity
 
         final NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        navigationView.getMenu().getItem(4).setChecked(true);
+
+        toolbar.setNavigationIcon(R.mipmap.ic_arrow_left);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+
 
         desc = (TextView) findViewById(R.id.desc);
         desc2 = (TextView) findViewById(R.id.desc2);
@@ -76,9 +84,54 @@ public class ContactsActivity extends AppCompatActivity
         startActivity(intent);
     }
 
+    public void openVk (View view) {
+
+        Intent intent = new Intent();
+        intent.setAction(Intent.ACTION_VIEW);
+        intent.addCategory(Intent.CATEGORY_BROWSABLE);
+        intent.setData(Uri.parse("https://vk.com/robofestomsk"));
+        startActivity(intent);
+
+    }
+
+    public void openFacebook (View view) {
+
+//        Intent intent = new Intent();
+//        intent.setAction(Intent.ACTION_VIEW);
+//        intent.addCategory(Intent.CATEGORY_BROWSABLE);
+//        intent.setData(Uri.parse("https://vk.com/robofestomsk"));
+//        startActivity(intent);
+
+    }
+
+    public void openOdnoklassniki (View view) {
+
+//        Intent intent = new Intent();
+//        intent.setAction(Intent.ACTION_VIEW);
+//        intent.addCategory(Intent.CATEGORY_BROWSABLE);
+//        intent.setData(Uri.parse("https://vk.com/robofestomsk"));
+//        startActivity(intent);
+
+    }
+
+    public void openGoogle (View view) {
+
+//        Intent intent = new Intent();
+//        intent.setAction(Intent.ACTION_VIEW);
+//        intent.addCategory(Intent.CATEGORY_BROWSABLE);
+//        intent.setData(Uri.parse("https://vk.com/robofestomsk"));
+//        startActivity(intent);
+
+    }
+
+
     public void openMain (View view) {
 
-        final Intent finalNextIntent = new Intent(this, MainActivity.class);
+        final Intent finalNextIntent = new Intent("ru.velkonost.Browser");
+        finalNextIntent.putExtra("site", 2);
+        finalNextIntent.setData(Uri.parse(
+                "https://www.robofestomsk.ru/index.html"
+        ));
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -109,6 +162,7 @@ public class ContactsActivity extends AppCompatActivity
 
             nextIntent =
                     new Intent("ru.velkonost.Browser");
+            nextIntent.putExtra("site", 1);
             nextIntent.setData(Uri.parse(
                     "https://docs.google.com/forms/d/e/1FAIpQLSfg7od0RMlO5CCML1MZB2dxVnS-3KG8rqTGZ2hitnVY2tdpxg/formResponse"
             ));
@@ -129,6 +183,7 @@ public class ContactsActivity extends AppCompatActivity
             public void run() {
 
                 changeActivityCompat(ContactsActivity.this, finalNextIntent);
+                finish();
             }
         }, 350);
 

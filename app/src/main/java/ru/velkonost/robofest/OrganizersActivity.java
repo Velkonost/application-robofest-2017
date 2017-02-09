@@ -33,15 +33,26 @@ public class OrganizersActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
+        toolbar.setNavigationIcon(R.mipmap.ic_arrow_left);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+
         final NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        navigationView.getMenu().getItem(3).setChecked(true);
 
     }
 
     public void openMain (View view) {
 
-        final Intent finalNextIntent = new Intent(this, MainActivity.class);
+        final Intent finalNextIntent = new Intent("ru.velkonost.Browser");
+        finalNextIntent.putExtra("site", 2);
+        finalNextIntent.setData(Uri.parse(
+                "https://www.robofestomsk.ru/index.html"
+        ));
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -82,6 +93,7 @@ public class OrganizersActivity extends AppCompatActivity
 
             nextIntent =
                     new Intent("ru.velkonost.Browser");
+            nextIntent.putExtra("site", 1);
             nextIntent.setData(Uri.parse(
                     "https://docs.google.com/forms/d/e/1FAIpQLSfg7od0RMlO5CCML1MZB2dxVnS-3KG8rqTGZ2hitnVY2tdpxg/formResponse"
             ));
@@ -103,6 +115,7 @@ public class OrganizersActivity extends AppCompatActivity
             public void run() {
 
                 changeActivityCompat(OrganizersActivity.this, finalNextIntent);
+                finish();
             }
         }, 350);
 

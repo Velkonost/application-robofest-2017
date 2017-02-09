@@ -43,9 +43,8 @@ public class MainTabsFragmentAdapter extends FragmentPagerAdapter {
     private void initTabsMap(Context context) {
         tabs = new HashMap<>();
 
-
-        tabs.put(0, FirstMainFragment.getInstance(context, "Карта"));
-        tabs.put(1, SecondMainFragment.getInstance(context, "Расписание"));
+        tabs.put(0, FirstMainFragment.getInstance(context, "Карта мероприятий"));
+        tabs.put(1, SecondMainFragment.getInstance(context, "Программа мероприятий"));
         tabs.put(2, ThirdMainFragment.getInstance(context,"Схема проезда"));
 
     }

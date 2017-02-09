@@ -5,6 +5,8 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -16,6 +18,29 @@ public class BrowserActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_browser);
+
+        int siteId = getIntent().getExtras().getInt("site");
+
+        final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+
+        if (siteId == 1) {
+            toolbar.setTitle("Регистрация");
+        } else if (siteId == 2) {
+            toolbar.setTitle("Сайт фестиваля");
+        } else if (siteId == 3) {
+            toolbar.setTitle("Группа Vk");
+        }
+
+        setSupportActionBar(toolbar);
+        toolbar.setNavigationIcon(R.mipmap.ic_arrow_left);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+
+
 
         Uri url = getIntent().getData();
         WebView webView = (WebView) findViewById(R.id.webView);
@@ -43,8 +68,6 @@ public class BrowserActivity extends AppCompatActivity {
         }
 
         private boolean handleUri(final Uri uri) {
-            final String host = uri.getHost();
-            final String scheme = uri.getScheme();
             return false;
         }
     }

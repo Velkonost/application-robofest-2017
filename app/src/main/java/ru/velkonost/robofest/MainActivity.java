@@ -74,7 +74,11 @@ public class MainActivity extends AppCompatActivity
 
     public void openMain (View view) {
 
-        final Intent finalNextIntent = new Intent(this, MainActivity.class);
+        final Intent finalNextIntent = new Intent("ru.velkonost.Browser");
+        finalNextIntent.putExtra("site", 2);
+        finalNextIntent.setData(Uri.parse(
+                "https://www.robofestomsk.ru/index.html"
+        ));
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -110,11 +114,12 @@ public class MainActivity extends AppCompatActivity
 
     public void registrationOpen (View view) {
 
-        Intent nextIntent = null;
+        Intent nextIntent;
 
 
         nextIntent =
                 new Intent("ru.velkonost.Browser");
+        nextIntent.putExtra("site", 1);
         nextIntent.setData(Uri.parse(
                 "https://docs.google.com/forms/d/e/1FAIpQLSfg7od0RMlO5CCML1MZB2dxVnS-3KG8rqTGZ2hitnVY2tdpxg/formResponse"
         ));
@@ -135,6 +140,7 @@ public class MainActivity extends AppCompatActivity
 
             nextIntent =
                     new Intent("ru.velkonost.Browser");
+            nextIntent.putExtra("site", 1);
             nextIntent.setData(Uri.parse(
                     "https://docs.google.com/forms/d/e/1FAIpQLSfg7od0RMlO5CCML1MZB2dxVnS-3KG8rqTGZ2hitnVY2tdpxg/formResponse"
             ));

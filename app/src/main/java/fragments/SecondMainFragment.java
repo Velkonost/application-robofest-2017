@@ -32,8 +32,6 @@ public class SecondMainFragment extends AbstractTabFragment {
 
     private static final int LAYOUT = R.layout.fragment_second_main;
 
-    private int competitionId;
-
     private String textHistory1;
     private String text1;
 
@@ -47,6 +45,8 @@ public class SecondMainFragment extends AbstractTabFragment {
     private String textHistory4;
     private String text4;
 
+    private String textHistory5, text5;
+
     private Button btnDay1, btnDay2;
 
     private Document doc = null, doc2 = null;
@@ -56,8 +56,8 @@ public class SecondMainFragment extends AbstractTabFragment {
     private int day = 1;
 
 
-    private LinearLayout first, second, third, forth;
-    private TextView fll, jrfll, hr, car;
+    private LinearLayout first, second, third, forth, fifth;
+    private TextView fll, jrfll, hr, car, free;
 
     public static SecondMainFragment getInstance(Context context, String title) {
         Bundle args = new Bundle();
@@ -92,6 +92,7 @@ public class SecondMainFragment extends AbstractTabFragment {
         jrfll = (TextView) view.findViewById(R.id.titleJrFll);
         hr = (TextView) view.findViewById(R.id.titleHr);
         car = (TextView) view.findViewById(R.id.titleCar);
+        free = (TextView) view.findViewById(R.id.titleFree);
 
         fll.setBackground(ContextCompat.getDrawable(context,
                 R.drawable.background_main_textview));
@@ -105,12 +106,14 @@ public class SecondMainFragment extends AbstractTabFragment {
         car.setBackground(ContextCompat.getDrawable(context,
                 R.drawable.background_main_textview));
 
-
+        free.setBackground(ContextCompat.getDrawable(context,
+                R.drawable.background_main_textview));
 
         first = (LinearLayout) view.findViewById(R.id.descFll);
         second = (LinearLayout) view.findViewById(R.id.descJrFll);
         third = (LinearLayout) view.findViewById(R.id.descHr);
         forth = (LinearLayout) view.findViewById(R.id.descCar);
+        fifth = (LinearLayout) view.findViewById(R.id.descFree);
 
         fll.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -120,11 +123,13 @@ public class SecondMainFragment extends AbstractTabFragment {
                 second.setVisibility(View.INVISIBLE);
                 third.setVisibility(View.INVISIBLE);
                 forth.setVisibility(View.INVISIBLE);
+                fifth.setVisibility(View.INVISIBLE);
 
                 first.setLayoutParams(layoutParamsVisible);
                 second.setLayoutParams(layoutParamsInvisible);
                 third.setLayoutParams(layoutParamsInvisible);
                 forth.setLayoutParams(layoutParamsInvisible);
+                fifth.setLayoutParams(layoutParamsInvisible);
 
             }
         });
@@ -136,11 +141,13 @@ public class SecondMainFragment extends AbstractTabFragment {
                 first.setVisibility(View.INVISIBLE);
                 third.setVisibility(View.INVISIBLE);
                 forth.setVisibility(View.INVISIBLE);
+                fifth.setVisibility(View.INVISIBLE);
 
                 second.setLayoutParams(layoutParamsVisible);
                 first.setLayoutParams(layoutParamsInvisible);
                 third.setLayoutParams(layoutParamsInvisible);
                 forth.setLayoutParams(layoutParamsInvisible);
+                fifth.setLayoutParams(layoutParamsInvisible);
 
             }
         });
@@ -152,11 +159,13 @@ public class SecondMainFragment extends AbstractTabFragment {
                 first.setVisibility(View.INVISIBLE);
                 second.setVisibility(View.INVISIBLE);
                 forth.setVisibility(View.INVISIBLE);
+                fifth.setVisibility(View.INVISIBLE);
 
                 third.setLayoutParams(layoutParamsVisible);
                 second.setLayoutParams(layoutParamsInvisible);
                 first.setLayoutParams(layoutParamsInvisible);
                 forth.setLayoutParams(layoutParamsInvisible);
+                fifth.setLayoutParams(layoutParamsInvisible);
             }
         });
 
@@ -167,9 +176,28 @@ public class SecondMainFragment extends AbstractTabFragment {
                 first.setVisibility(View.INVISIBLE);
                 third.setVisibility(View.INVISIBLE);
                 second.setVisibility(View.INVISIBLE);
+                fifth.setVisibility(View.INVISIBLE);
 
                 forth.setLayoutParams(layoutParamsVisible);
                 second.setLayoutParams(layoutParamsInvisible);
+                third.setLayoutParams(layoutParamsInvisible);
+                first.setLayoutParams(layoutParamsInvisible);
+                fifth.setLayoutParams(layoutParamsInvisible);
+            }
+        });
+
+        free.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                fifth.setVisibility(View.VISIBLE);
+                forth.setVisibility(View.INVISIBLE);
+                first.setVisibility(View.INVISIBLE);
+                third.setVisibility(View.INVISIBLE);
+                second.setVisibility(View.INVISIBLE);
+
+                fifth.setLayoutParams(layoutParamsVisible);
+                second.setLayoutParams(layoutParamsInvisible);
+                forth.setLayoutParams(layoutParamsInvisible);
                 third.setLayoutParams(layoutParamsInvisible);
                 first.setLayoutParams(layoutParamsInvisible);
             }
@@ -181,11 +209,13 @@ public class SecondMainFragment extends AbstractTabFragment {
         second.setVisibility(View.INVISIBLE);
         third.setVisibility(View.INVISIBLE);
         forth.setVisibility(View.INVISIBLE);
+        fifth.setVisibility(View.INVISIBLE);
 
         first.setLayoutParams(layoutParamsInvisible);
         second.setLayoutParams(layoutParamsInvisible);
         third.setLayoutParams(layoutParamsInvisible);
         forth.setLayoutParams(layoutParamsInvisible);
+        fifth.setLayoutParams(layoutParamsInvisible);
 
         btnDay1.setBackground(ContextCompat.getDrawable(context,
                 R.drawable.main_button_pressed));
@@ -251,10 +281,6 @@ public class SecondMainFragment extends AbstractTabFragment {
         protected String doInBackground(Object... strings) {
 
             int id = (int) strings[0];
-            /**
-             * Формирование адреса, по которому необходимо обратиться.
-             **/
-            String dataURL = "http://developer.alexanderklimov.ru/android/";
             String goURL = null;
 
             switch (id) {
@@ -503,12 +529,28 @@ public class SecondMainFragment extends AbstractTabFragment {
                     teamTxt.setText(R.string.robocarusel_team);
                     robotTxt.setText(R.string.robocarusel_robot);
                     langProgTxt.setText(R.string.robocarusel_langProg);
-                    goURL = "http://robofest.ru/sorevnovaniya/robokarusel/";
-                  /*  url1.setTextSize(14);
-                    url2.setTextSize(14);*/
+
                     url1.setText(Html.fromHtml(view.getResources().getString(R.string.url1_robocarusel)));
                     url2.setText(Html.fromHtml(view.getResources().getString(R.string.url2_robocarusel)));
                     break;
+                case 5:
+
+                    ageTxt = (TextView) view.findViewById(R.id.text_age5);
+                    teamTxt = (TextView) view.findViewById(R.id.text_team5);
+                    robotTxt = (TextView) view.findViewById(R.id.text_robot5);
+                    langProgTxt = (TextView) view.findViewById(R.id.text_langProg5);
+                    langProgTxtName = (TextView) view.findViewById(R.id.text_langProg_name5);
+
+                    cardView = (CardView) view.findViewById(R.id.cardView5);
+
+                    title = (TextView) view.findViewById(R.id.title_comp5);
+                    url1 = (TextView) view.findViewById(R.id.url15);
+                    url2 = (TextView) view.findViewById(R.id.url25);
+
+                    url1.setMovementMethod(LinkMovementMethod.getInstance());
+                    url2.setMovementMethod(LinkMovementMethod.getInstance());
+
+
                 default:
 
                     //   rv.setAdapter(new CompetitionAdapter("HRwrehw;o", getContext()));

@@ -43,8 +43,8 @@ public class AboutActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
-        final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("О мероприятии");
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("О фестивале");
         setSupportActionBar(toolbar);
 
         final DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -55,7 +55,14 @@ public class AboutActivity extends AppCompatActivity
 
         final NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        navigationView.getMenu().getItem(2).setChecked(true);
+
+        toolbar.setNavigationIcon(R.mipmap.ic_arrow_left);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
         GetHtml getHtml = new GetHtml();
         getHtml.execute();
@@ -76,7 +83,11 @@ public class AboutActivity extends AppCompatActivity
 
     public void openMain (View view) {
 
-        final Intent finalNextIntent = new Intent(this, MainActivity.class);
+        final Intent finalNextIntent = new Intent("ru.velkonost.Browser");
+        finalNextIntent.putExtra("site", 2);
+        finalNextIntent.setData(Uri.parse(
+                "https://www.robofestomsk.ru/index.html"
+        ));
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -106,6 +117,7 @@ public class AboutActivity extends AppCompatActivity
 
             nextIntent =
                     new Intent("ru.velkonost.Browser");
+            nextIntent.putExtra("site", 1);
             nextIntent.setData(Uri.parse(
                     "https://docs.google.com/forms/d/e/1FAIpQLSfg7od0RMlO5CCML1MZB2dxVnS-3KG8rqTGZ2hitnVY2tdpxg/formResponse"
             ));
@@ -127,6 +139,7 @@ public class AboutActivity extends AppCompatActivity
             public void run() {
 
                 changeActivityCompat(AboutActivity.this, finalNextIntent);
+                finish();
             }
         }, 350);
 
@@ -140,7 +153,6 @@ public class AboutActivity extends AppCompatActivity
         protected String doInBackground(Object... strings) {
 
             String dataURL = "http://www.robofestomsk.ru/o-festivale.html";
-
 
             try {
                 doc[0] = Jsoup.connect(dataURL).get();

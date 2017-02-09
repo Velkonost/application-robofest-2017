@@ -4,18 +4,23 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/registration"
+            android:icon="@mipmap/ic_account_plus"
             android:title="Регистрация"/>
         <item
             android:id="@+id/galery"
+            android:icon="@mipmap/ic_insert_photo_white_24dp"
             android:title="Галерея"/>
         <item
             android:id="@+id/about"
+            android:icon="@mipmap/ic_info_outline_white_24dp"
             android:title="О фестивале"/>
         <item
             android:id="@+id/organizers"
+            android:icon="@mipmap/ic_supervisor_account_white_24dp"
             android:title="Организаторы"/>
         <item
             android:id="@+id/contacts"
+            android:icon="@mipmap/ic_contacts_white_24dp"
             android:title="Контакты"/>
     </group>
 </menu>
