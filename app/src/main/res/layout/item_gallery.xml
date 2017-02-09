@@ -2,4 +2,5 @@
 <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="wrap_content"
             android:id="@+id/img_gal"
+           android:scaleType="fitXY"
             android:layout_height="wrap_content" />

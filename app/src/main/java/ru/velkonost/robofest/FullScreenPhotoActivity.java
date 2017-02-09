@@ -8,7 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.bumptech.glide.Glide;
+import com.squareup.picasso.Picasso;
 
 import uk.co.senab.photoview.PhotoViewAttacher;
 
@@ -56,9 +56,14 @@ public class FullScreenPhotoActivity extends AppCompatActivity {
                 setTitle("18 февраля");
                 break;
             case 5:
-                Glide.with(getApplicationContext())
-                        .load(GalleryActivity.urlToOpen)
+                Picasso
+                        .with(getApplicationContext())
+                        .load(getIntent().getExtras().getString("url"))
                         .into(imageView);
+
+//                Glide.with(getApplicationContext())
+//                        .load(getIntent().getExtras().getString("url"))
+//                        .into(imageView);
         }
 
         new PhotoViewAttacher(imageView);
