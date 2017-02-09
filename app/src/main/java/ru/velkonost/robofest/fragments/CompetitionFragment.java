@@ -1,4 +1,4 @@
-package fragments;
+package ru.velkonost.robofest.fragments;
 
 import android.content.Context;
 import android.os.AsyncTask;
@@ -19,7 +19,7 @@ import org.jsoup.nodes.Document;
 import java.io.IOException;
 import java.util.List;
 
-import adapters.CompetitionAdapter;
+import ru.velkonost.robofest.adapters.CompetitionAdapter;
 import ru.velkonost.robofest.R;
 
 public class CompetitionFragment extends AbstractTabFragment {

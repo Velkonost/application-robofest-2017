@@ -1,4 +1,4 @@
-package fragments;
+package ru.velkonost.robofest.fragments;
 
 import android.content.Context;
 import android.os.AsyncTask;
@@ -19,9 +19,9 @@ import org.jsoup.nodes.Document;
 import java.io.IOException;
 import java.util.List;
 
-import adapters.AboutAdapter;
-import adapters.AboutContactAdapter;
-import adapters.AboutOrganizersAdapter;
+import ru.velkonost.robofest.adapters.AboutAdapter;
+import ru.velkonost.robofest.adapters.AboutContactAdapter;
+import ru.velkonost.robofest.adapters.AboutOrganizersAdapter;
 import ru.velkonost.robofest.R;
 
 public class AboutFragment extends AbstractTabFragment {

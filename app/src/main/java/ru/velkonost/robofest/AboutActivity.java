@@ -26,9 +26,9 @@ import org.jsoup.nodes.Document;
 import java.io.IOException;
 import java.util.List;
 
-import adapters.AboutAdapter;
+import ru.velkonost.robofest.adapters.AboutAdapter;
 
-import static managers.Initializations.changeActivityCompat;
+import static ru.velkonost.robofest.managers.Initializations.changeActivityCompat;
 
 public class AboutActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {

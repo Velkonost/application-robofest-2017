@@ -20,9 +20,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import adapters.MainTabsFragmentAdapter;
+import ru.velkonost.robofest.adapters.MainTabsFragmentAdapter;
 
-import static managers.Initializations.changeActivityCompat;
+import static ru.velkonost.robofest.managers.Initializations.changeActivityCompat;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {

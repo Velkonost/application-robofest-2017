@@ -14,7 +14,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 
-import static managers.Initializations.changeActivityCompat;
+import static ru.velkonost.robofest.managers.Initializations.changeActivityCompat;
 
 public class OrganizersActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {

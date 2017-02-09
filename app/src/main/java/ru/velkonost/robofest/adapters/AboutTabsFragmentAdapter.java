@@ -1,4 +1,4 @@
-package adapters;
+package ru.velkonost.robofest.adapters;
 
 import android.content.Context;
 import android.support.v4.app.Fragment;
@@ -8,8 +8,8 @@ import android.support.v4.app.FragmentPagerAdapter;
 import java.util.HashMap;
 import java.util.Map;
 
-import fragments.AboutFragment;
-import fragments.AbstractTabFragment;
+import ru.velkonost.robofest.fragments.AboutFragment;
+import ru.velkonost.robofest.fragments.AbstractTabFragment;
 
 public class AboutTabsFragmentAdapter extends FragmentPagerAdapter {
 

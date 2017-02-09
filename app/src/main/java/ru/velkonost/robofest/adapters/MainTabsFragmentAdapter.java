@@ -1,4 +1,4 @@
-package adapters;
+package ru.velkonost.robofest.adapters;
 
 import android.content.Context;
 import android.support.v4.app.Fragment;
@@ -8,16 +8,17 @@ import android.support.v4.app.FragmentPagerAdapter;
 import java.util.HashMap;
 import java.util.Map;
 
-import fragments.AbstractTabFragment;
-import fragments.CompetitionFragment;
+import ru.velkonost.robofest.fragments.AbstractTabFragment;
+import ru.velkonost.robofest.fragments.FirstMainFragment;
+import ru.velkonost.robofest.fragments.SecondMainFragment;
+import ru.velkonost.robofest.fragments.ThirdMainFragment;
 
-
-public class CompetitionTabsFragmentAdapter extends FragmentPagerAdapter {
+public class MainTabsFragmentAdapter extends FragmentPagerAdapter {
 
     private Map<Integer, AbstractTabFragment> tabs;
     private Context context;
 
-    public CompetitionTabsFragmentAdapter(Context context, FragmentManager fm) {
+    public MainTabsFragmentAdapter(Context context, FragmentManager fm) {
         super(fm);
 
         this.context = context;
@@ -42,11 +43,9 @@ public class CompetitionTabsFragmentAdapter extends FragmentPagerAdapter {
     private void initTabsMap(Context context) {
         tabs = new HashMap<>();
 
-
-        tabs.put(0, CompetitionFragment.getInstance(context, 1, "FLL"));
-        tabs.put(1, CompetitionFragment.getInstance(context, 2, "Jr.FLL"));
-        tabs.put(2, CompetitionFragment.getInstance(context, 3, "HR"));
-        tabs.put(3, CompetitionFragment.getInstance(context, 4, "РОБОКАРУСЕЛЬ"));
+        tabs.put(0, FirstMainFragment.getInstance(context, "Карта мероприятий"));
+        tabs.put(1, SecondMainFragment.getInstance(context, "Программа мероприятий"));
+        tabs.put(2, ThirdMainFragment.getInstance(context,"Схема проезда"));
 
     }
 }

@@ -8,6 +8,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
+
 import uk.co.senab.photoview.PhotoViewAttacher;
 
 
@@ -53,6 +55,10 @@ public class FullScreenPhotoActivity extends AppCompatActivity {
 
                 setTitle("18 февраля");
                 break;
+            case 5:
+                Glide.with(getApplicationContext())
+                        .load(GalleryActivity.urlToOpen)
+                        .into(imageView);
         }
 
         new PhotoViewAttacher(imageView);

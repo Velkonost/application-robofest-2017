@@ -15,7 +15,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-import static managers.Initializations.changeActivityCompat;
+import static ru.velkonost.robofest.managers.Initializations.changeActivityCompat;
 
 public class ContactsActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {

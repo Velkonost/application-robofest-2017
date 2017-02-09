@@ -1,4 +1,4 @@
-package fragments;
+package ru.velkonost.robofest.fragments;
 
 import android.content.Context;
 import android.support.v4.app.Fragment;

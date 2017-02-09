@@ -1,4 +1,4 @@
-package managers;
+package ru.velkonost.robofest.managers;
 
 import android.app.Activity;
 import android.content.Intent;
