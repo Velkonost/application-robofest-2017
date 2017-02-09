@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -17,8 +18,8 @@ import com.squareup.picasso.Target;
 import java.util.ArrayList;
 
 import ru.velkonost.robofest.FullScreenPhotoActivity;
-import ru.velkonost.robofest.GalleryActivity;
 import ru.velkonost.robofest.R;
+import ru.velkonost.robofest.RecyclerView_Activity;
 import ru.velkonost.robofest.model.Data_Model;
 
 /**
@@ -64,10 +65,24 @@ public class RecyclerView_Adapter extends
             }
         });
 
-        Picasso
-                .with(context)
+        Picasso.Builder builder = new Picasso.Builder(context);
+
+        builder.listener(new Picasso.Listener()
+        {
+            @Override
+            public void onImageLoadFailed(Picasso picasso, Uri uri, Exception exception)
+            {
+                RecyclerView_Activity.checkImg = false;
+            }
+        });
+
+        builder
+                .build()
                 .load(url)
+                .error(R.drawable.ic_launcher)
                 .into(mainHolder.imageview);
+
+
         // bitmap
 
         // setting title
@@ -92,5 +107,6 @@ public class RecyclerView_Adapter extends
         return listHolder;
 
     }
+
 
 }

@@ -59,6 +59,7 @@ public class FullScreenPhotoActivity extends AppCompatActivity {
                 Picasso
                         .with(getApplicationContext())
                         .load(getIntent().getExtras().getString("url"))
+                        .error(R.drawable.ic_launcher)
                         .into(imageView);
 
 //                Glide.with(getApplicationContext())

@@ -16,6 +16,7 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 import java.util.ArrayList;
 
@@ -31,8 +32,12 @@ public class RecyclerView_Activity extends AppCompatActivity
 
     //String and Integer array for Recycler View Items
     public static final ArrayList<String> TITLES = new ArrayList<String>();
+    public static ArrayList arrayList = new ArrayList<String>();
     public static final Integer[] IMAGES = {R.drawable.background_about};
+    public static int minCount = 0, maxCount = 10 ,page = 1, prevCount=-5;
+    public static boolean checkImg = true;
 
+    private Button btnUploadMore;
 
     private static String navigateFrom;//String to get Intent Value
 
@@ -44,6 +49,8 @@ public class RecyclerView_Activity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("Галерея");
         setSupportActionBar(toolbar);
+
+        btnUploadMore = (Button) findViewById(R.id.btn_uploadmore);
 
         final DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -63,8 +70,22 @@ public class RecyclerView_Activity extends AppCompatActivity
         });
 
 
+
+
+
         initViews();
         populatRecyclerView();
+
+        btnUploadMore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                prevCount = minCount;
+                minCount+=5;
+                maxCount+=5;
+                page++;
+                populatRecyclerView();
+            }
+        });
     }
 
     @Override
@@ -96,17 +117,18 @@ public class RecyclerView_Activity extends AppCompatActivity
 
     // populate the list view by adding data to arraylist
     private void populatRecyclerView() {
-        ArrayList<String> arrayList = new ArrayList<>();
-        for (int i = 0; i < 62; i++) {
-            TITLES.add("http://robofestomsk.ru/images/robofest2017_photo/bor" + i + ".jpg");
-            //TITLES.add("http://robofestomsk.ru/images/robofest2017_photo/thumb/bor_the"+i+".jpg");
+        if(checkImg) {
+                for (int i = minCount; i < maxCount; i++) {
+                    TITLES.add("http://robofestomsk.ru/images/robofest2017_photo/bor" + i + ".jpg");
+                    //TITLES.add("http://robofestomsk.ru/images/robofest2017_photo/thumb/bor_the"+i+".jpg");
+                }
+                for (int i = minCount; i < TITLES.size(); i++) {
+                    arrayList.add(TITLES.get(i));
+                }
+                RecyclerView_Adapter adapter = new RecyclerView_Adapter(RecyclerView_Activity.this, arrayList);
+                recyclerView.setAdapter(adapter);// set adapter on recyclerview
+                adapter.notifyDataSetChanged();// Notify the adapter
         }
-        for (int i = 0; i < TITLES.size(); i++) {
-            arrayList.add(TITLES.get(i));
-        }
-        RecyclerView_Adapter adapter = new RecyclerView_Adapter(RecyclerView_Activity.this, arrayList);
-        recyclerView.setAdapter(adapter);// set adapter on recyclerview
-        adapter.notifyDataSetChanged();// Notify the adapter
 
     }
 
@@ -136,7 +158,6 @@ public class RecyclerView_Activity extends AppCompatActivity
                 AlertDialog alert = builder.create();
                 alert.show();
 
-                nextIntent = new Intent(RecyclerView_Activity.this, GalleryActivity.class);
             } else {
 
                 nextIntent =

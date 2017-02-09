@@ -30,11 +30,22 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/colorMain"
-            app:popupTheme="@style/AppTheme.PopupOverlay"/>
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/btn_uploadmore"
+                android:text="Показать ещё"
+                android:elevation="0dp"
+                android:gravity="center_vertical|center_horizontal|clip_horizontal" />
+        </android.support.v7.widget.Toolbar>
+
 
     </android.support.design.widget.AppBarLayout>
 
         <android.support.v7.widget.RecyclerView
+            android:layout_weight="1"
             xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/recycler_view"
@@ -44,8 +55,9 @@
             android:scrollbars="none">
 
         </android.support.v7.widget.RecyclerView>
+</android.support.design.widget.CoordinatorLayout>
 
-    </android.support.design.widget.CoordinatorLayout>
+
 
 
     <android.support.design.widget.NavigationView
