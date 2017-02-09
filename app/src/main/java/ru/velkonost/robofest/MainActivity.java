@@ -219,7 +219,7 @@ public class MainActivity extends AppCompatActivity
             }
 
         } else if (id == R.id.galery) {
-            nextIntent = new Intent(MainActivity.this, GalleryActivity.class);
+            nextIntent = new Intent(MainActivity.this, RecyclerView_Activity.class);
         } else if (id == R.id.about) {
             nextIntent = new Intent(MainActivity.this, AboutActivity.class);
         } else if (id == R.id.organizers) {

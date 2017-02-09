@@ -180,7 +180,7 @@ public class AboutActivity extends AppCompatActivity
             }
 
         } else if (id == R.id.galery) {
-            nextIntent = new Intent(AboutActivity.this, GalleryActivity.class);
+            nextIntent = new Intent(AboutActivity.this, RecyclerView_Activity.class);
         } else if (id == R.id.about) {
             nextIntent = new Intent(AboutActivity.this, AboutActivity.class);
         } else if (id == R.id.organizers) {

@@ -25,8 +25,9 @@
         <activity android:name=".FullScreenPhotoActivity"/>
         <activity android:name=".OrganizersActivity"/>
         <activity android:name=".ContactsActivity"/>
-        <activity android:name=".AboutActivity"/>
         <activity android:name=".GalleryActivity"/>
+        <activity android:name=".AboutActivity"/>
+        <activity android:name=".RecyclerView_Activity"/>
         <activity android:name=".BrowserActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />

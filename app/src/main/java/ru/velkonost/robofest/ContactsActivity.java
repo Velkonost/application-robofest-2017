@@ -226,7 +226,7 @@ public class ContactsActivity extends AppCompatActivity
             }
 
         } else if (id == R.id.galery) {
-            nextIntent = new Intent(ContactsActivity.this, GalleryActivity.class);
+            nextIntent = new Intent(ContactsActivity.this, RecyclerView_Activity.class);
         } else if (id == R.id.about) {
             nextIntent = new Intent(ContactsActivity.this, AboutActivity.class);
         } else if (id == R.id.organizers) {

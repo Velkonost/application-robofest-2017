@@ -7,12 +7,4 @@
     android:fitsSystemWindows="true"
     tools:context=".GalleryActivity">
 
-    <GridView
-        android:id="@+id/gvMain"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:numColumns="5">
-    </GridView>
-
-
 </android.support.design.widget.CoordinatorLayout>

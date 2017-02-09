@@ -139,7 +139,7 @@ public class OrganizersActivity extends AppCompatActivity
             }
 
         } else if (id == R.id.galery) {
-            nextIntent = new Intent(OrganizersActivity.this, GalleryActivity.class);
+            nextIntent = new Intent(OrganizersActivity.this, RecyclerView_Activity.class);
         } else if (id == R.id.about) {
             nextIntent = new Intent(OrganizersActivity.this, AboutActivity.class);
         } else if (id == R.id.organizers) {
