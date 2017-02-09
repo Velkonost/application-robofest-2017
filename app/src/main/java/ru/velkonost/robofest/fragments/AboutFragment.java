@@ -1,6 +1,8 @@
 package ru.velkonost.robofest.fragments;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
@@ -19,10 +21,12 @@ import org.jsoup.nodes.Document;
 import java.io.IOException;
 import java.util.List;
 
+import ru.velkonost.robofest.R;
 import ru.velkonost.robofest.adapters.AboutAdapter;
 import ru.velkonost.robofest.adapters.AboutContactAdapter;
 import ru.velkonost.robofest.adapters.AboutOrganizersAdapter;
-import ru.velkonost.robofest.R;
+
+import static ru.velkonost.robofest.managers.Initializations.hasConnection;
 
 public class AboutFragment extends AbstractTabFragment {
     private static final int LAYOUT = R.layout.fragment_about;
@@ -52,24 +56,43 @@ public class AboutFragment extends AbstractTabFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(LAYOUT, container, false);
 
-        switch (columnId) {
-            case 1:
-                GetHtml getHtml = new GetHtml();
-                getHtml.execute();
-                break;
-            case 2:
-                RecyclerView rv1 = (RecyclerView) view.findViewById(R.id.recyclerViewAbout);
-                rv1.setLayoutManager(new LinearLayoutManager(context));
-                rv1.setAdapter(new AboutOrganizersAdapter());
-                break;
-            case 3:
-                RecyclerView rv2 = (RecyclerView) view.findViewById(R.id.recyclerViewAbout);
-                rv2.setLayoutManager(new LinearLayoutManager(context));
-                rv2.setAdapter(new AboutContactAdapter());
-                break;
-            default:
 
-                break;
+        if (!hasConnection(context)) {
+
+            AlertDialog.Builder builder = new AlertDialog.Builder(context);
+            builder.setTitle("Ошибка")
+                    .setMessage("Отсутствует интернет-соединение!")
+                    .setCancelable(false)
+                    .setNegativeButton("Хорошо",
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+                                    dialog.cancel();
+                                }
+                            });
+            AlertDialog alert = builder.create();
+            alert.show();
+
+        }
+        if (hasConnection(context)) {
+            switch (columnId) {
+                case 1:
+                    GetHtml getHtml = new GetHtml();
+                    getHtml.execute();
+                    break;
+                case 2:
+                    RecyclerView rv1 = (RecyclerView) view.findViewById(R.id.recyclerViewAbout);
+                    rv1.setLayoutManager(new LinearLayoutManager(context));
+                    rv1.setAdapter(new AboutOrganizersAdapter());
+                    break;
+                case 3:
+                    RecyclerView rv2 = (RecyclerView) view.findViewById(R.id.recyclerViewAbout);
+                    rv2.setLayoutManager(new LinearLayoutManager(context));
+                    rv2.setAdapter(new AboutContactAdapter());
+                    break;
+                default:
+
+                    break;
+            }
         }
 
 

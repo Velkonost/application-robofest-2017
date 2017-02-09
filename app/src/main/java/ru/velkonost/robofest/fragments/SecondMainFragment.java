@@ -28,6 +28,8 @@ import java.util.List;
 import ru.velkonost.robofest.FullScreenPhotoActivity;
 import ru.velkonost.robofest.R;
 
+import static ru.velkonost.robofest.managers.Initializations.hasConnection;
+
 public class SecondMainFragment extends AbstractTabFragment {
 
     private static final int LAYOUT = R.layout.fragment_second_main;
@@ -263,10 +265,13 @@ public class SecondMainFragment extends AbstractTabFragment {
             }
         });
 
-        new GetHtml().execute(1);
-        new GetHtml().execute(2);
-        new GetHtml().execute(3);
-        new GetHtml().execute(4);
+
+        if (hasConnection(context)) {
+            new GetHtml().execute(1);
+            new GetHtml().execute(2);
+            new GetHtml().execute(3);
+            new GetHtml().execute(4);
+        }
 
         return view;
     }

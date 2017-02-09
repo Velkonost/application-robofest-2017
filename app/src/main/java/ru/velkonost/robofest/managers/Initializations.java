@@ -1,7 +1,10 @@
 package ru.velkonost.robofest.managers;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 
 public class Initializations {
 
@@ -17,5 +20,16 @@ public class Initializations {
 
         a.startActivity(nextIntent);
         a.overridePendingTransition(0, 0);
+    }
+
+    /**
+     * Проверка интернет-соединения.
+     **/
+    public static boolean hasConnection(Context context) {
+        ConnectivityManager cm =
+                (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo netInfo = cm.getActiveNetworkInfo();
+
+        return netInfo != null && netInfo.isConnectedOrConnecting();
     }
 }

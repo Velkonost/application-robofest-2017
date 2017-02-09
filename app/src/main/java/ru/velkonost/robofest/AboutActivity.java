@@ -1,6 +1,8 @@
 package ru.velkonost.robofest;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;
@@ -29,6 +31,7 @@ import java.util.List;
 import ru.velkonost.robofest.adapters.AboutAdapter;
 
 import static ru.velkonost.robofest.managers.Initializations.changeActivityCompat;
+import static ru.velkonost.robofest.managers.Initializations.hasConnection;
 
 public class AboutActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -64,9 +67,25 @@ public class AboutActivity extends AppCompatActivity
             }
         });
 
-        GetHtml getHtml = new GetHtml();
-        getHtml.execute();
+        if (!hasConnection(AboutActivity.this)) {
 
+            AlertDialog.Builder builder = new AlertDialog.Builder(AboutActivity.this);
+            builder.setTitle("Ошибка")
+                    .setMessage("Отсутствует интернет-соединение!")
+                    .setCancelable(false)
+                    .setNegativeButton("Хорошо",
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+                                    dialog.cancel();
+                                }
+                            });
+            AlertDialog alert = builder.create();
+            alert.show();
+
+        } else {
+            GetHtml getHtml = new GetHtml();
+            getHtml.execute();
+        }
     }
 
 
@@ -82,6 +101,24 @@ public class AboutActivity extends AppCompatActivity
     }
 
     public void openMain (View view) {
+
+        if (!hasConnection(AboutActivity.this)) {
+
+            AlertDialog.Builder builder = new AlertDialog.Builder(AboutActivity.this);
+            builder.setTitle("Ошибка")
+                    .setMessage("Отсутствует интернет-соединение!")
+                    .setCancelable(false)
+                    .setNegativeButton("Хорошо",
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+                                    dialog.cancel();
+                                }
+                            });
+            AlertDialog alert = builder.create();
+            alert.show();
+
+            return;
+        }
 
         final Intent finalNextIntent = new Intent("ru.velkonost.Browser");
         finalNextIntent.putExtra("site", 2);
@@ -115,12 +152,32 @@ public class AboutActivity extends AppCompatActivity
 
         if (id == R.id.registration) {
 
-            nextIntent =
-                    new Intent("ru.velkonost.Browser");
-            nextIntent.putExtra("site", 1);
-            nextIntent.setData(Uri.parse(
-                    "https://docs.google.com/forms/d/e/1FAIpQLSfg7od0RMlO5CCML1MZB2dxVnS-3KG8rqTGZ2hitnVY2tdpxg/formResponse"
-            ));
+
+            if (!hasConnection(AboutActivity.this)) {
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(AboutActivity.this);
+                builder.setTitle("Ошибка")
+                        .setMessage("Отсутствует интернет-соединение!")
+                        .setCancelable(false)
+                        .setNegativeButton("Хорошо",
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int id) {
+                                        dialog.cancel();
+                                    }
+                                });
+                AlertDialog alert = builder.create();
+                alert.show();
+
+                nextIntent = new Intent(AboutActivity.this, AboutActivity.class);
+            } else {
+
+                nextIntent =
+                        new Intent("ru.velkonost.Browser");
+                nextIntent.putExtra("site", 1);
+                nextIntent.setData(Uri.parse(
+                        "https://docs.google.com/forms/d/e/1FAIpQLSfg7od0RMlO5CCML1MZB2dxVnS-3KG8rqTGZ2hitnVY2tdpxg/formResponse"
+                ));
+            }
 
         } else if (id == R.id.galery) {
             nextIntent = new Intent(AboutActivity.this, GalleryActivity.class);

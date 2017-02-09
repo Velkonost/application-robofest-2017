@@ -1,6 +1,8 @@
 package ru.velkonost.robofest;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -15,6 +17,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import static ru.velkonost.robofest.managers.Initializations.changeActivityCompat;
+import static ru.velkonost.robofest.managers.Initializations.hasConnection;
 
 public class OrganizersActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -47,6 +50,24 @@ public class OrganizersActivity extends AppCompatActivity
     }
 
     public void openMain (View view) {
+
+        if (!hasConnection(OrganizersActivity.this)) {
+
+            AlertDialog.Builder builder = new AlertDialog.Builder(OrganizersActivity.this);
+            builder.setTitle("Ошибка")
+                    .setMessage("Отсутствует интернет-соединение!")
+                    .setCancelable(false)
+                    .setNegativeButton("Хорошо",
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+                                    dialog.cancel();
+                                }
+                            });
+            AlertDialog alert = builder.create();
+            alert.show();
+
+            return;
+        }
 
         final Intent finalNextIntent = new Intent("ru.velkonost.Browser");
         finalNextIntent.putExtra("site", 2);
@@ -91,12 +112,31 @@ public class OrganizersActivity extends AppCompatActivity
 
         if (id == R.id.registration) {
 
-            nextIntent =
-                    new Intent("ru.velkonost.Browser");
-            nextIntent.putExtra("site", 1);
-            nextIntent.setData(Uri.parse(
-                    "https://docs.google.com/forms/d/e/1FAIpQLSfg7od0RMlO5CCML1MZB2dxVnS-3KG8rqTGZ2hitnVY2tdpxg/formResponse"
-            ));
+            if (!hasConnection(OrganizersActivity.this)) {
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(OrganizersActivity.this);
+                builder.setTitle("Ошибка")
+                        .setMessage("Отсутствует интернет-соединение!")
+                        .setCancelable(false)
+                        .setNegativeButton("Хорошо",
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int id) {
+                                        dialog.cancel();
+                                    }
+                                });
+                AlertDialog alert = builder.create();
+                alert.show();
+
+                nextIntent = new Intent(OrganizersActivity.this, OrganizersActivity.class);
+            } else {
+
+                nextIntent =
+                        new Intent("ru.velkonost.Browser");
+                nextIntent.putExtra("site", 1);
+                nextIntent.setData(Uri.parse(
+                        "https://docs.google.com/forms/d/e/1FAIpQLSfg7od0RMlO5CCML1MZB2dxVnS-3KG8rqTGZ2hitnVY2tdpxg/formResponse"
+                ));
+            }
 
         } else if (id == R.id.galery) {
             nextIntent = new Intent(OrganizersActivity.this, GalleryActivity.class);

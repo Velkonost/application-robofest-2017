@@ -22,6 +22,8 @@ import java.util.List;
 import ru.velkonost.robofest.adapters.CompetitionAdapter;
 import ru.velkonost.robofest.R;
 
+import static ru.velkonost.robofest.managers.Initializations.hasConnection;
+
 public class CompetitionFragment extends AbstractTabFragment {
     private static final int LAYOUT = R.layout.fragment_competition;
 
@@ -54,8 +56,10 @@ public class CompetitionFragment extends AbstractTabFragment {
         RecyclerView rv = (RecyclerView) view.findViewById(R.id.recyclerViewCompetition);
         rv.setLayoutManager(new LinearLayoutManager(context));
 
-        GetHtml getHtml = new GetHtml();
-        getHtml.execute();
+        if (hasConnection(context)) {
+            GetHtml getHtml = new GetHtml();
+            getHtml.execute();
+        }
 
         return view;
     }
