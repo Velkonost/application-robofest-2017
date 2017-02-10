@@ -1,5 +1,6 @@
 package ru.velkonost.robofest;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -246,5 +247,47 @@ public class RecyclerView_Activity extends AppCompatActivity
         super.onDestroy();
         arrayList.clear();
         TITLES.clear();
+    }
+
+    public void openMain (View view) {
+
+        if (!hasConnection(RecyclerView_Activity.this)) {
+
+            AlertDialog.Builder builder = new AlertDialog.Builder(RecyclerView_Activity.this);
+            builder.setTitle("Ошибка")
+                    .setMessage("Отсутствует интернет-соединение!")
+                    .setCancelable(false)
+                    .setNegativeButton("Хорошо",
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+                                    dialog.cancel();
+                                }
+                            });
+            AlertDialog alert = builder.create();
+            alert.show();
+
+            return;
+        }
+
+        final Intent finalNextIntent = new Intent("ru.velkonost.Browser");
+        finalNextIntent.putExtra("site", 2);
+        finalNextIntent.setData(Uri.parse(
+                "https://www.robofestomsk.ru/index.html"
+        ));
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+
+                /**
+                 * Обновляет страницу.
+                 * {@link Initializations#changeActivityCompat(Activity, Intent)}
+                 * */
+                changeActivityCompat(RecyclerView_Activity.this, finalNextIntent);
+            }
+        }, 350);
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+
     }
 }
