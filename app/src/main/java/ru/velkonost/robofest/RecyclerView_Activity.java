@@ -211,12 +211,14 @@ public class RecyclerView_Activity extends AppCompatActivity
 
 
         final Intent finalNextIntent = nextIntent;
+        final int id2 = id;
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-
-                changeActivityCompat(RecyclerView_Activity.this, finalNextIntent);
-                finish();
+                if(id2!=R.id.galery) {
+                    changeActivityCompat(RecyclerView_Activity.this, finalNextIntent);
+                    finish();
+                }
             }
         }, 350);
 
