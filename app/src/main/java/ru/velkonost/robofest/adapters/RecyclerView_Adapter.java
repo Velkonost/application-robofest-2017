@@ -50,7 +50,7 @@ public class RecyclerView_Adapter extends
     public void onBindViewHolder(RecyclerViewHolder holder, final int position) {
        // final Data_Model model = arrayList.get(position);
 
-        RecyclerViewHolder mainHolder = (RecyclerViewHolder) holder;// holder
+        final RecyclerViewHolder mainHolder = (RecyclerViewHolder) holder;// holder
        // mainHolder.imageview.getLayoutParams().height = mainHolder.imageview.getWidth();
         String url = arrayList.get(position);
         mainHolder.imageview.setOnClickListener(new View.OnClickListener() {
@@ -78,6 +78,7 @@ public class RecyclerView_Adapter extends
                     @Override
                     public void onError() {
                         RecyclerView_Activity.checkImg = false;
+                        mainHolder.cardView.setVisibility(View.INVISIBLE);
                     }
                 });
 
