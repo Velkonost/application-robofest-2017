@@ -56,7 +56,7 @@ public class RecyclerView_Adapter extends
         mainHolder.imageview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String urlToOpen = "http://robofestomsk.ru/images/robofest2017_photo/bor"+position+".jpg";
+                String urlToOpen = "http://robofestomsk.ru/images/robofest2017_photo/bor"+(RecyclerView_Activity.page+position)+".jpg";
 
                 Intent intent = new Intent(context, FullScreenPhotoActivity.class);
                 intent.putExtra("Photo", 5);
@@ -65,22 +65,21 @@ public class RecyclerView_Adapter extends
             }
         });
 
-        Picasso.Builder builder = new Picasso.Builder(context);
 
-        builder.listener(new Picasso.Listener()
-        {
-            @Override
-            public void onImageLoadFailed(Picasso picasso, Uri uri, Exception exception)
-            {
-                RecyclerView_Activity.checkImg = false;
-            }
-        });
-
-        builder
-                .build()
+        Picasso
+                .with(context)
                 .load(url)
-                .error(R.drawable.ic_launcher)
-                .into(mainHolder.imageview);
+                .into(mainHolder.imageview, new com.squareup.picasso.Callback() {
+                    @Override
+                    public void onSuccess() {
+
+                    }
+
+                    @Override
+                    public void onError() {
+                        RecyclerView_Activity.checkImg = false;
+                    }
+                });
 
 
         // bitmap

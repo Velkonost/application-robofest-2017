@@ -31,14 +31,26 @@
             android:layout_height="?attr/actionBarSize"
             android:background="@color/colorMain"
             app:popupTheme="@style/AppTheme.PopupOverlay" >
-
-            <Button
+            <ImageButton
+                android:layout_marginLeft="50dp"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:id="@+id/btn_uploadmore"
-                android:text="Показать ещё"
-                android:elevation="0dp"
+                android:id="@+id/btn_prevp"
+                android:scaleType="centerInside"
+                android:background="@color/colorMain"
+                android:src="@drawable/arrowleftboldcircleoutline"
                 android:gravity="center_vertical|center_horizontal|clip_horizontal" />
+            <ImageButton
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/btn_nextp"
+                android:scaleType="centerInside"
+                android:background="@color/colorMain"
+                android:src="@drawable/arrowrightboldcircleoutline"
+                android:gravity="center_vertical|center_horizontal|clip_horizontal" />
+
+
         </android.support.v7.widget.Toolbar>
 
 
