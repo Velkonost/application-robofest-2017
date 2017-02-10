@@ -225,5 +225,24 @@ public class RecyclerView_Activity extends AppCompatActivity
         return true;
     }
 
+    @Override
+    protected void onStop() {
+        super.onStop();
+        arrayList.clear();
+        TITLES.clear();
+    }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        arrayList.clear();
+        TITLES.clear();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        arrayList.clear();
+        TITLES.clear();
+    }
 }
