@@ -31,24 +31,7 @@
             android:layout_height="?attr/actionBarSize"
             android:background="@color/colorMain"
             app:popupTheme="@style/AppTheme.PopupOverlay" >
-            <ImageButton
-                android:layout_marginLeft="50dp"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/btn_prevp"
-                android:scaleType="centerInside"
-                android:background="@color/colorMain"
-                android:src="@drawable/arrowleftboldcircleoutline"
-                android:gravity="center_vertical|center_horizontal|clip_horizontal" />
-            <ImageButton
-                android:layout_marginLeft="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/btn_nextp"
-                android:scaleType="centerInside"
-                android:background="@color/colorMain"
-                android:src="@drawable/arrowrightboldcircleoutline"
-                android:gravity="center_vertical|center_horizontal|clip_horizontal" />
+
 
 
         </android.support.v7.widget.Toolbar>
@@ -67,17 +50,42 @@
             android:scrollbars="none">
 
         </android.support.v7.widget.RecyclerView>
-</android.support.design.widget.CoordinatorLayout>
+        <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+            <ImageButton
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:id="@+id/btn_prevp"
+                android:scaleType="centerInside"
+                android:background="@drawable/bg_img"
+                android:src="@drawable/arrowleftbold"
+                android:layout_marginRight="200dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true" />
+
+            <ImageButton
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:id="@+id/btn_nextp"
+                android:scaleType="centerInside"
+                android:background="@drawable/bg_img"
+                android:src="@drawable/arrowrightbold"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+    </android.support.design.widget.CoordinatorLayout>
 
 
 
 
-    <android.support.design.widget.NavigationView
+   <android.support.design.widget.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header_main"
         app:menu="@menu/activity_main_drawer"/>
 
