@@ -38,7 +38,7 @@ public class RecyclerView_Activity extends AppCompatActivity
     public static int minCount = 0, maxCount = 15 ,page = 0, prevCount=-5;
     public static boolean checkImg = true;
 
-    private ImageButton btnNextPage, btnPrevPage;
+    public static ImageButton btnNextPage, btnPrevPage;
 
     private static String navigateFrom;//String to get Intent Value
 
@@ -75,18 +75,30 @@ public class RecyclerView_Activity extends AppCompatActivity
 
 
         page = 0;
+
+        if(page==0)
+        {
+            btnPrevPage.setVisibility(View.INVISIBLE);
+        }else{
+            btnPrevPage.setVisibility(View.VISIBLE);
+        }
         initViews();
         populatRecyclerView();
 
         btnNextPage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 if(checkImg) {
                     TITLES.clear();
                     arrayList.clear();
                   //  recyclerView.destroyDrawingCache();
                     page+=15;
                     populatRecyclerView();
+
+                }
+                if(page>0) {
+                    btnPrevPage.setVisibility(View.VISIBLE);
                 }
             }
         });
@@ -98,7 +110,19 @@ public class RecyclerView_Activity extends AppCompatActivity
                     TITLES.clear();
                     arrayList.clear();
                     page -= 15;
+                    if(page>0)
+                    {
+                        btnPrevPage.setVisibility(View.VISIBLE);
+                    }else{
+                        btnPrevPage.setVisibility(View.INVISIBLE);
+                    }
                     populatRecyclerView();
+                }else {
+                    btnPrevPage.setVisibility(View.INVISIBLE);
+                }
+                if(checkImg)
+                {
+                    btnNextPage.setVisibility(View.VISIBLE);
                 }
 
             }

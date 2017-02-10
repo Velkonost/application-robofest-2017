@@ -72,13 +72,15 @@ public class RecyclerView_Adapter extends
                 .into(mainHolder.imageview, new com.squareup.picasso.Callback() {
                     @Override
                     public void onSuccess() {
-
+                        RecyclerView_Activity.checkImg = true;
+                        RecyclerView_Activity.btnNextPage.setVisibility(View.VISIBLE);
                     }
 
                     @Override
                     public void onError() {
                         RecyclerView_Activity.checkImg = false;
                         mainHolder.cardView.setVisibility(View.INVISIBLE);
+                        RecyclerView_Activity.btnNextPage.setVisibility(View.INVISIBLE);
                     }
                 });
 
