@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:card="http://schemas.android.com/apk/res-auto"
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+    xmlns:card="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
 
 
     <ScrollView
@@ -13,14 +14,14 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="10dp">
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/llDays"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -41,13 +42,12 @@
             </LinearLayout>
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
                 android:layout_below="@id/llDays"
                 android:scaleType="fitXY"
                 android:id="@+id/imageGraphic"
-                android:src="@drawable/day1"
-                android:layout_margin="10dp"/>
+                android:src="@drawable/day1"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -56,10 +56,9 @@
                 android:text="FIRST LEGO League"
                 android:textAlignment="center"
                 android:padding="10dp"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="16dp"
                 android:textColor="@color/colorWhite"
-
-                android:layout_marginTop="40dp"/>
+                android:layout_marginTop="16dp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"

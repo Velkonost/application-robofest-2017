@@ -47,7 +47,7 @@
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/btnAddBoard"
-        android:layout_margin="10dp"
+        android:layout_margin="16dp"
         android:layout_gravity="right|bottom"
         style="@style/FabStyle"
         android:onClick="registrationOpen"

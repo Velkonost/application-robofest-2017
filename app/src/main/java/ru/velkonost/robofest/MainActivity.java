@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("Главная");
+        toolbar.setTitle(getString(R.string.app_name));
         setSupportActionBar(toolbar);
 
         if (!hasConnection(MainActivity.this)) {
