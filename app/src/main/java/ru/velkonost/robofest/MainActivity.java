@@ -23,6 +23,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import ru.velkonost.robofest.adapters.MainTabsFragmentAdapter;
+import ru.velkonost.robofest.services.ServiceNotification;
 
 import static ru.velkonost.robofest.managers.Initializations.changeActivityCompat;
 import static ru.velkonost.robofest.managers.Initializations.hasConnection;
@@ -48,6 +49,11 @@ public class MainActivity extends AppCompatActivity
         toolbar.setTitle(getString(R.string.app_name));
         setSupportActionBar(toolbar);
 
+        //остановка сервиса
+        stopService(new Intent(MainActivity.this, ServiceNotification.class));
+        //запуск сервиса
+        startService(new Intent(MainActivity.this, ServiceNotification.class));
+
         if (!hasConnection(MainActivity.this)) {
 
             AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
@@ -62,7 +68,6 @@ public class MainActivity extends AppCompatActivity
                             });
             AlertDialog alert = builder.create();
             alert.show();
-
         }
 
         initTabs();
